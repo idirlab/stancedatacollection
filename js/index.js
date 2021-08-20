@@ -369,7 +369,7 @@ function check_sign_in_information()
 		dataType: "text",
 		success: function(data)
 		{
-			console.log(data)
+			console.log("check_sign_in_information:", data)
 			if(data.localeCompare("-1") == 0)
 			{
 				alert('Invalid Username or Password. Please Try Again.');
@@ -577,6 +577,7 @@ function start_training()
 		dataType: "text",
 		success: function(data)
 		{
+			console.log("get_training_index", data);
 			if(data == 0)
 			{
 				is_training = 0;
