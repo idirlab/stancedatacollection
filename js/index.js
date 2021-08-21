@@ -717,6 +717,7 @@ function get_sentence(sentence_id)
 		data: {sentence_id: sentence_id},
 		success: function(data)
 		{
+			console.log("get_sentence:", data);
 			if(data.localeCompare("-1") == 0)
 			{
 				alert('No more sentences available for you. Thanks for your participation. We may notify you in case there is a third phase of the data collection.');
