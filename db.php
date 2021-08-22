@@ -4,17 +4,27 @@ $db = null;
 date_default_timezone_set('America/Chicago');
 
 function getConnect() {
+    # TODO: change local to server
     global $db;
     $local = TRUE;
-
+    
     if(!$db) {
         if($local) {
-            $config = array(
-                'user' => 'root',
-                'password' => '',
-                'server' => 'localhost',
-                'database' => 'factchecker_presidential_debate',
-                );    
+            if($_SESSION['project']=='"WildFire"') {
+                $config = array(
+                    'user' => 'root',
+                    'password' => '',
+                    'server' => 'localhost',
+                    'database' => 'wildfire',
+                    );  
+            } elseif($_SESSION['project']=='"ClaimBuster"') {
+                $config = array(
+                    'user' => 'root',
+                    'password' => '',
+                    'server' => 'localhost',
+                    'database' => 'factchecker_presidential_debate',
+                    );  
+            }
         } else {
             $config = array(
                 'user' => 'factchecker',
@@ -23,13 +33,9 @@ function getConnect() {
                 'database' => 'factchecker_presidential_debate',
                 );
         }
-
         $dsn= "mysql:host=${config['server']};dbname=${config['database']}";
-
         $db = new PDO($dsn, $config['user'], $config['password']);
-        
     }
-
     return $db;
 }
 

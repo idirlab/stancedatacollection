@@ -365,7 +365,8 @@ function check_sign_in_information()
 		url: "check_sign_in_information.php",
 		method: "POST",
 		data: { username : '"'+$('#input_username').val()+'"',
-				password : '"'+$('#input_password').val()+'"' },
+				password : '"'+$('#input_password').val()+'"',
+				project  : '"'+$('#project').val()+'"'},
 		dataType: "text",
 		success: function(data)
 		{
@@ -380,6 +381,7 @@ function check_sign_in_information()
 			}
 			else
 			{
+				console.log("check_sign_in_information passed")
 				logged_out = 0;
 				init_survey();
 				var username = $('#span_username').text();

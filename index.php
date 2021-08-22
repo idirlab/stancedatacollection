@@ -36,25 +36,47 @@
 			</div>
 			
 			<div id="navbar_signin_signup" class="navbar-collapse collapse">
-				<form class="navbar-form navbar-right">
+				<form class="navbar-form navbar-left">
 					<div class="row">
-						<div class="col-md-8">
+						<div class="col-sm-8">
 							<div class="form-group">
-								<input type="text" placeholder="username" class="form-control" id="input_username">
-								<input type="password" placeholder="Password" class="form-control" id="input_password">
-								<button id="button_sign_in" type="button" class="btn btn-success pull_top">Sign In</button>
-								<br>
-								<button id="button_forgot_password" type="button" class="btn btn-link">Forgot username/password?</button>
+								<input type="text" placeholder="Username" class="form-control" id="input_username">
+								<input type="password" placeholder="Password" class="form-control" id="input_password" for='inputsm'>
 							</div>
 						</div>
 
-						<div class="col-md-2">
+						<div class="col-sm-2">
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_new_user">New User</button>
 						</div>
-						<div class="col-md-2">
-							<a class="btn btn-primary" href="http://idir.uta.edu/claimbuster">ClaimBuster Demo</a>
+						<div class="col-sm-2">
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+									Try project demos
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+									<li><a href="http://idir.uta.edu/claimbuster">ClaimBuster Demo</a></li>
+									<li><a href="http://idir.uta.edu/stance_detection">WildFire Stance Detection Demo</a></li>
+								</ul>
+							</div>
 						</div>
-	
+					</div>
+					
+					<div class="row" style="margin-top: 10px">
+						<div class="form-group col-lg-8">
+							<!-- <div class="col-sm-6 col-md-4"> -->
+								<label style="color:white; font-size: 1.25em;">Select project:</label>
+								<select id="project" class="form-control">
+								<option>WildFire</option>
+								<option>ClaimBuster</option>
+								</select> 
+							<!-- </div> -->
+						</div>
+						<div class="form-group col-lg-3">
+							<button id="button_sign_in" type="button" class="btn btn-success pull_top">Sign In</button>
+							<button id="button_forgot_password" type="button" class="btn btn-link">Forgot username/password?</button>
+						</div>
+						
 					</div>
 				</form>
 			</div>
@@ -474,10 +496,21 @@
 			<br>
 			<br>
 			<br>
-			<div class='center-block'><p class='justified_para'><h2>Thank you for participating in data collection for ClaimBuster!<br></h2><!--<h4>ClaimBuster uses computational power to do tasks that are tedious and time-consuming for fact-checkers, such as finding claims by politicians that should be checked.<br>Note: Participants are paid for every labeled sentence. Pay rate depends on work quality and the length/complexity of labeled sentences.</h4>--></p></div>
-		
+			<div class='center-block'><p class='justified_para'><h2>Thank you for participating in data collection for IDIR project!<br></h2><!--<h4>ClaimBuster uses computational power to do tasks that are tedious and time-consuming for fact-checkers, such as finding claims by politicians that should be checked.<br>Note: Participants are paid for every labeled sentence. Pay rate depends on work quality and the length/complexity of labeled sentences.</h4>--></p></div>
+			<br>
 			<!--<p class='justified_para'><h2>ClaimBuster data collection is PAUSED for now. If you have contributed, you can login and see your payment by clicking the "Leaderboard" button.</h2></p>-->
-			
+			<h3>1. ClaimBuster Data Annotation</h2>
+			<div class='row'>
+				<div class='col-md-2'></div>
+				<div class='col-md-8'>
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/R30KinquvvQ"></iframe>
+					</div>
+				</div>
+				<div class='col-md-2'></div>
+			</div>
+
+			<h3>2. WildFire Stance Detection Annotation</h2>
 			<div class='row'>
 				<div class='col-md-2'></div>
 				<div class='col-md-8'>

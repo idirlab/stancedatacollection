@@ -1,14 +1,18 @@
 <?php
+	session_start();
 	$username = $_REQUEST["username"];
 	$password = $_REQUEST["password"];
+	$project = $_REQUEST["project"];
+	$_SESSION['project'] = $project;
 
 	$encrypted_password = '"'.md5($password).'"';
 	include_once("db.php");
 	$db_tmp = getConnect();
-
+	
 	$sql = gen_select_query(array('username', 'count(*) as count'), array('User'), array('username = '.$username, 'password = '.$encrypted_password));
 	
 	$results = execute($sql, array(), PDO::FETCH_ASSOC);
+	
 	
 	if(strcmp($results[0]['count'], "0") == 0) echo "-1";#wrong information
 	else
@@ -16,8 +20,7 @@
 		$sql = gen_select_query(array('verification'), array('User'), array('username = '.$username, 'password = '.$encrypted_password));
 		$results = execute($sql, array(), PDO::FETCH_ASSOC);
 		if(strcmp($results[0]['verification'], "verified") == 0)
-		{
-			session_start();
+		{	
 			$_SESSION['username'] = $username;
 			$_SESSION['answered'] = 0;
 			$_SESSION['screening_questioned'] = 0;

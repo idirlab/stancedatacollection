@@ -59,8 +59,7 @@
 	$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), array('Sentence', 'Speaker', 'Speaker_File'), array('Sentence.speaker_id = Speaker.id', 'Speaker.id = Speaker_File.speaker_id', 'Sentence.file_id = Speaker_File.file_id', 'Sentence.id NOT IN '.$already_answered, 'Sentence.id NOT IN '.$top_quality_sentences_string, 'Sentence.length >= 5', 'Speaker_File.role = "Interviewee"', 'screening = -3'), array(), array('RAND()'), array('1'));
 	
 	$results = execute($sql, array(), PDO::FETCH_ASSOC);
-	echo('results:');
-	var_dump($results);
+	
 	if(!count($results) && $sentence_id == 0)//No more sentence available for the user.
 	{
 		$activity_sql = gen_insert_query($tables=array('Activity'), $fields=array('username', 'time', 'action'), $values=array($username, '"'.date("Y-m-d H:i:s").'"', '"NO MORE SENTENCE AVAILABLE"'));
@@ -92,17 +91,7 @@
 		}
 		
 		if($is_screening == 1 && strcmp($username, '"factchecker"') != 0) #screening question
-		{
-#			$sql = gen_select_query(array('sentence_id'), array('Sentence_User'), array('username = '.$username));	
-#			$results = execute($sql, array(), PDO::FETCH_COLUMN);
-#			if(count($results))$already_answered = '('.implode(', ', $results).')';
-#			else $already_answered = '(-1)';
-		
-			/*$sql = gen_select_query(array('min(answered) as min_answered'), array('Sentence', 'Speaker', 'Speaker_File'), array('Sentence.speaker_id = Speaker.id', 'Speaker.id = Speaker_File.speaker_id', 'Sentence.file_id = Speaker_File.file_id', 'Sentence.length >= 5', 'Speaker_File.role = "Interviewee"', 'screening != -3'), array(), array(), array());
-		
-			$results = execute($sql, array(), PDO::FETCH_ASSOC);
-			$min_answered = $results[0]['min_answered'];*/
-			
+		{	
 			$class_screening = randomFloat(0,30);
 			if($class_screening <= 10)
 			{
@@ -118,9 +107,6 @@
 			}
 	
 			$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), array('Sentence', 'Speaker', 'Speaker_File'), array('Sentence.speaker_id = Speaker.id', 'Speaker.id = Speaker_File.speaker_id', 'Sentence.file_id = Speaker_File.file_id', 'Sentence.length >= 5', 'Speaker_File.role = "Interviewee"', 'screening = '.$class_screening, 'Sentence.id not in '.$_SESSION['training_sentences'].' '), array(), array('RAND()'), array('1'));
-			
-#			$activity_sql = gen_insert_query($tables=array('Activity'), $fields=array('username', 'time', 'action'), $values=array($username, '"'.date("Y-m-d H:i:s").'"', "'SYSTEM ASKED ".$class_screening." SCREENING QUESTION'"));
-#			$activity_sql_results = execute($activity_sql, array(), PDO::FETCH_ASSOC);
 		}
 		else #regular question
 		{
@@ -128,19 +114,7 @@
 			$results = execute($sql, array(), PDO::FETCH_COLUMN);
 			if(count($results))$already_answered = '('.implode(', ', $results).')';
 			else $already_answered = '(-1)';
-			//*****************************************************************************************
-			//******************The following code was for third stage*****************************
-			//*************************************************************************************
-					/*$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), array('Sentence', 'Speaker', 'Speaker_File', 'Sentence_User'), array('Sentence.speaker_id = Speaker.id', 'Speaker.id = Speaker_File.speaker_id', 'Sentence.file_id = Speaker_File.file_id', 'Sentence.id NOT IN '.$already_answered, 'Sentence.id = Sentence_User.sentence_id', 'Sentence_User.top_quality_after_2nd_stage = 0'), array(), array('RAND()'), array('1'));*/
-			//*************************************************************************************
-			//******************The following code was for first and second stage******************
-			//******************Re-enabled for fourth stage****************************************
-			/*$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), array('Sentence', 'Speaker', 'Speaker_File'), array('Sentence.speaker_id = Speaker.id', 'Speaker.id = Speaker_File.speaker_id', 'Sentence.file_id = Speaker_File.file_id', 'Sentence.id NOT IN '.$already_answered, 'Sentence.length >= 5', 'Speaker_File.role = "Interviewee"', 'answered < '.$min_number_of_users, 'screening = -3'), array(), array('answered', 'RAND()'), array('1'));*/
-
-			/*FINAL STAGE*/
-			/*$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), array('Remaining_06282016', 'Sentence', 'Speaker'), array('Sentence.id = Remaining_06282016.sentence_id', 'Sentence.speaker_id = Speaker.id', 'Sentence.id NOT IN '.$already_answered), array(), array('RAND()'), array('1'));*/
-
-			/*Dynamic Sentence Selection Based on Top Quality Responses*/ //January 10, 2017
+		
 			$sql = 'select 
 			    Sentence_User.username as USERNAME	
 			from
@@ -196,39 +170,35 @@
 		$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), array('Sentence', 'Speaker'), array('Sentence.speaker_id = Speaker.id', 'Sentence.id = '.$sentence_id), array(), array(), array());
 	}
 	
-	$results = execute($sql, array(), PDO::FETCH_ASSOC);
-	if(count($results))
-	{
+	$results = execute($sql, array(), PDO::FETCH_ASSOC); // [id, name, text]
+	
+	if(count($results)) {
 		$sql = 'select A.USERNAME, A.ANSWERED,
 				(case when A.RANK_W <= 0.0 and A.ANSWERED >= 4 then 1
-				when A.RANK_W <= 0.3 and A.ANSWERED >= 4  then 2
-				when A.RANK_W <= 0.6 and A.ANSWERED >= 4  then 3
-				when A.RANK_W > 0.6 and A.ANSWERED >= 4  then 4
-					else 0
+					  when A.RANK_W <= 0.3 and A.ANSWERED >= 4  then 2
+					  when A.RANK_W <= 0.6 and A.ANSWERED >= 4  then 3
+					  when A.RANK_W > 0.6 and A.ANSWERED >= 4  then 4
+					  else 0
 						end) as REGION
-
-				from (select 
-					Sentence_User.username as USERNAME, 
-
-					round(-0.2*(sum(if(screening = -1 and response = -1, 1, 0))+sum(if(screening = 0 and response = 0, 1, 0))+sum(if(screening = 1 and response = 1, 1, 0)))/(sum(screening != -3 and response != -2))
-					+0.7*(sum(if(screening = 0 and response = 1, 1, 0))+sum(if(screening = 1 and response = 0, 1, 0)))/(sum(screening != -3 and response != -2))
-					+0.7*(sum(if(screening = -1 and response = 0, 1, 0))+sum(if(screening = 0 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2))
-					+2.5*(sum(if(screening = -1 and response = 1, 1, 0))+sum(if(screening = 1 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2)), 3) as RANK_W,
-					
+				from (select Sentence_User.username as USERNAME, 
+					 round(-0.2*(sum(if(screening = -1 and response = -1, 1, 0))+sum(if(screening = 0 and response = 0, 1, 0))+sum(if(screening = 1 and response = 1, 1, 0)))/(sum(screening != -3 and response != -2))
+					 +0.7*(sum(if(screening = 0 and response = 1, 1, 0))+sum(if(screening = 1 and response = 0, 1, 0)))/(sum(screening != -3 and response != -2))
+					 +0.7*(sum(if(screening = -1 and response = 0, 1, 0))+sum(if(screening = 0 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2))
+					 +2.5*(sum(if(screening = -1 and response = 1, 1, 0))+sum(if(screening = 1 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2)), 3) as RANK_W,	
 					count(*) as ANSWERED
 					
-				from
-					Sentence_User,
-					Sentence,
-					User
-				where
-					id = sentence_id and
-					Sentence_User.username = User.username and
-					Sentence_User.username = '.$username.' and
-					Sentence_User.response != -2 and
-					screening != -3) A';
+					from
+						Sentence_User,
+						Sentence,
+						User
+					where
+						id = sentence_id and
+						Sentence_User.username = User.username and
+						Sentence_User.username = '.$username.' and
+						Sentence_User.response != -2 and
+						screening != -3) A';
 		$results_status = execute($sql, array(), PDO::FETCH_ASSOC);
-
+		
 		if(1)//$results_status[0]['REGION'] != $_SESSION['REGION']// 1 means for every response, do update.
 		{
 			$results[0]['REGION'] = $results_status[0]['REGION'];
@@ -243,31 +213,31 @@
 		$_SESSION['sentence_id'] = $results[0]['id'];
 		
 		$sql = 'select USERNAME,ANSWERED,
-	if(ANSWERED >= 50, round(if( RANK_W <= 0, 3-7*RANK_W/0.2, if(RANK_W<=0.3, pow((0.3-RANK_W)/0.3, 2.5)*3, 0) )*pow((A.LEN/18.4217), 1.5)*pow(0.6, A.SKIPPED/A.ANSWERED),2), 0) as QUALITY,
-	if(ANSWERED >= 50, round(if( RANK_W <= 0, 3-7*RANK_W/0.2, if(RANK_W<=0.3, pow((0.3-RANK_W)/0.3, 2.5)*3, 0) )*pow((A.LEN/18.4217), 1.5)*ANSWERED/100*pow(0.6, A.SKIPPED/A.ANSWERED),2), 0) as PAYMENT
-	from (select 
-    Sentence_User.username as USERNAME, 
-	
-	round(-0.2*(sum(if(screening = -1 and response = -1, 1, 0))+sum(if(screening = 0 and response = 0, 1, 0))+sum(if(screening = 1 and response = 1, 1, 0)))/(sum(screening != -3 and response != -2))
-	+0.7*(sum(if(screening = 0 and response = 1, 1, 0))+sum(if(screening = 1 and response = 0, 1, 0)))/(sum(screening != -3 and response != -2))
-	+0.7*(sum(if(screening = -1 and response = 0, 1, 0))+sum(if(screening = 0 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2))
-	+2.5*(sum(if(screening = -1 and response = 1, 1, 0))+sum(if(screening = 1 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2)), 3) as RANK_W,
-	
-	sum(if(Sentence_User.response != -2, 1, 0)) as ANSWERED,
-	sum(if(Sentence_User.response = -2, 1, 0)) as SKIPPED,
-	avg(if(Sentence_User.response != -2, length, null)) as LEN
-	from
-		Sentence_User,
-		Sentence,
-		User
-	where
-		id = sentence_id and
-		Sentence_User.username = User.username and
-		Sentence_User.username != "factchecker" and
-		Sentence_User.time >= '.$_SESSION['fourth_phase_time_start'].' and
-		sentence_id not in '.$_SESSION['training_sentences'].'
-		group by Sentence_User.username) A order by PAYMENT desc, ANSWERED desc;';
+				if(ANSWERED >= 50, round(if( RANK_W <= 0, 3-7*RANK_W/0.2, if(RANK_W<=0.3, pow((0.3-RANK_W)/0.3, 2.5)*3, 0) )*pow((A.LEN/18.4217), 1.5)*pow(0.6, A.SKIPPED/A.ANSWERED),2), 0) as QUALITY,
+				if(ANSWERED >= 50, round(if( RANK_W <= 0, 3-7*RANK_W/0.2, if(RANK_W<=0.3, pow((0.3-RANK_W)/0.3, 2.5)*3, 0) )*pow((A.LEN/18.4217), 1.5)*ANSWERED/100*pow(0.6, A.SKIPPED/A.ANSWERED),2), 0) as PAYMENT
+				from (select 
+				Sentence_User.username as USERNAME, 
 				
+				round(-0.2*(sum(if(screening = -1 and response = -1, 1, 0))+sum(if(screening = 0 and response = 0, 1, 0))+sum(if(screening = 1 and response = 1, 1, 0)))/(sum(screening != -3 and response != -2))
+				+0.7*(sum(if(screening = 0 and response = 1, 1, 0))+sum(if(screening = 1 and response = 0, 1, 0)))/(sum(screening != -3 and response != -2))
+				+0.7*(sum(if(screening = -1 and response = 0, 1, 0))+sum(if(screening = 0 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2))
+				+2.5*(sum(if(screening = -1 and response = 1, 1, 0))+sum(if(screening = 1 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2)), 3) as RANK_W,
+				
+				sum(if(Sentence_User.response != -2, 1, 0)) as ANSWERED,
+				sum(if(Sentence_User.response = -2, 1, 0)) as SKIPPED,
+				avg(if(Sentence_User.response != -2, length, null)) as LEN
+				from
+					Sentence_User,
+					Sentence,
+					User
+				where
+					id = sentence_id and
+					Sentence_User.username = User.username and
+					Sentence_User.username != "factchecker" and
+					Sentence_User.time >= '.$_SESSION['fourth_phase_time_start'].' and
+					sentence_id not in '.$_SESSION['training_sentences'].'
+					group by Sentence_User.username) A order by PAYMENT desc, ANSWERED desc;';
+		
 		if($_SESSION['message_counter'] == 0)
 		{
 			$results_message = execute($sql, array(), PDO::FETCH_ASSOC);
@@ -335,16 +305,15 @@
 		}
 		else
 		{
-			if($sentence_id == 0)$_SESSION['message_counter'] = $_SESSION['message_counter'] - 1;//decrease only if not a modify request
+			if($sentence_id == 0) $_SESSION['message_counter'] = $_SESSION['message_counter'] - 1;//decrease only if not a modify request
 			
 			if($_SESSION['just_logged_in'] ==  1)
 			{
-				$_SESSION[0]['ANSWERED_message'] = null;
-				$_SESSION[0]['QUALITY_message'] = null;
-				$_SESSION[0]['PAYMENT_message'] = null;
-				$_SESSION[0]['RANK_message'] = null;
-				$_SESSION[0]['total_message'] = null;
-				
+				$_SESSION['ANSWERED_message'] = null;
+				$_SESSION['QUALITY_message'] = null;
+				$_SESSION['PAYMENT_message'] = null;
+				$_SESSION['RANK_message'] = null;
+				$_SESSION['total_message'] = null;
 				$_SESSION['just_logged_in'] =  0;
 			}
 			$results[0]['ANSWERED_message'] = $_SESSION['ANSWERED_message'];
