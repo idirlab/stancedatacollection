@@ -310,7 +310,10 @@ function check_username_exist()
 	$.ajax({
 		url: "check_username_exist.php",
 		method: "POST",
-		data: { username : '"'+$('#input_new_user_username').val()+'"', email : '"'+$('#input_new_user_email').val()+'"'},
+		data: { username : '"'+$('#input_new_user_username').val()+'"', 
+				email    : '"'+$('#input_new_user_email').val()+'"',
+				project  : '"'+$('#project').val()+'"',
+			},
 		dataType: "text",
 		success: function(data)
 		{
@@ -349,10 +352,12 @@ function insert_new_user()
 				email : '"'+$('#input_new_user_email').val()+'"',
 				profession : '"'+profession+'"',
 				university : university,
-				major : major},
+				major : major,
+				project: '"'+$('#project').val()+'"'},
 		dataType: "text",
 		success: function(data)
 		{
+			console.log("insert_new_user", data);
 			$('#modal_new_user').modal('hide');
 			alert(data);
 		}
@@ -817,6 +822,7 @@ function get_context(sentence_id)
 		dataType: "text",
 		success: function(data)
 		{
+			console.log("get_context:", data);
 			var data = jQuery.parseJSON(data);
 			var context = "";
 			for (i = 0; i < data.length-1; i++)
@@ -841,6 +847,7 @@ function get_previous_answers(sentence_id)
 		dataType: "text",
 		success: function(data)
 		{
+			console.log("get_previous_answers", data.length);
 			data = jQuery.parseJSON(data);
 			var container = $('.jumbotron .container').first();
 			container.empty();			

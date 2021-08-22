@@ -1,6 +1,10 @@
 <?php
+	session_start();
 	$random_key = $_GET["random_key"];
 	$username = $_GET["username"];
+	$project = $_GET["project"];
+	$_SESSION['project'] = '"'. $project .'"';
+	
 	include_once("db.php");	
 	
 	$sql = gen_update_query(array('User'), array('verification'), 
