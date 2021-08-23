@@ -2,33 +2,40 @@
 
 ## Data Schema Explanation
 
-1. 'Activity'
-2. 'Concept'
-3. 'Entity'
-4. 'Explanation'
-5. 'Feedback'
-6. 'File'
-7. 'Keyword'
-8. 'Politifact_Concept'
-9. 'Politifact_Entity'
-10. 'Politifact_Keyword'
-11. 'Politifact_Sentence'
-12. 'Politifact_Taxonomy'
-13. 'Remaining_06282016'
-14. 'Sentence'
-15. 'Sentence_Concept'
-16. 'Sentence_Entity'
-17. 'Sentence_Explanation'
-18. 'Sentence_Keyword'
-19. 'Sentence_Taxonomy'
-20. 'Sentence_User'
-21. 'Sentence_Verdict'
-22. 'Sentence_Word'
-23. 'Speaker'
-24. 'Speaker_File'
-25. 'Taxonomy'
-26. 'Training'
-27. 'User'
-28. 'User_Performance'
-29. 'User_Training'
-30. 'Word'
+- Activity
+- Concept
+- Entity
+- Explanation
+- Feedback
+- File
+- Keyword
+- Politifact_Concept
+- Politifact_Entity
+- Politifact_Keyword
+- Politifact_Sentence
+- Politifact_Taxonomy
+- Remaining_06282016
+- Sentence
+- Sentence_Concept
+- Sentence_Entity
+- Sentence_Explanation
+- Sentence_Keyword
+- Sentence_Taxonomy
+- Sentence_User
+  - sentence_id:
+  - username:
+  - response: TODO: get to know the meaning of this field.
+  - context_seen:
+  - time:
+  - session_id:
+  - top_quality_after_2nd_stage
+- Sentence_Verdict
+- Sentence_Word
+- Speaker
+- Speaker_File
+- Taxonomy
+- Training
+- User
+- User_Performance
+- User_Training
+- Word
