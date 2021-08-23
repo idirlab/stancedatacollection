@@ -10,7 +10,6 @@
 	{
 		$sql = gen_insert_query($tables=array('User_Training'), $fields=array('username', 'idx'), $values=array($username, $idx));
 		execute($sql, array(), PDO::FETCH_ASSOC);		
-		echo $idx;
 	}
 	else
 	{

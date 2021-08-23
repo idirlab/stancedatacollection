@@ -8,6 +8,7 @@ var text_response = {'-1': 'There is <b>no</b> factual claim in this sentence.',
 var logged_out = 1;
 var is_training = 1;
 var training_index = -1;
+
 window.onbeforeunload = function (e) {
     e = e || window.event;
     // For IE and Firefox prior to version 4
@@ -538,8 +539,92 @@ function load_survey_instructions()
 	$('#button_leaderboard').prop('disabled', true); //commented momentarily for payment display purpose. March 30, 2016.
 	var container = $('.jumbotron .container').first();
 	container.empty();
+	var project = $('#project').val();
+	console.log("load_survey_instructions~project", project);
+	if(project=='WildFire') {
+		container.append('<p class="justified_para top_margin">You will be shown a pair of tweet and factual claim. \
+						  All you need to do is to decide whether the tweet believes the truthfulness/veracity of factual claim. \
+						  Your five options will always be TODO:<br><br><img src="image/1.png" class="img-responsive center-block with-border" alt="Figure 1"><span class="center-block">Figure 1</span><br> \
+						  <b>Annotation instruction:</b>\
+						  	<br>Step1: Read factual claim and tweet, if you think the tweet-claim pair is problematic(e.g. tweet is not in English; factual claim is a question, etc.), please choose TODO:. Else go to step2. \
+							<br>Step2: If the author of tweet discusses unrelated topic with regard to factual claim, then label the pair with “Y”. Else go to step 3. \
+							<br>Step3: Assign the label to column G based on the criterion below: \
+							<br>&nbsp;&nbsp;Positive: The author of tweet supports the veracity of the factual claim. Twitter user believes the truthfulness of factual claim. Or we can deduce user believe in what factual claim said is happened. Twitter user provides his own opinion or provides extra background information about the claim.\
+							<br>&nbsp;&nbsp;Negative: The author of tweet denies the veracity of the factual claim. Tweet user doesn’t believe the truthfulness of factual claim. Twitter user shows fact that contradicts to factual claim. \
+							<br>&nbsp;&nbsp;Neutral: Tweets hold neutral attitude or cannot confirm the truthfulness of the factual claim. Tweet almost only repeats the content of factual claim and doesn’t add more contextual information. The author of tweet makes their own comment without a clear contribution to assessing the veracity of the factual claim. \
+							<br><b>Examples of positive tweet-claim pairs:</b> \
+							<br>1.User provides extra background information about the factual claim. \
+							<br>Factual claim: The largest bust in U.S. history’ 412 Muslims arrested from Michigan! \
+							<br>Tweet: 412 Michigan Muslims Arrested ‘LARGEST BUST IN U.S. HISTORY’!! They Hit The MOTHERLOAD! https://freedomdaily.com/?p=360808 via @Freedom_Daily \
+							<br>2.User provides his own opinion about the factual claim. \
+							<br>Factual claim: "Ohio student suspended for staying in class during National Walkout Day" \
+							<br>Tweet: Patriot attorney needed.  Reach out to this family.  Ohio student suspended for staying in class during National Walkout Day https://truepundit.com/ohio-student-suspended-staying-class-national-walkout-day/… \
+							<br>3.We can deduce user believe in what factual claim said is happened. \
+							<br>Factual claim: Emboldened by election, Texas Republicans kill Medicaid funding for kids with disabilities. \
+							<br>Tweet: Emboldened By Election, Smug & Unsavory Texas Republicans Kill Medicaid Funding For Kids w/ Disabilities @GregAbbott_TX Misguided & pathetic \
+							<br>4.We can deduce user believe in what factual claim said is happened. \
+							<br>Factual claim: Police find 19 white female bodies in freezers with ‘Black Lives Matter’ carved into skin.\
+							<br>Tweet: Did you know: #Police Find 19 White Female Bodies In Freezers With “Black Lives Matter” Carved Into Skin. \
+							<br>5.We can deduce user believe in what factual claim said is happened. \
+							<br>Factual claim: KAMALA HARRIS Says Schools in Berkeley Weren’t Integrated When She Was a Kid — But Yearbook Pictures Prove She’s Lying.\
+							<br>Tweet: It is like these morons don\'t know how the Internet works.  We can look up your lies!  Unreal...  KAMALA HARRIS Says Schools in Berkeley Weren\'t Integrated When She Was a Kid -- But Yearbook Pictures Prove She\'s Lying. \
+							\
+							<br><b>Examples of positive tweet-claim pairs:</b> \
+							<br>1.User provides extra background information about the factual claim. \
+							<br>Factual claim: The largest bust in U.S. history’ 412 Muslims arrested from Michigan! \
+							<br>Tweet: 412 Michigan Muslims Arrested ‘LARGEST BUST IN U.S. HISTORY’!! They Hit The MOTHERLOAD! https://freedomdaily.com/?p=360808 via @Freedom_Daily \
+							<br>2.User provides his own opinion about the factual claim. \
+							<br>Factual claim: "Ohio student suspended for staying in class during National Walkout Day" \
+							<br>Tweet: Patriot attorney needed.  Reach out to this family.  Ohio student suspended for staying in class during National Walkout Day https://truepundit.com/ohio-student-suspended-staying-class-national-walkout-day/… \
+							<br>3.We can deduce user believe in what factual claim said is happened. \
+							<br>Factual claim: Emboldened by election, Texas Republicans kill Medicaid funding for kids with disabilities. \
+							<br>Tweet: Emboldened By Election, Smug & Unsavory Texas Republicans Kill Medicaid Funding For Kids w/ Disabilities @GregAbbott_TX Misguided & pathetic \
+							<br>4.We can deduce user believe in what factual claim said is happened. \
+							<br>Factual claim: Police find 19 white female bodies in freezers with ‘Black Lives Matter’ carved into skin.\
+							<br>Tweet: Did you know: #Police Find 19 White Female Bodies In Freezers With “Black Lives Matter” Carved Into Skin. \
+							<br>5.We can deduce user believe in what factual claim said is happened. \
+							<br>Factual claim: KAMALA HARRIS Says Schools in Berkeley Weren’t Integrated When She Was a Kid — But Yearbook Pictures Prove She’s Lying.\
+							<br>Tweet: It is like these morons don\'t know how the Internet works.  We can look up your lies!  Unreal...  KAMALA HARRIS Says Schools in Berkeley Weren\'t Integrated When She Was a Kid -- But Yearbook Pictures Prove She\'s Lying. \
+							\
+							<br><b>Examples of negative tweet-claim pairs:</b> \
+							<br>1.Twitter user shows fact that contradicts to factual claim. \
+							<br>Factual claim: We got rid of the Johnson Amendment. \
+							<br>Tweet: That\'s 4 more Pinocchios for @realDonaldTrump as it pertains to his shifting claim that ‘we got rid’ of the Johnson Amendment. Fact: The Johnson Amendment is still a thing. "It\'s still on the books." \
+							<br>2.Twitter user shows fact that contradicts to factual claim. \
+							<br>Factual claim: Rick Scott won and he won by a lot. \
+							<br>Tweet: @realDonaldTrump on Fox News: “Rick Scott won and he won by a lot." Reality: Scott won by 10,033 votes. Out of more than 8 million cast. #AlternativeFacts \
+							<br>3.Tweet user doesn’t believe the truthfulness of factual claim. \
+							<br>Factual claim: ISIS is in 32 countries. \
+							<br>Tweet: "ISIS is in 32 countries."  I think he meant IKEA. \
+							<br>4.Tweet user doesn’t believe the truthfulness of factual claim. \
+							<br>Factual claim: Jennifer Lawrence links 9/11 to Trump\'s election.\
+							<br>Tweet: A New Conspiracy Theory Falsely Claims Jennifer Lawrence Blamed Trump for 9/11 A meme with over 11,000 shares quotes Lawrence as blaming Trump for September 11 because he stole the election, but it\'s totally bogus. \
+							\
+							<br><b>Examples of neutral tweet-claim pairs:</b> \
+							<br>1.Tweet almost only repeats the content of factual claim and doesn’t add more contextual information. \
+							<br>Factual claim: the media distorted what happened with a baby at his rally. \
+							<br>Tweet: DONALD TRUMP Says the MEDIA (reporters) distorted what happened with a baby at his rally.  @cspanwj #tcot \
+							<br>2.Tweet almost only repeats the content of factual claim and doesn’t add more contextual information. \
+							<br>Factual claim: "Google search spike suggests many people don’t know why they voted for Brexit." \
+							<br>Tweet: Google search spike suggests people don\'t know why they Brexited #brexit http://theverge.com/2016/6/24/12022880/google-search-spike-brexit-why-leave-eu?utm_campaign=theverge&utm_content=article&utm_medium=social&utm_source=twitter…\
+							\
+							<br><b>Examples of unrelated tweet-claim pairs:</b> \
+							<br>1.Tweet discusses difference topic. \
+							<br>Factual claim: The chances of being killed by a refugee committing a terrorist act is 1 in 3.6 billion.\
+							<br>Tweet: @ItizBiz and @TB_Timesshe was decapitated and ruled a suicide!!??? \
+							<br>2.The tweet doesn’t talk about whether Paul Ryan has blocked gun laws or not. Even the tweet indeed talks about the Paul Ryan and gun laws, we still need to label pair as Unrelated. \
+							<br>Factual claim: Paul Ryan has blocked all action to strengthen our gun laws. \
+							<br>Tweet: Wisconsin students are marching 50 miles to Paul Ryan&apos;s hometown for action on gun laws… https://goo.gl/fb/6SPZtQ http://bitly.com/2sjBBbW \
+							<br>TODO:If you need more information to decide on your answer please click the “More context” button to see the sentences that were spoken before the sentence you are being asked about. \
+							If you are still unsure you can select the “skip sentence” button.<br><br>There will be 40 training questions at the beginning. \
+							We will show the correct answer and a brief explanation after you submit your response. \
+							The actual data collection will start after you are done with the initial 40 training questions. \
+							<br><br>Please feel free to use the “Feedback” button (to the right of the browser window) to inform us your suggestions and/or report errors. \
+							You can also contact us at <a href="mailto:classifyfact@gmail.com">classifyfact@gmail.com</a>. Thanks!</p>');
+	} else {
+		container.append('<p class="justified_para top_margin">You will be shown actual sentences from Presidential debates. All you need to do is decide whether the sentence contains an important factual claim, an unimportant factual claim or no factual claim. Your three options will always be:<br><br><img src="image/1.png" class="img-responsive center-block with-border" alt="Figure 1"><span class="center-block">Figure 1</span><br><b>Examples of important factual claims:</b><br>“We spend less on the military today than at any time in our history.”<br>“The President’s position on gay marriage has changed.”<br>“More people are unemployed today than four years ago.”<br><br><b>Examples of unimportant factual claims:</b><br>“I was in Iowa yesterday.”<br>“My mother enjoys cooking.”<br>“I ran for President once before.”<br><br><b>Examples of sentences with no factual claims (just opinions, questions & declarations):</b><br>“Iran must not get nuclear weapons.”<br>“7% unemployment is too high.”<br>“My opponent is wishy-washy.”<br>“I will be tough on crime.”<br>"Why should we do that?"<br>“Hello, New Hampshire!”<br>“Our plan is to reduce tax rate by 10%.”<br><br><b>TIP:</b> If a sentence contains an opinion and a factual claim, then you should NOT select the “no factual claim” option.<br><b>Example:</b>“Unemployment rate is too high and in last four years it increased from 8% to 10%.”<br><br>Even though this sentence contains opinion (“Unemployment rate is too high”) it also contains a factual claim (“in last four years it increased from 8% to 10%”). The correct answer for this would be “There is an important factual claim.”<br><br>If you need more information to decide on your answer please click the “More context” button to see the sentences that were spoken before the sentence you are being asked about. If you are still unsure you can select the “skip sentence” button.<br><br>There will be 40 training questions at the beginning. We will show the correct answer and a brief explanation after you submit your response. The actual data collection will start after you are done with the initial 40 training questions. <br><br>Please feel free to use the “Feedback” button (to the right of the browser window) to inform us your suggestions and/or report errors. You can also contact us at <a href="mailto:classifyfact@gmail.com">classifyfact@gmail.com</a>. Thanks!</p>');
+	}
 	
-	container.append('<p class="justified_para top_margin">You will be shown actual sentences from Presidential debates. All you need to do is decide whether the sentence contains an important factual claim, an unimportant factual claim or no factual claim. Your three options will always be:<br><br><img src="image/1.png" class="img-responsive center-block with-border" alt="Figure 1"><span class="center-block">Figure 1</span><br><b>Examples of important factual claims:</b><br>“We spend less on the military today than at any time in our history.”<br>“The President’s position on gay marriage has changed.”<br>“More people are unemployed today than four years ago.”<br><br><b>Examples of unimportant factual claims:</b><br>“I was in Iowa yesterday.”<br>“My mother enjoys cooking.”<br>“I ran for President once before.”<br><br><b>Examples of sentences with no factual claims (just opinions, questions & declarations):</b><br>“Iran must not get nuclear weapons.”<br>“7% unemployment is too high.”<br>“My opponent is wishy-washy.”<br>“I will be tough on crime.”<br>"Why should we do that?"<br>“Hello, New Hampshire!”<br>“Our plan is to reduce tax rate by 10%.”<br><br><b>TIP:</b> If a sentence contains an opinion and a factual claim, then you should NOT select the “no factual claim” option.<br><b>Example:</b>“Unemployment rate is too high and in last four years it increased from 8% to 10%.”<br><br>Even though this sentence contains opinion (“Unemployment rate is too high”) it also contains a factual claim (“in last four years it increased from 8% to 10%”). The correct answer for this would be “There is an important factual claim.”<br><br>If you need more information to decide on your answer please click the “More context” button to see the sentences that were spoken before the sentence you are being asked about. If you are still unsure you can select the “skip sentence” button.<br><br>There will be 40 training questions at the beginning. We will show the correct answer and a brief explanation after you submit your response. The actual data collection will start after you are done with the initial 40 training questions. <br><br>Please feel free to use the “Feedback” button (to the right of the browser window) to inform us your suggestions and/or report errors. You can also contact us at <a href="mailto:classifyfact@gmail.com">classifyfact@gmail.com</a>. Thanks!</p>');
 	
 	//<br><b>Prizes</b><br>Your participation in this study will enter you into a random drawing for prizes. The more sentences you complete the more entries you will have in this prize lottery. By the end of this study, we will provide grand prizes accordingly.<br><br>• One grand prize of $200<br>• Two prizes of $100 each (one already awarded) <br>• Twenty prizes of $10 each (fifteen already awarded) <br><br>Please follow the directions carefully to be eligible for the random prize drawings. It may be tempting to rush through without giving your answers any thought but our software can identify volunteers who are not following directions and who are randomly selecting answers. We reserve the right to exclude anyone from prizes. To maximize your winning chances, please follow all directions carefully and try your best.<br>
 	
@@ -603,7 +688,6 @@ function show_sentence(sentence_id, sentence, REGION, ANSWERED_message, QUALITY_
 {
 	var container = $('.jumbotron .container').first();
 	container.empty();
-//	container.append('');
 	container.append('<br><div id="top_well" class="well message highlight"><span id="span_REGION_status"></span></div><div class="panel panel-primary">  <div class="panel-body"><div id="div_sentence" class="well">'+sentence+'</div><button id="button_context" type="button" class="btn btn-xs btn-primary">More Context</button><br><br><div class="panel-title">Will the general public be interested in knowing whether (part of) this sentence is true or false?</div><br>  <ul class="list-group"><li class="list-group-item"><input type="radio" name="iCheck" id="-1"><label>'+text_response['-1']+'</label></li><li class="list-group-item"><input type="radio" name="iCheck" id="0"><label>'+text_response['0']+'</label></li><li class="list-group-item"><input type="radio" name="iCheck" id="1"><label>'+text_response['1']+'</label></li><!--<li class="list-group-item"><input type="radio" name="iCheck" id="-2"><label>'+text_response['-2']+'</label></li>--></ul></div><div class="panel-footer"><button id="button_submit_answer" type="button" class="btn btn-primary">Submit</button>&nbsp&nbsp<button id="button_skip" type="button" class="btn btn-info">'+text_response['-2']+'</button><button id="button_previous_answers" type="button" class="btn btn-primary pull-right">Modify My Previous Responses</button></div></div><div class="well tips justified_para"><span id="span_tips">Tips for improving your payrate: (1) Carefully examine each sentence. (2) Read instructions carefully (click the button above) to understand examples belonging to each category. (3) Don\'t guess. Skip sentences that you are not sure about. (4) Contextual sentences (by clicking “More Context”) may help you form answers.) (5) Modify previous responses if necessary. (6) You may be tempted to pick easy/short questions to work on by "skipping". However, your payrate will get lower, since our payrate calculation formula has a component that accounts for the length/complexity of sentences. Basically, we discourage excessive skipping. Nevertheless, if you are not confident on a question, it is still better to skip, because every single mistake will lower your payrate. (See (3) above related to "Don\'t guess".)<br><br>Whenever you make 1 mistake, our algorithm lowers your pay rate, which means you get paid less for every sentence you have labeled. It takes multiple correct answers to make up for every single mistake and get the pay rate back to the previous value. If you current pay rate is 0 or very low, it is because our algorithm detected many mistakes in your answers so far. The best thing to do is to go back and review all your answers so far and modify them if necessary. If your payrate is 0, it might actually be negative internally. If you continue to answer new questions, it will take MANY questions before you can see positive and improving payrate.<br><br>If you have labeled 50-150 sentences, the quality measure based on the small number of sentences may not be statistically significant. Hence, your current pay rate may not reflect your true work quality. It will become more accurate once you have labeled more sentences.</span></div>');
 
 	$('input').iCheck({
@@ -732,9 +816,7 @@ function get_sentence(sentence_id)
 				return;
 			}
 			data = jQuery.parseJSON(data);
-			//show_sentence(data.id, "<b>"+data.name+": "+data.text+"</b>", data.REGION);
 			show_sentence(data.id, "<b>"+data.name+": "+data.text+"</b>", data.REGION, data.ANSWERED_message, data.QUALITY_message, data.PAYMENT_message, data.RANK_message, data.total_message);
-//			show_sentence(data.id, "<b>"+data.text+"</b>", data.REGION, data.ANSWERED_message, data.QUALITY_message, data.PAYMENT_message, data.RANK_message, data.total_message);			
 		}
 	});
 }
