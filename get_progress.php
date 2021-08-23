@@ -3,17 +3,14 @@
 	
 	$training_sentences = '(129, 1576, 3110, 3429, 4390, 5553, 5562, 5654, 5974, 6002, 6483, 7600, 9017, 9355, 9862, 10060, 10762, 10863, 11025, 11112, 14933, 611, 15445, 15602, 15763, 16014, 16015, 16258, 16828, 17000, 17159, 17420, 17509, 21636, 24352, 26145, 27100, 27828, 27986, 28777)'; /*May 26, 2016*/
 	
-	$sql = 'select 
-    count(*) as TOTAL
-from
-    Sentence,
-    Speaker_File
-where
-    Sentence.file_id = Speaker_File.file_id
-        and Sentence.speaker_id = Speaker_File.speaker_id
-        and Speaker_File.role = "Interviewee"
-        and screening = -3
-        and Sentence.length >= 5;';
+	$sql = 'select  count(*) as TOTAL
+			from Sentence, Speaker_File
+			where
+				Sentence.file_id = Speaker_File.file_id and 
+				Sentence.speaker_id = Speaker_File.speaker_id and 
+				Speaker_File.role = "Interviewee" and 
+				screening = -3 and 
+				Sentence.length >= 5;';
 	$total_sentences = execute($sql, array(), PDO::FETCH_ASSOC)[0]['TOTAL'];
 	echo 'Total Sentences: '.$total_sentences.' (excluding 1032 screening sentences)';
 	echo '<br>';
