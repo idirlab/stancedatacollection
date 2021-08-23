@@ -30,7 +30,7 @@
 - Sentence_User
   - sentence_id:
   - username:
-  - response: TODO: get to know the meaning of this field.
+  - response:
     - "1": important/positive
     - "0": neutral
     - "-1": not important/negative
