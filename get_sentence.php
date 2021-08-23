@@ -55,7 +55,10 @@
 		$top_quality_sentences = execute($sql, array(), PDO::FETCH_COLUMN);
 		$top_quality_sentences_string = '("'.implode('","', $top_quality_sentences).'")';
 
-		$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), array('Sentence', 'Speaker', 'Speaker_File'), array('Sentence.speaker_id = Speaker.id', 'Speaker.id = Speaker_File.speaker_id', 'Sentence.file_id = Speaker_File.file_id', 'Sentence.id NOT IN '.$already_answered, 'Sentence.id NOT IN '.$top_quality_sentences_string, 'Sentence.length >= 5', 'Speaker_File.role = "Interviewee"', 'screening = -3'), array(), array('RAND()'), array('1'));
+		$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), 
+								array('Sentence', 'Speaker', 'Speaker_File'), 
+								array('Sentence.speaker_id = Speaker.id', 'Speaker.id = Speaker_File.speaker_id', 'Sentence.file_id = Speaker_File.file_id', 'Sentence.id NOT IN '.$already_answered, 'Sentence.id NOT IN '.$top_quality_sentences_string, 'Sentence.length >= 5', 'Speaker_File.role = "Interviewee"', 'screening = -3'), 
+								array(), array('RAND()'), array('1'));
 		
 		$results = execute($sql, array(), PDO::FETCH_ASSOC);
 		

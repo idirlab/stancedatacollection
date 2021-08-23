@@ -15,7 +15,13 @@
 - Politifact_Sentence
 - Politifact_Taxonomy
 - Remaining_06282016
-- Sentence
+- Sentence:
+  - id:
+  - fild_id:
+  - start_char_position:
+  - end_char_position:
+  - text:
+  - speaker_id
 - Sentence_Concept
 - Sentence_Entity
 - Sentence_Explanation
@@ -25,6 +31,10 @@
   - sentence_id:
   - username:
   - response: TODO: get to know the meaning of this field.
+    - "1":
+    - "0":
+    - "-1":
+    - "-2":
   - context_seen:
   - time:
   - session_id:

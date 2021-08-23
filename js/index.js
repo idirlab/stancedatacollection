@@ -649,7 +649,6 @@ function load_survey_instructions()
 
 	$('#button_start_survey').click(function(){
 		start_training();
-		//get_sentence(0);
 	});
 	
 	$('#input_agree').on('ifChecked', function(event){
@@ -938,8 +937,7 @@ function get_previous_answers(sentence_id)
 			container.append('<ul id="selectable" class="list-group"></ul>');			
 			for(i = 0; i < data.length; i++)
 			{
-				$('#selectable').append('<li class="list-group-item"><div class="row"><div class="col-md-12">'+data[i].name+": "+data[i].text+'</div></div><hr><div class="row"><div class="col-md-1"><button id="button_change_'+data[i].id+'"class="btn btn-primary">Change</button></div><div class="col-md-11">'+'Your Response at '+data[i].time+': '+text_response[ data[i].response ]+'</div></div></li><br>');
-//				$('#selectable').append('<li class="list-group-item"><div class="row"><div class="col-md-12">'+data[i].text+'</div></div><hr><div class="row"><div class="col-md-8">'+'Response: '+text_response[ data[i].response ]+'</div><div class="col-md-2"></div><div class="col-md-2"><button id="button_change_'+data[i].id+'"class="btn btn-primary pull-right">Change</button></div></div></li><br>');
+				$('#selectable').append('<li class="list-group-item"><div class="row"><div class="col-md-12">'+data[i].name+": "+data[i].text+'</div></div><hr><div class="row"><div class="col-md-1"><button id="button_change_'+data[i].id+'"class="btn btn-primary">Change</button></div><div class="col-md-11">'+'Your Response at '+data[i].time+': '+text_response[ data[i].response ]+'</div></div></li><br>')
 				
 				$('#button_change_'+data[i].id).click(function(){
 					get_sentence(parseInt(this.id.split('_')[2]));
@@ -948,7 +946,6 @@ function get_previous_answers(sentence_id)
 			
 			$('#button_go_back').click(function(){
 				get_sentence(sentence_id*(-1)); //restore to last sentence after go back
-				//get_sentence(0); //for pseudo skip
 			});
 		}
 	});

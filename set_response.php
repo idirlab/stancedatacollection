@@ -14,12 +14,6 @@
 		{
 			$sql = gen_update_query(array('Sentence'), array('answered'), array('answered+1'), array('id = '.$sentence_id));
 			if($sentence_id)$results = execute($sql, array(), PDO::FETCH_ASSOC);
-			
-			//*************************************************************************************
-			//******************The following code was for third stage*****************************
-			//*************************************************************************************
-			/*$sql = "UPDATE Sentence_User SET top_quality_after_2nd_stage=-1 where sentence_id=".$sentence_id." and top_quality_after_2nd_stage = 0 ORDER BY sentence_id LIMIT 1;";
-			if($sentence_id)$results = execute($sql, array(), PDO::FETCH_ASSOC);*/
 		}
 		$sql = gen_insert_query(array('Sentence_User'), array('sentence_id', 'username', 'response', 'context_seen', 'time'), array($sentence_id, $username, $response, $context_seen, '"'.date("Y-m-d H:i:s").'"'));		
 	}
@@ -31,12 +25,6 @@
 			{
 				$sql = gen_update_query(array('Sentence'), array('answered'), array('answered+1'), array('id = '.$sentence_id));
 				if($sentence_id)$results = execute($sql, array(), PDO::FETCH_ASSOC);
-				
-	//*************************************************************************************
-	//******************The following code was for third stage*****************************
-	//*************************************************************************************
-				/*$sql = "UPDATE Sentence_User SET top_quality_after_2nd_stage=-1 where sentence_id=".$sentence_id." and top_quality_after_2nd_stage = 0 ORDER BY sentence_id LIMIT 1;";
-				if($sentence_id)$results = execute($sql, array(), PDO::FETCH_ASSOC);*/
 			}
 		}
 		else if($results[0]['response'] != -2 && strcmp($username,'"factchecker"') != 0)
@@ -45,12 +33,6 @@
 			{
 				$sql = gen_update_query(array('Sentence'), array('answered'), array('answered-1'), array('id = '.$sentence_id));
 				if($sentence_id)$results = execute($sql, array(), PDO::FETCH_ASSOC);
-				
-	//*************************************************************************************
-	//******************The following code was for third stage*****************************
-	//*************************************************************************************
-				/*$sql = "UPDATE Sentence_User SET top_quality_after_2nd_stage=0 where sentence_id=".$sentence_id." and top_quality_after_2nd_stage = -1 ORDER BY sentence_id LIMIT 1;";
-				if($sentence_id)$results = execute($sql, array(), PDO::FETCH_ASSOC);*/
 			}
 		}
 		
