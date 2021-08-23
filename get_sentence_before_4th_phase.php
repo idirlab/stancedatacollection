@@ -88,13 +88,7 @@
 			$results = execute($sql, array(), PDO::FETCH_COLUMN);
 			if(count($results))$already_answered = '('.implode(', ', $results).')';
 			else $already_answered = '(-1)';
-//*****************************************************************************************
-	//******************The following code was for third stage*****************************
-	//*************************************************************************************
-			/*$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), array('Sentence', 'Speaker', 'Speaker_File', 'Sentence_User'), array('Sentence.speaker_id = Speaker.id', 'Speaker.id = Speaker_File.speaker_id', 'Sentence.file_id = Speaker_File.file_id', 'Sentence.id NOT IN '.$already_answered, 'Sentence.id = Sentence_User.sentence_id', 'Sentence_User.top_quality_after_2nd_stage = 0'), array(), array('RAND()'), array('1'));*/
-	//*************************************************************************************
-	//******************The following code was for first and second stage******************
-	//******************Re-enabled for fourth stage****************************************
+
 			$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), array('Sentence', 'Speaker', 'Speaker_File'), array('Sentence.speaker_id = Speaker.id', 'Speaker.id = Speaker_File.speaker_id', 'Sentence.file_id = Speaker_File.file_id', 'Sentence.id NOT IN '.$already_answered, 'Sentence.length >= 5', 'Speaker_File.role = "Interviewee"', 'answered < '.$min_number_of_users, 'screening = -3'), array(), array('answered', 'RAND()'), array('1'));
 		}		
 	}
@@ -116,34 +110,28 @@
 	if(count($results))
 	{
 		$sql = 'select A.USERNAME, A.ANSWERED,
-
-(case when A.RANK_W <= 0.0 and A.ANSWERED >= 4 then 1
-   when A.RANK_W <= 0.3 and A.ANSWERED >= 4  then 2
-   when A.RANK_W <= 0.6 and A.ANSWERED >= 4  then 3
-   when A.RANK_W > 0.6 and A.ANSWERED >= 4  then 4
-	else 0
-         end) as REGION
-
-from (select 
-    Sentence_User.username as USERNAME, 
-
-	round(-0.2*(sum(if(screening = -1 and response = -1, 1, 0))+sum(if(screening = 0 and response = 0, 1, 0))+sum(if(screening = 1 and response = 1, 1, 0)))/(sum(screening != -3 and response != -2))
-	+0.7*(sum(if(screening = 0 and response = 1, 1, 0))+sum(if(screening = 1 and response = 0, 1, 0)))/(sum(screening != -3 and response != -2))
-	+0.7*(sum(if(screening = -1 and response = 0, 1, 0))+sum(if(screening = 0 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2))
-	+2.5*(sum(if(screening = -1 and response = 1, 1, 0))+sum(if(screening = 1 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2)), 3) as RANK_W,
-	
-	count(*) as ANSWERED
-	
-from
-    Sentence_User,
-    Sentence,
-	User
-where
-    id = sentence_id and
-	Sentence_User.username = User.username and
-	Sentence_User.username = '.$username.' and
-	Sentence_User.response != -2 and
-	screening != -3) A';
+					(case when A.RANK_W <= 0.0 and A.ANSWERED >= 4 then 1
+						  when A.RANK_W <= 0.3 and A.ANSWERED >= 4  then 2
+						  when A.RANK_W <= 0.6 and A.ANSWERED >= 4  then 3
+						  when A.RANK_W > 0.6 and A.ANSWERED >= 4  then 4
+						  else 0 end) as REGION
+				from (select 
+					Sentence_User.username as USERNAME, 
+					round(-0.2*(sum(if(screening = -1 and response = -1, 1, 0))+sum(if(screening = 0 and response = 0, 1, 0))+sum(if(screening = 1 and response = 1, 1, 0)))/(sum(screening != -3 and response != -2))
+					+0.7*(sum(if(screening = 0 and response = 1, 1, 0))+sum(if(screening = 1 and response = 0, 1, 0)))/(sum(screening != -3 and response != -2))
+					+0.7*(sum(if(screening = -1 and response = 0, 1, 0))+sum(if(screening = 0 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2))
+					+2.5*(sum(if(screening = -1 and response = 1, 1, 0))+sum(if(screening = 1 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2)), 3) as RANK_W,
+					count(*) as ANSWERED
+				from
+					Sentence_User,
+					Sentence,
+					User
+				where
+					id = sentence_id and
+					Sentence_User.username = User.username and
+					Sentence_User.username = '.$username.' and
+					Sentence_User.response != -2 and
+					screening != -3) A';
 		$results_status = execute($sql, array(), PDO::FETCH_ASSOC);
 
 		if(1)//$results_status[0]['REGION'] != $_SESSION['REGION']// 1 means for every response, do update.

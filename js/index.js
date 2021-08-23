@@ -4,7 +4,13 @@ var universities = [
 		  "Other"
 	];
 	
-var text_response = {'-1': 'There is <b>no</b> factual claim in this sentence.', '0': 'There is a factual claim but it is <b>unimportant</b>', '1': 'There is an <b>important</b> factual claim.', '-2': 'Skip this sentence'};
+var text_response = {'-1': 'Tweet doesn\'t believe the truthfulness/veracity of factual claim', 
+					 '0': 'Tweet holds neutral attitude or cannot confirm the truthfulness of the factual claim.', 
+					 '1': 'Tweet believes the truthfulness/veracity of factual claim', 
+					 '-2': 'Skip this sentence',
+					 '2': 'Tweet discusses unrelated topic to factual claim',
+					 '3': 'Tweet and factual claim pair is problematic.'
+					};
 var logged_out = 1;
 var is_training = 1;
 var training_index = -1;
@@ -452,19 +458,6 @@ function get_leaderboard()
 	});
 }
 
-//function get_progress()
-//{
-//	$.ajax({
-//		url: "get_progress.php",
-//		method: "POST",
-//		dataType: "text",
-//		success: function(data)
-//		{
-//			$('#selectable_leaderboard').append('Survey Progress <div class="progress">  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">    60%  </div></div>');
-//		}
-//	});
-//}
-
 function get_consent()
 {
 	$.ajax({
@@ -621,23 +614,9 @@ function load_survey_instructions()
 							The actual data collection will start after you are done with the initial 40 training questions. \
 							<br><br>Please feel free to use the “Feedback” button (to the right of the browser window) to inform us your suggestions and/or report errors. \
 							You can also contact us at <a href="mailto:classifyfact@gmail.com">classifyfact@gmail.com</a>. Thanks!</p>');
-	} else {
+	} else if(project=='ClaimBuster'){
 		container.append('<p class="justified_para top_margin">You will be shown actual sentences from Presidential debates. All you need to do is decide whether the sentence contains an important factual claim, an unimportant factual claim or no factual claim. Your three options will always be:<br><br><img src="image/1.png" class="img-responsive center-block with-border" alt="Figure 1"><span class="center-block">Figure 1</span><br><b>Examples of important factual claims:</b><br>“We spend less on the military today than at any time in our history.”<br>“The President’s position on gay marriage has changed.”<br>“More people are unemployed today than four years ago.”<br><br><b>Examples of unimportant factual claims:</b><br>“I was in Iowa yesterday.”<br>“My mother enjoys cooking.”<br>“I ran for President once before.”<br><br><b>Examples of sentences with no factual claims (just opinions, questions & declarations):</b><br>“Iran must not get nuclear weapons.”<br>“7% unemployment is too high.”<br>“My opponent is wishy-washy.”<br>“I will be tough on crime.”<br>"Why should we do that?"<br>“Hello, New Hampshire!”<br>“Our plan is to reduce tax rate by 10%.”<br><br><b>TIP:</b> If a sentence contains an opinion and a factual claim, then you should NOT select the “no factual claim” option.<br><b>Example:</b>“Unemployment rate is too high and in last four years it increased from 8% to 10%.”<br><br>Even though this sentence contains opinion (“Unemployment rate is too high”) it also contains a factual claim (“in last four years it increased from 8% to 10%”). The correct answer for this would be “There is an important factual claim.”<br><br>If you need more information to decide on your answer please click the “More context” button to see the sentences that were spoken before the sentence you are being asked about. If you are still unsure you can select the “skip sentence” button.<br><br>There will be 40 training questions at the beginning. We will show the correct answer and a brief explanation after you submit your response. The actual data collection will start after you are done with the initial 40 training questions. <br><br>Please feel free to use the “Feedback” button (to the right of the browser window) to inform us your suggestions and/or report errors. You can also contact us at <a href="mailto:classifyfact@gmail.com">classifyfact@gmail.com</a>. Thanks!</p>');
-	}
-	
-	
-	//<br><b>Prizes</b><br>Your participation in this study will enter you into a random drawing for prizes. The more sentences you complete the more entries you will have in this prize lottery. By the end of this study, we will provide grand prizes accordingly.<br><br>• One grand prize of $200<br>• Two prizes of $100 each (one already awarded) <br>• Twenty prizes of $10 each (fifteen already awarded) <br><br>Please follow the directions carefully to be eligible for the random prize drawings. It may be tempting to rush through without giving your answers any thought but our software can identify volunteers who are not following directions and who are randomly selecting answers. We reserve the right to exclude anyone from prizes. To maximize your winning chances, please follow all directions carefully and try your best.<br>
-	
-	
-//	container.append('<p class="justified_para top_margin">Please follow the directions carefully to be eligible for the random prize drawings. It may be tempting to rush through without giving your answers any thought but our software can identify volunteers who are not following directions and who are randomly selecting answers. To maximize your winning chances, please follow all directions carefully and try your best.</p>');
-//	
-//	container.append('<h2><u>Survey Instructions</u></h2><br>');
-//	
-//	container.append('<p class="justified_para">We will present one sentence at a time as shown in Figure 1. Your job is to decide whether the sentence is a check-worthy factual statement or not. There are three options. You can select one of them. After selecting one option, you have to click the "Submit" button. You can skip labeling a sentence by clicking the "Skip this sentence" button.<br><br><img src="image/1.png" class="img-responsive center-block with-border" alt="Figure 1"><span class="center-block">Figure 1</span><br>If you find it difficult to decide, there is a "More Context" button to give you a little context about the sentence. Please be gently reminded that even if the "More Context" button shows you 5 sentences, your job is to decide check-worthiness of the main sentence which is in bold-font. Please see Figure 2 for example.<br><br><img src="image/2.png" class="img-responsive center-block with-border" alt="Figure 2"><span class="center-block">Figure 2</span><br>You can click the "Modify My Previous Responses" button to see the sentences you have labeled so far. Clicking that button will present a list like Figure 3. You can click the "Change" button to modify your response for any sentence. "Go Back" button will take you to the survey again.<br><br><img src="image/3.png" class="img-responsive center-block with-border" alt="Figure 3"><span class="center-block">Figure 3</span><br>You can use the "Feedback" button to report any problem about the website or data. Also, you can give us your valuable suggestions.</p>');
-//	
-//	container.append('<h2><u>Prizes</u></h2><br>');
-//	
-//	container.append('<p>Your participation in this study will enter you into a random drawing for prizes. The more sentences you complete the more entries you will have in this prize lottery. At the end of this study, we will provide grand prizes accordingly.</p><br><ul><li>One grand prize of $200</li><li>Two prizes of $100 each</li><li>Twenty prizes of $10 each</li></ul><br><p>Please again be reminded that we want genuine effort from participants, and we will apply various approaches to detect spam and low-quality participants, and we reserve the right to exclude anyone from prizes.</p>');
+	} // TODO: for new project
 	
 	container.append('<div class="center-align"><input id="input_agree" type="checkbox"><label><b>I have carefully read and understood all the instructions.</b></label><br><br><button id="button_start_survey" type="button" class="btn btn-primary btn-lg" disabled>Start</button><br><br> </div>');
 	
@@ -687,7 +666,37 @@ function show_sentence(sentence_id, sentence, REGION, ANSWERED_message, QUALITY_
 {
 	var container = $('.jumbotron .container').first();
 	container.empty();
-	container.append('<br><div id="top_well" class="well message highlight"><span id="span_REGION_status"></span></div><div class="panel panel-primary">  <div class="panel-body"><div id="div_sentence" class="well">'+sentence+'</div><button id="button_context" type="button" class="btn btn-xs btn-primary">More Context</button><br><br><div class="panel-title">Will the general public be interested in knowing whether (part of) this sentence is true or false?</div><br>  <ul class="list-group"><li class="list-group-item"><input type="radio" name="iCheck" id="-1"><label>'+text_response['-1']+'</label></li><li class="list-group-item"><input type="radio" name="iCheck" id="0"><label>'+text_response['0']+'</label></li><li class="list-group-item"><input type="radio" name="iCheck" id="1"><label>'+text_response['1']+'</label></li><!--<li class="list-group-item"><input type="radio" name="iCheck" id="-2"><label>'+text_response['-2']+'</label></li>--></ul></div><div class="panel-footer"><button id="button_submit_answer" type="button" class="btn btn-primary">Submit</button>&nbsp&nbsp<button id="button_skip" type="button" class="btn btn-info">'+text_response['-2']+'</button><button id="button_previous_answers" type="button" class="btn btn-primary pull-right">Modify My Previous Responses</button></div></div><div class="well tips justified_para"><span id="span_tips">Tips for improving your payrate: (1) Carefully examine each sentence. (2) Read instructions carefully (click the button above) to understand examples belonging to each category. (3) Don\'t guess. Skip sentences that you are not sure about. (4) Contextual sentences (by clicking “More Context”) may help you form answers.) (5) Modify previous responses if necessary. (6) You may be tempted to pick easy/short questions to work on by "skipping". However, your payrate will get lower, since our payrate calculation formula has a component that accounts for the length/complexity of sentences. Basically, we discourage excessive skipping. Nevertheless, if you are not confident on a question, it is still better to skip, because every single mistake will lower your payrate. (See (3) above related to "Don\'t guess".)<br><br>Whenever you make 1 mistake, our algorithm lowers your pay rate, which means you get paid less for every sentence you have labeled. It takes multiple correct answers to make up for every single mistake and get the pay rate back to the previous value. If you current pay rate is 0 or very low, it is because our algorithm detected many mistakes in your answers so far. The best thing to do is to go back and review all your answers so far and modify them if necessary. If your payrate is 0, it might actually be negative internally. If you continue to answer new questions, it will take MANY questions before you can see positive and improving payrate.<br><br>If you have labeled 50-150 sentences, the quality measure based on the small number of sentences may not be statistically significant. Hence, your current pay rate may not reflect your true work quality. It will become more accurate once you have labeled more sentences.</span></div>');
+	// TODO:
+	var project = $('#project').val();
+	if(project=='WildFire') {
+		container.append('<br><div id="top_well" class="well message highlight"><span id="span_REGION_status"></span></div><div class="panel panel-primary">  \
+						  <div class="panel-body"><div id="div_sentence" class="well">'+sentence+'</div> \
+						  <button id="button_context" type="button" class="btn btn-xs btn-primary">More Context</button><br><br> \
+						  <div class="panel-title">What is the truthfulness stance of tweet towards factual claim?</div><br>  \
+						  <ul class="list-group"> \
+						  	<li class="list-group-item"> \
+								<input type="radio" name="iCheck" id="1"><label>'+text_response['1']+'</label> \
+							</li> \
+							<li class="list-group-item"> \
+								<input type="radio" name="iCheck" id="0"><label>'+text_response['0']+'</label> \
+							</li> \
+							<li class="list-group-item"> \
+								<input type="radio" name="iCheck" id="-1"><label>'+text_response['-1']+'</label> \
+							</li> \
+							<br> \
+							<li class="list-group-item"> \
+								<input type="radio" name="iCheck" id="2"><label>'+text_response['2']+'</label> \
+							</li> \
+							<li class="list-group-item"> \
+								<input type="radio" name="iCheck" id="3"><label>'+text_response['3']+'</label> \
+							</li> \
+							</ul></div><div class="panel-footer"><button id="button_submit_answer" type="button" class="btn btn-primary">Submit</button>&nbsp&nbsp \
+							<button id="button_skip" type="button" class="btn btn-info">'+text_response['-2']+'</button> \
+							<button id="button_previous_answers" type="button" class="btn btn-primary pull-right">Modify My Previous Responses</button></div></div> \
+							<div class="well tips justified_para"> <span id="span_tips">Tips for improving your payrate: (1) Carefully examine each sentence. (2) Read instructions carefully (click the button above) to understand examples belonging to each category. (3) Don\'t guess. Skip sentences that you are not sure about. (4) Contextual sentences (by clicking “More Context”) may help you form answers.) (5) Modify previous responses if necessary. (6) You may be tempted to pick easy/short questions to work on by "skipping". However, your payrate will get lower, since our payrate calculation formula has a component that accounts for the length/complexity of sentences. Basically, we discourage excessive skipping. Nevertheless, if you are not confident on a question, it is still better to skip, because every single mistake will lower your payrate. (See (3) above related to "Don\'t guess".)<br><br>Whenever you make 1 mistake, our algorithm lowers your pay rate, which means you get paid less for every sentence you have labeled. It takes multiple correct answers to make up for every single mistake and get the pay rate back to the previous value. If you current pay rate is 0 or very low, it is because our algorithm detected many mistakes in your answers so far. The best thing to do is to go back and review all your answers so far and modify them if necessary. If your payrate is 0, it might actually be negative internally. If you continue to answer new questions, it will take MANY questions before you can see positive and improving payrate.<br><br>If you have labeled 50-150 sentences, the quality measure based on the small number of sentences may not be statistically significant. Hence, your current pay rate may not reflect your true work quality. It will become more accurate once you have labeled more sentences.</span></div>');
+	} else if(project=='ClaimBuster') {
+		container.append('<br><div id="top_well" class="well message highlight"><span id="span_REGION_status"></span></div><div class="panel panel-primary">  <div class="panel-body"><div id="div_sentence" class="well">'+sentence+'</div><button id="button_context" type="button" class="btn btn-xs btn-primary">More Context</button><br><br><div class="panel-title">Will the general public be interested in knowing whether (part of) this sentence is true or false?</div><br>  <ul class="list-group"><li class="list-group-item"><input type="radio" name="iCheck" id="-1"><label>'+text_response['-1']+'</label></li><li class="list-group-item"><input type="radio" name="iCheck" id="0"><label>'+text_response['0']+'</label></li><li class="list-group-item"><input type="radio" name="iCheck" id="1"><label>'+text_response['1']+'</label></li><!--<li class="list-group-item"><input type="radio" name="iCheck" id="-2"><label>'+text_response['-2']+'</label></li>--></ul></div><div class="panel-footer"><button id="button_submit_answer" type="button" class="btn btn-primary">Submit</button>&nbsp&nbsp<button id="button_skip" type="button" class="btn btn-info">'+text_response['-2']+'</button><button id="button_previous_answers" type="button" class="btn btn-primary pull-right">Modify My Previous Responses</button></div></div><div class="well tips justified_para"><span id="span_tips">Tips for improving your payrate: (1) Carefully examine each sentence. (2) Read instructions carefully (click the button above) to understand examples belonging to each category. (3) Don\'t guess. Skip sentences that you are not sure about. (4) Contextual sentences (by clicking “More Context”) may help you form answers.) (5) Modify previous responses if necessary. (6) You may be tempted to pick easy/short questions to work on by "skipping". However, your payrate will get lower, since our payrate calculation formula has a component that accounts for the length/complexity of sentences. Basically, we discourage excessive skipping. Nevertheless, if you are not confident on a question, it is still better to skip, because every single mistake will lower your payrate. (See (3) above related to "Don\'t guess".)<br><br>Whenever you make 1 mistake, our algorithm lowers your pay rate, which means you get paid less for every sentence you have labeled. It takes multiple correct answers to make up for every single mistake and get the pay rate back to the previous value. If you current pay rate is 0 or very low, it is because our algorithm detected many mistakes in your answers so far. The best thing to do is to go back and review all your answers so far and modify them if necessary. If your payrate is 0, it might actually be negative internally. If you continue to answer new questions, it will take MANY questions before you can see positive and improving payrate.<br><br>If you have labeled 50-150 sentences, the quality measure based on the small number of sentences may not be statistically significant. Hence, your current pay rate may not reflect your true work quality. It will become more accurate once you have labeled more sentences.</span></div>');
+	}
 
 	$('input').iCheck({
 		checkboxClass: 'icheckbox_square-blue',

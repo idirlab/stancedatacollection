@@ -15,26 +15,26 @@
 	echo 'Total Sentences: '.$total_sentences.' (excluding 1032 screening sentences)';
 	echo '<br>';
 	
-	$sql = 'select 
-    Sentence_User.username as USERNAME	
-from
-    Sentence_User,
-    Sentence
-where
-    id = sentence_id and
-	username not in ("cmavs2015", "sakiforu", "teaphony") and
-	response != -2 and
-	sentence_id not in '.$training_sentences.'
-group by Sentence_User.username
+	$sql = 'select Sentence_User.username as USERNAME	
+			from
+				Sentence_User,
+				Sentence
+			where
+				id = sentence_id and
+				username not in ("cmavs2015", "sakiforu", "teaphony") and
+				response != -2 and
+				sentence_id not in '.$training_sentences.'
+			group by Sentence_User.username
 
-having 
+			having 
 
-	-0.2*(sum(if(screening = -1 and response = -1, 1, 0))+sum(if(screening = 0 and response = 0, 1, 0))+sum(if(screening = 1 and response = 1, 1, 0)))/(sum(screening != -3 and response != -2))
-	+0.7*(sum(if(screening = 0 and response = 1, 1, 0))+sum(if(screening = 1 and response = 0, 1, 0)))/(sum(screening != -3 and response != -2))
-	+0.7*(sum(if(screening = -1 and response = 0, 1, 0))+sum(if(screening = 0 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2))
-	+2.5*(sum(if(screening = -1 and response = 1, 1, 0))+sum(if(screening = 1 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2)) <= 0.0 and count(*) >= 50';	
+				-0.2*(sum(if(screening = -1 and response = -1, 1, 0))+sum(if(screening = 0 and response = 0, 1, 0))+sum(if(screening = 1 and response = 1, 1, 0)))/(sum(screening != -3 and response != -2))
+				+0.7*(sum(if(screening = 0 and response = 1, 1, 0))+sum(if(screening = 1 and response = 0, 1, 0)))/(sum(screening != -3 and response != -2))
+				+0.7*(sum(if(screening = -1 and response = 0, 1, 0))+sum(if(screening = 0 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2))
+				+2.5*(sum(if(screening = -1 and response = 1, 1, 0))+sum(if(screening = 1 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2)) <= 0.0 and count(*) >= 50';	
 	$top_participants = execute($sql, array(), PDO::FETCH_COLUMN);
 	$top_participants_string = '("'.implode('","', $top_participants).'")';
+
 	echo '<br><br>Number of Top-quality Participants: '.count($top_participants).' [RANK_W <= 0.0]';
 	
 	echo '<br><br>/*A sentence is NOT selected for further questions if the following condition is true: there exists a category X in {NFS, CFS, UFS} such that X>=2 and X/(N+U+C) > Y/(N+U+C) for any Y <> X and Y in {NFS, CFS, UFS}.*/<br>';
@@ -58,10 +58,6 @@ having
 	echo 'Number of Sentences for which the above condition is true: ';	
 	$top_agreements = count(execute($sql, array(), PDO::FETCH_ASSOC));
 	echo ''.strval($top_agreements).' <b>['.strval(round((intval($top_agreements))/intval($total_sentences)*100,2)).'%]</b>';
-
-	/*$sql = 'select sentence_id, sum(if(response = -1, 1, 0)) as NFS, sum(if(response = 0, 1, 0)) as UFS, sum(if(response = 1, 1, 0)) as CFS from Sentence_User, Sentence where Sentence.id = Sentence_User.sentence_id and screening = -3 and username in '.$top_participants_string.' group by sentence_id having NFS >= 2 or UFS >= 2 or CFS >= 2;';
-	$top_agreements = count(execute($sql, array(), PDO::FETCH_ASSOC));
-	echo '<br>Two Top-Quality Participants Agreed: '.strval($top_agreements).' <b>['.strval(round((intval($top_agreements))/intval($total_sentences)*100,2)).'%]</b>';*/
 	
 	$sql = 'select count(*) from Sentence_User, Sentence where Sentence_User.sentence_id = Sentence.id and screening = - 3 and response != - 2;';
 	$total_labels = execute($sql, array(), PDO::FETCH_COLUMN);
