@@ -16,28 +16,7 @@ where
         and Sentence.length >= 5;';
 	$total_sentences = execute($sql, array(), PDO::FETCH_ASSOC)[0]['TOTAL'];
 	echo 'Total Sentences: '.$total_sentences.' (excluding 1032 screening sentences)';
-#	$total_labels_required = intval($total_sentences)*2;
-#	echo '<br>Labels Required: '.$total_sentences.' X 2 = '.strval($total_labels_required);
-	
-#	$sql = "select 
-#    sum(if(answered = 0, 2, 0))+sum(if(answered = 1, 1, 0)) as REQUIRED, count(*)*2 as TOTAL
-#from
-#    Sentence,
-#    Speaker_File
-#where
-#    Sentence.file_id = Speaker_File.file_id
-#        and Sentence.speaker_id = Speaker_File.speaker_id
-#        and Speaker_File.role = 'Interviewee'
-#        and Sentence.length >= 5
-#		and screening = -3;";
-#	$temp = execute($sql, array(), PDO::FETCH_ASSOC)[0];
-#	echo '<br>Labels Received: '.strval( intval($temp['TOTAL'])-intval($temp['REQUIRED'])).'<br>';
-#	echo '<b>Progress: '. strval(round((intval($temp['TOTAL'])-intval($temp['REQUIRED']))/intval($temp['TOTAL'])*100,2)).'%</b>';
-
 	echo '<br>';
-#	$sql = 'select sentence_id, sum(if(response = -1, 1, 0)) as NFS, sum(if(response = 0, 1, 0)) as UFS, sum(if(response = 1, 1, 0)) as CFS from Sentence_User, Sentence where Sentence.id = Sentence_User.sentence_id and screening = -3 group by sentence_id having NFS >= 2 or UFS >= 2 or CFS >= 2;';
-#	$all_agreements = count(execute($sql, array(), PDO::FETCH_ASSOC));
-	#echo '<br>Two Participants Agreed: '.strval($all_agreements).' <b>['.strval(round((intval($all_agreements))/intval($total_sentences)*100,2)).'%]</b>';
 	
 	$sql = 'select 
     Sentence_User.username as USERNAME	
