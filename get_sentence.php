@@ -70,7 +70,6 @@
 			exit();
 		}
 
-
 		if($sentence_id == 0) #sentence_id not mentioned. Not a 'Change' or 'Go Back' scenario.
 		{
 			$is_screening = (randomFloat() <= 0.10) ? 1 : 0;

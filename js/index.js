@@ -512,7 +512,6 @@ function change_navbar(login_status)
 		$('#navbar_logout').show();
 		$('#button_leaderboard').click(function(){
 			get_leaderboard();
-			//alert("This feature is disabled momentarily.");
 		});
 		$('#button_load_survey_instructions').click(function(event){
 			event.stopPropagation();
@@ -731,7 +730,7 @@ function show_sentence(sentence_id, sentence, REGION, ANSWERED_message, QUALITY_
 		}
 		
 	})
-		
+	console.log('qqqq', ANSWERED_message);
 	//update_region_status(REGION);
 	update_payrate_message(ANSWERED_message, QUALITY_message, PAYMENT_message, RANK_message, total_message);	
 	
@@ -805,7 +804,6 @@ function update_payrate_message(ANSWERED_message, QUALITY_message, PAYMENT_messa
 
 function get_sentence(sentence_id)
 {
-//	$('#button_leaderboard').prop('disabled', false);
 	get_answer_count();
 	$('input').iCheck('enable');
 	sentence_id = typeof sentence_id !== 'undefined' ? sentence_id : 0;
