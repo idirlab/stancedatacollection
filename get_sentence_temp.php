@@ -17,18 +17,6 @@
 	$results = execute($sql, array(), PDO::FETCH_COLUMN);
 	if(count($results))$already_answered = '('.implode(', ', $results).')';
 	else $already_answered = '(-1)';
-	//*************************************************************************************
-	//******************The following code was for third stage*****************************
-	//*************************************************************************************
-	/*$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), array('Sentence', 'Speaker', 'Speaker_File', 'Sentence_User'), array('Sentence.speaker_id = Speaker.id', 'Speaker.id = Speaker_File.speaker_id', 'Sentence.file_id = Speaker_File.file_id', 'Sentence.id NOT IN '.$already_answered, 'Sentence.id = Sentence_User.sentence_id', 'Sentence_User.top_quality_after_2nd_stage = 0'), array(), array('RAND()'), array('1'));*/
-	//*************************************************************************************
-	//******************The following code was for first and second stage******************
-	//******************Re-enabled for fourth stage****************************************
-	/*$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), array('Sentence', 'Speaker', 'Speaker_File'), array('Sentence.speaker_id = Speaker.id', 'Speaker.id = Speaker_File.speaker_id', 'Sentence.file_id = Speaker_File.file_id', 'Sentence.id NOT IN '.$already_answered, 'Sentence.length >= 5', 'Speaker_File.role = "Interviewee"', 'answered < '.$min_number_of_users, 'screening = -3'), array(), array('answered', 'RAND()'), array('1'));*/
-	/*FINAL STAGE*/
-	/*$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), array('Remaining_06282016', 'Sentence', 'Speaker'), array('Sentence.id = Remaining_06282016.sentence_id', 'Sentence.speaker_id = Speaker.id', 'Sentence.id NOT IN '.$already_answered), array(), array('RAND()'), array('1'));*/
-	
-	/* January 10. 2017 */
 
 	/*Dynamic Sentence Selection Based on Top Quality Responses*/ //January 10, 2017
 
@@ -151,17 +139,6 @@
 			$results = execute($sql, array(), PDO::FETCH_COLUMN);
 			if(count($results))$already_answered = '('.implode(', ', $results).')';
 			else $already_answered = '(-1)';
-//*****************************************************************************************
-	//******************The following code was for third stage*****************************
-	//*************************************************************************************
-			/*$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), array('Sentence', 'Speaker', 'Speaker_File', 'Sentence_User'), array('Sentence.speaker_id = Speaker.id', 'Speaker.id = Speaker_File.speaker_id', 'Sentence.file_id = Speaker_File.file_id', 'Sentence.id NOT IN '.$already_answered, 'Sentence.id = Sentence_User.sentence_id', 'Sentence_User.top_quality_after_2nd_stage = 0'), array(), array('RAND()'), array('1'));*/
-	//*************************************************************************************
-	//******************The following code was for first and second stage******************
-	//******************Re-enabled for fourth stage****************************************
-			/*$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), array('Sentence', 'Speaker', 'Speaker_File'), array('Sentence.speaker_id = Speaker.id', 'Speaker.id = Speaker_File.speaker_id', 'Sentence.file_id = Speaker_File.file_id', 'Sentence.id NOT IN '.$already_answered, 'Sentence.length >= 5', 'Speaker_File.role = "Interviewee"', 'answered < '.$min_number_of_users, 'screening = -3'), array(), array('answered', 'RAND()'), array('1'));*/
-
-			/*FINAL STAGE*/
-			/*$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), array('Remaining_06282016', 'Sentence', 'Speaker'), array('Sentence.id = Remaining_06282016.sentence_id', 'Sentence.speaker_id = Speaker.id', 'Sentence.id NOT IN '.$already_answered), array(), array('RAND()'), array('1'));*/
 
 			/*Dynamic Sentence Selection Based on Top Quality Responses*/ //January 10, 2017
 			$sql = 'select 

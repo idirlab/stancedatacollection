@@ -7,7 +7,7 @@
 							array('Sentence', 'Speaker'), 
 							array('Sentence.speaker_id = Speaker.id', 'Sentence.id <='.$sentence_id.' ', 'Sentence.id >='.$sentence_id.'-4'), 
 							array(), array(), array());
-
+	// TODO: add get context for wildfire.
 	$results = execute($sql, array(), PDO::FETCH_ASSOC);
 	echo json_encode($results);
 ?>
