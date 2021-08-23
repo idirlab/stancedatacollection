@@ -333,8 +333,6 @@
 			echo "-1";
 		}
 	} elseif ($_SESSION['project']=='"WildFire"') {
-		// TODO: change training sentences idx
-		// $training_sentences = '(129, 1576, 3110, 3429, 4390, 5553, 5562, 5654, 5974, 6002, 6483, 7600, 9017, 9355, 9862, 10060, 10762, 10863, 11025, 11112, 14933, 611, 15445, 15602, 15763, 16014, 16015, 16258, 16828, 17000, 17159, 17420, 17509, 21636, 24352, 26145, 27100, 27828, 27986, 28777)';
 		$training_sentences = '(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40)';
 
 		$sql = 'select Sentence_User.username as USERNAME	
@@ -620,7 +618,6 @@
 				$results[0]['RANK_message'] = $_SESSION['RANK_message'];
 				$results[0]['total_message'] = $_SESSION['total_message'];						
 			}						
-			
 			echo json_encode($results[0]);
 		}
 		else

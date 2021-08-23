@@ -916,11 +916,9 @@ function get_context(sentence_id)
 			for (i = 0; i < data.length-1; i++)
 			{
 				context += data[i].name + ": " + data[i].text + "</br>";
-//				context += data[i].text + "</br>";
 			}
 			
 			context += "<b>"+data[i].name + ": " + data[i].text + "</b></br>";
-//			context += "<b>"+data[i].text + "</b></br>";
 			$('#div_sentence').html(context);
 		}		
     });          

@@ -31,21 +31,23 @@
   - sentence_id:
   - username:
   - response: TODO: get to know the meaning of this field.
-    - "1":
-    - "0":
-    - "-1":
-    - "-2":
+    - "1": important/positive
+    - "0": neutral
+    - "-1": not important/negative
+    - "-2": skip
+    - "2": (new) unrelated
+    - "3": (new) problematic
   - context_seen:
   - time:
   - session_id:
-  - top_quality_after_2nd_stage
+  - top_quality_after_2nd_stage: The entire codebase doesn't use it field, drop it.
 - Sentence_Verdict
 - Sentence_Word
-- Speaker
-- Speaker_File
-- Taxonomy
+- Speaker: **Drop it.**
+- Speaker_File: **Drop it.**
+- Taxonomy: **Drop it.**
 - Training
 - User
-- User_Performance
-- User_Training
+- User_Performance: **Drop it.**
+- User_Training: 
 - Word
