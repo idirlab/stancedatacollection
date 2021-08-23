@@ -333,6 +333,7 @@
 	} elseif ($_SESSION['project']=='"WildFire"') {
 		// TODO: change training sentences idx
 		$training_sentences = '(129, 1576, 3110, 3429, 4390, 5553, 5562, 5654, 5974, 6002, 6483, 7600, 9017, 9355, 9862, 10060, 10762, 10863, 11025, 11112, 14933, 611, 15445, 15602, 15763, 16014, 16015, 16258, 16828, 17000, 17159, 17420, 17509, 21636, 24352, 26145, 27100, 27828, 27986, 28777)';
+		
 		$sql = 'select Sentence_User.username as USERNAME	
 		from
 			Sentence_User,
@@ -348,7 +349,7 @@
 			+0.7*(sum(if(screening = 0 and response = 1, 1, 0))+sum(if(screening = 1 and response = 0, 1, 0)))/(sum(screening != -3 and response != -2))
 			+0.7*(sum(if(screening = -1 and response = 0, 1, 0))+sum(if(screening = 0 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2))
 			+2.5*(sum(if(screening = -1 and response = 1, 1, 0))+sum(if(screening = 1 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2)) <= 0.0 and count(*) >= 50';	
-			
+
 		$top_participants = execute($sql, array(), PDO::FETCH_COLUMN);
 		$top_participants_string = '("'.implode('","', $top_participants).'")';
 
