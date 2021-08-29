@@ -411,6 +411,7 @@ function get_answer_count()
 		dataType: "text",
 		success: function(data)
 		{
+			console.log("answer_count:", data);
 			data = data.split('^');
 			$('#span_badge').text(" "+data[0]+" ");
 			$('#span_username').text(""+data[1].replace('"','').replace('"',''+" labeled"));
@@ -836,7 +837,6 @@ function skip_sentence(sentence_id, context_seen)
 		dataType: "text",
 		success: function(data)
 		{
-//			get_answer_count();
 			get_sentence(0);
 		}
 	});
@@ -858,7 +858,6 @@ function post_response(sentence_id, context_seen)
 		dataType: "text",
 		success: function(data)
 		{
-//			get_answer_count();
 			if(is_training == 1)
 			{
 				show_training_message(sentence_id);
