@@ -345,29 +345,37 @@
 					sentence_id not in '.$training_sentences.'
 					group by Sentence_User.username
 				having 
-					-0.2*(sum(if(screening = -1 and response = -1, 1, 0))+sum(if(screening = 0 and response = 0, 1, 0))+sum(if(screening = 1 and response = 1, 1, 0)))/(sum(screening != -3 and response != -2))
-					+0.7*(sum(if(screening = 0 and response = 1, 1, 0))+sum(if(screening = 1 and response = 0, 1, 0)))/(sum(screening != -3 and response != -2))
+					-0.2*(sum(if(screening = -1 and response = -1, 1, 0))+sum(if(screening =0 and response = 0, 1, 0))+sum(if(screening = 1 and response = 1, 1, 0)))/(sum(screening != -3 and response != -2))
+					+0.7*(sum(if(screening =  0 and response = 1, 1, 0))+sum(if(screening = 1 and response = 0, 1, 0)))/(sum(screening != -3 and response != -2))
 					+0.7*(sum(if(screening = -1 and response = 0, 1, 0))+sum(if(screening = 0 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2))
 					+2.5*(sum(if(screening = -1 and response = 1, 1, 0))+sum(if(screening = 1 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2)) <= 0.0 and count(*) >= 50';
 
 		$top_participants = execute($sql, array(), PDO::FETCH_COLUMN);
 		$top_participants_string = '("'.implode('","', $top_participants).'")';
-
+		# TODO: change value.
 		$sql = 'select sentence_id from (
-					select sentence_id, sum(if(response = -1, 1, 0)) as nfs, sum(if(response = 0, 1, 0)) as ufs, sum(if(response = 1, 1, 0)) as cfs
+					select sentence_id, 
+						   sum(if(response = -1, 1, 0)) as neg, 
+						   sum(if(response = 0, 1, 0)) as neu, 
+						   sum(if(response = 1, 1, 0)) as pos,
+						   sum(if(response = 2, 1, 0)) as unr,
 					from Sentence_User, Sentence 
 					where Sentence.id = Sentence_User.sentence_id 
 						and screening = -3
 						and username in '.$top_participants_string.'group by sentence_id
-					having (nfs >= 3 and nfs >= 2+ufs and nfs >= 2+cfs)
-						or (ufs >= 3 and ufs >= 2+nfs and ufs >= 2+cfs)
-						or (cfs >= 3 and cfs >= 2+ufs and cfs >= 2+nfs)
+					having (pos >= 2 and pos >= 1+neu and pos >= 1+neg and pos >= 1+unr)
+						or (neu >= 2 and neu >= 1+pos and neu >= 1+neg and neu >= 1+unr)
+						or (neg >= 2 and neg >= 1+neu and neg >= 1+pos and neg >= 1+unr)
+						or (unr >= 2 and unr >= 1+pos and unr >= 1+neu and unr >= 1+neg)
 				) A';
 
 		$top_quality_sentences = execute($sql, array(), PDO::FETCH_COLUMN);
 		$top_quality_sentences_string = '("'.implode('","', $top_quality_sentences).'")';
-
-		$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), array('Sentence', 'Speaker', 'Speaker_File'), array('Sentence.speaker_id = Speaker.id', 'Speaker.id = Speaker_File.speaker_id', 'Sentence.file_id = Speaker_File.file_id', 'Sentence.id NOT IN '.$already_answered, 'Sentence.id NOT IN '.$top_quality_sentences_string, 'screening = -3'), array(), array('RAND()'), array('1'));
+		// select sentence that not answered and not in top quality sentences
+		$sql = gen_select_query(array('Sentence.id', 'Sentence.text', 'Sentence.claim', 'Sentence.claim_author'), 
+							    array('Sentence'), 
+								array('Sentence.id NOT IN '.$already_answered, 'Sentence.id NOT IN '.$top_quality_sentences_string, 'screening = -3'), 
+								array(), array('RAND()'), array('1'));
 		$results = execute($sql, array(), PDO::FETCH_ASSOC);
 		//No more sentence available for the user.
 		if(!count($results) && $sentence_id == 0) {
@@ -376,7 +384,7 @@
 			echo "-1";
 			exit();
 		}
-		#sentence_id not mentioned. Not a 'Change' or 'Go Back' scenario.
+		// sentence_id not mentioned. Not a 'Change' or 'Go Back' scenario.
 		if($sentence_id == 0) 
 		{
 			$is_screening = (randomFloat() <= 0.10) ? 1 : 0;
@@ -413,7 +421,15 @@
 				{
 					$class_screening = '1';
 				}
-				$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), array('Sentence', 'Speaker', 'Speaker_File'), array('Sentence.speaker_id = Speaker.id', 'Speaker.id = Speaker_File.speaker_id', 'Sentence.file_id = Speaker_File.file_id', 'Sentence.length >= 5', 'Speaker_File.role = "Interviewee"', 'screening = '.$class_screening, 'Sentence.id not in '.$_SESSION['training_sentences'].' '), array(), array('RAND()'), array('1'));
+				// 
+				$sql = gen_select_query(array('Sentence.id', 'Sentence.text', 'Sentence.claim', 'Sentence.claim_author'), 
+										array('Sentence'), 
+										array('screening = '.$class_screening, 'Sentence.id not in '.$_SESSION['training_sentences'].' '), 
+										array(), array('RAND()'), array('1'));
+				// $sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), 
+				//   					    array('Sentence', 'Speaker', 'Speaker_File'), 
+				// 						array('screening = '.$class_screening, 'Sentence.id not in '.$_SESSION['training_sentences'].' '), 
+				// 						array(), array('RAND()'), array('1'));
 			}
 			else  { #regular question
 				$sql = gen_select_query(array('sentence_id'), array('Sentence_User'), array('username = '.$username));	
@@ -455,12 +471,15 @@
 
 				$top_quality_sentences = execute($sql, array(), PDO::FETCH_COLUMN);
 				$top_quality_sentences_string = '("'.implode('","', $top_quality_sentences).'")';
-
-				$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), array('Sentence', 'Speaker', 'Speaker_File'), array('Sentence.speaker_id = Speaker.id', 'Speaker.id = Speaker_File.speaker_id', 'Sentence.file_id = Speaker_File.file_id', 'Sentence.id NOT IN '.$already_answered, 'Sentence.id NOT IN '.$top_quality_sentences_string, 'Sentence.length >= 5', 'Speaker_File.role = "Interviewee"', 'screening = -3'), array(), array('answered', 'RAND()'), array('1'));
+				$sql = gen_select_query(array('Sentence.id', 'Sentence.text', 'Sentence.claim', 'Sentence.claim_author'), 
+							    array('Sentence'), 
+								array('Sentence.id NOT IN '.$already_answered, 'Sentence.id NOT IN '.$top_quality_sentences_string, 'screening = -3'), 
+								array(), array('RAND()'), array('1'));
+				// $sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), 
+				//                         array('Sentence', 'Speaker', 'Speaker_File'), 
+				// 						array('Sentence.speaker_id = Speaker.id', 'Speaker.id = Speaker_File.speaker_id', 'Sentence.file_id = Speaker_File.file_id', 'Sentence.id NOT IN '.$already_answered, 'Sentence.id NOT IN '.$top_quality_sentences_string, 'Sentence.length >= 5', 'Speaker_File.role = "Interviewee"', 'screening = -3'), array(), array('answered', 'RAND()'), array('1'));
 			}		
-		}
-		else #sentence_id mentioned
-		{				
+		} else { #sentence_id mentioned
 			$action = "'USER CLICKED CHANGE'";
 			if($sentence_id < 0)
 			{
@@ -478,11 +497,10 @@
 		if(count($results)) {
 			$sql = 'select A.USERNAME, A.ANSWERED,
 					(case when A.RANK_W <= 0.0 and A.ANSWERED >= 4 then 1
-						when A.RANK_W <= 0.3 and A.ANSWERED >= 4  then 2
-						when A.RANK_W <= 0.6 and A.ANSWERED >= 4  then 3
-						when A.RANK_W > 0.6 and A.ANSWERED >= 4  then 4
-						else 0
-							end) as REGION
+						  when A.RANK_W <= 0.3 and A.ANSWERED >= 4  then 2
+						  when A.RANK_W <= 0.6 and A.ANSWERED >= 4  then 3
+						  when A.RANK_W > 0.6 and A.ANSWERED >= 4  then 4
+						  else 0 end) as REGION
 					from (select Sentence_User.username as USERNAME, 
 								round(-0.2*(sum(if(screening = -1 and response = -1, 1, 0))+sum(if(screening = 0 and response = 0, 1, 0))+sum(if(screening = 1 and response = 1, 1, 0)))/(sum(screening != -3 and response != -2))
 								+0.7*(sum(if(screening = 0 and response = 1, 1, 0))+sum(if(screening = 1 and response = 0, 1, 0)))/(sum(screening != -3 and response != -2))
