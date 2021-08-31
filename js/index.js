@@ -302,12 +302,6 @@ function check_confirm_password()
 
 function show_rules(number)
 {
-	/*$('#button_new_user_submit').popover({
-        html: true,
-        content: "<p><ul><li>Username: Allowed characters are 0-9, a-z and A-Z. Must be smaller than 16 characters.</li>\
-        		         <li>Password: Allowed characters are 0-9, a-z and A-Z. Must be smaller than 16 characters. Both passwords\ 						should exactly match.</li></p>"
-    });
-    $('#button_new_user_submit').popover('show');*/
     if(number == 1)alert("Email Address: A valid email address.\n\nUsername: Allowed characters are 0-9, a-z, A-Z, PERIOD(.) and UNDERSCORE(_). Must be smaller than 16 characters.\n\nPassword: Allowed characters are 0-9, a-z, A-Z, PERIOD(.) and UNDERSCORE(_). Must be smaller than 16 characters. Both passwords should exactly match.\n\nSelect your profession. If your profession is not in the list, select 'Other' and specify in the textbox. If you are a 'Professor/Student', then please select your university and major.");
     else if(number == 2)alert("Password: Allowed characters are 0-9, a-z, A-Z, PERIOD(.) and UNDERSCORE(_). Must be smaller than 16 characters. Both passwords should match exactly.");
 }
@@ -731,7 +725,7 @@ function show_sentence(sentence_id, sentence, REGION, ANSWERED_message, QUALITY_
 		}
 		
 	})
-	console.log('qqqq', ANSWERED_message);
+	console.log('answered_message:', ANSWERED_message);
 	//update_region_status(REGION);
 	update_payrate_message(ANSWERED_message, QUALITY_message, PAYMENT_message, RANK_message, total_message);	
 	
@@ -823,7 +817,14 @@ function get_sentence(sentence_id)
 				return;
 			}
 			data = jQuery.parseJSON(data);
-			show_sentence(data.id, "<b>"+data.name+": "+data.text+"</b>", data.REGION, data.ANSWERED_message, data.QUALITY_message, data.PAYMENT_message, data.RANK_message, data.total_message);
+			var project = $('#project').val();
+			if(project=='WildFire') {
+				console.log(data.claim, data.tweet)
+				show_sentence(data.id, "<b>Factual claim:"+data.claim+"<br><br>Tweet: "+data.tweet+"</b>", data.REGION, data.ANSWERED_message, data.QUALITY_message, data.PAYMENT_message, data.RANK_message, data.total_message);
+			} else if(project=='ClaimBuster') {
+				show_sentence(data.id, "<b>"+data.name+": "+data.text+"</b>", data.REGION, data.ANSWERED_message, data.QUALITY_message, data.PAYMENT_message, data.RANK_message, data.total_message);
+			}
+			
 		}
 	});
 }
@@ -876,6 +877,7 @@ function show_training_message(sentence_id)
 		dataType: "text",
 		success: function(data)
 		{
+			console.log('show_training_message:', data);
 			data = data.split('^');
 			$('#top_well').removeClass("highlight");
 			if(data[1].localeCompare("Correct!") == 0)

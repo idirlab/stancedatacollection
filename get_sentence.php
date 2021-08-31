@@ -358,7 +358,7 @@
 						   sum(if(response = -1, 1, 0)) as neg, 
 						   sum(if(response = 0, 1, 0)) as neu, 
 						   sum(if(response = 1, 1, 0)) as pos,
-						   sum(if(response = 2, 1, 0)) as unr,
+						   sum(if(response = 2, 1, 0)) as unr
 					from Sentence_User, Sentence 
 					where Sentence.id = Sentence_User.sentence_id 
 						and screening = -3
@@ -372,9 +372,10 @@
 		$top_quality_sentences = execute($sql, array(), PDO::FETCH_COLUMN);
 		$top_quality_sentences_string = '("'.implode('","', $top_quality_sentences).'")';
 		// select sentence that not answered and not in top quality sentences
-		$sql = gen_select_query(array('Sentence.id', 'Sentence.text', 'Sentence.claim', 'Sentence.claim_author'), 
+		$sql = gen_select_query(array('Sentence.id', 'Sentence.tweet', 'Sentence.claim', 'Sentence.claim_author'), 
 							    array('Sentence'), 
-								array('Sentence.id NOT IN '.$already_answered, 'Sentence.id NOT IN '.$top_quality_sentences_string, 'screening = -3'), 
+								// array('Sentence.id NOT IN '.$already_answered, 'Sentence.id NOT IN '.$top_quality_sentences_string, 'screening = -3'), 
+								array('Sentence.id NOT IN '.$already_answered, 'Sentence.id NOT IN '.$top_quality_sentences_string), 
 								array(), array('RAND()'), array('1'));
 		$results = execute($sql, array(), PDO::FETCH_ASSOC);
 		//No more sentence available for the user.
@@ -479,7 +480,7 @@
 				//                         array('Sentence', 'Speaker', 'Speaker_File'), 
 				// 						array('Sentence.speaker_id = Speaker.id', 'Speaker.id = Speaker_File.speaker_id', 'Sentence.file_id = Speaker_File.file_id', 'Sentence.id NOT IN '.$already_answered, 'Sentence.id NOT IN '.$top_quality_sentences_string, 'Sentence.length >= 5', 'Speaker_File.role = "Interviewee"', 'screening = -3'), array(), array('answered', 'RAND()'), array('1'));
 			}		
-		} else { #sentence_id mentioned
+		} else { #sentence_id mentioned; or in training stage
 			$action = "'USER CLICKED CHANGE'";
 			if($sentence_id < 0)
 			{
@@ -489,9 +490,12 @@
 			$activity_sql = gen_insert_query($tables=array('Activity'), $fields=array('username', 'time', 'action', 'sentence_id'), $values=array($username, '"'.date("Y-m-d H:i:s").'"', $action, $sentence_id));
 			$activity_sql_results = execute($activity_sql, array(), PDO::FETCH_ASSOC);
 			
-			$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text'), array('Sentence', 'Speaker'), array('Sentence.speaker_id = Speaker.id', 'Sentence.id = '.$sentence_id), array(), array(), array());
+			$sql = gen_select_query(array('Sentence.id', 'Sentence.claim', 'Sentence.tweet', 'Sentence.claim_author'), 
+									array('Sentence'), 
+									array('Sentence.id = '.$sentence_id), 
+									array(), array(), array());
 		}
-		
+		// var_dump($sql);
 		$results = execute($sql, array(), PDO::FETCH_ASSOC); // [id, name, text]
 		
 		if(count($results)) {
@@ -548,7 +552,6 @@
 						id = sentence_id and
 						Sentence_User.username = User.username and
 						Sentence_User.username != "factchecker" and
-						Sentence_User.time >= '.$_SESSION['fourth_phase_time_start'].' and
 						sentence_id not in '.$_SESSION['training_sentences'].'
 						group by Sentence_User.username) A order by PAYMENT desc, ANSWERED desc;';
 			
@@ -608,7 +611,6 @@
 					id = sentence_id and
 					Sentence_User.username = User.username and
 					Sentence_User.username != "factchecker" and
-					Sentence_User.time >= '.$_SESSION['fourth_phase_time_start'].' and
 					sentence_id not in '.$_SESSION['training_sentences'].'
 				group by Sentence_User.username) A order by PAYMENT desc, ANSWERED desc;'; 
 				$leaderboard_results = execute($leaderboard_sql, array(), PDO::FETCH_ASSOC);

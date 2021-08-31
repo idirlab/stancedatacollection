@@ -2,8 +2,11 @@
 	session_start();
 	$username = $_SESSION['username'];
 	include_once("db.php");
-	
-	$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text', 'Sentence_User.response', 'Sentence_User.time'), array('Sentence', 'Speaker', 'Sentence_User'), array('Sentence_User.username = '.$username, 'Sentence_User.sentence_id = Sentence.id', 'Sentence.speaker_id = Speaker.id', 'Sentence.id not in '.$_SESSION['training_sentences'].' ', 'Sentence_User.time >= '.$_SESSION['fourth_phase_time_start']), array(), array('Sentence_User.time desc'), array());	
+	# TODO: add wildfire version
+	$sql = gen_select_query(array('Sentence.id', 'Speaker.shortform as name', 'Sentence.text', 'Sentence_User.response', 'Sentence_User.time'), 
+							array('Sentence', 'Speaker', 'Sentence_User'), 
+							array('Sentence_User.username = '.$username, 'Sentence_User.sentence_id = Sentence.id', 'Sentence.speaker_id = Speaker.id', 'Sentence.id not in '.$_SESSION['training_sentences'].' ', 'Sentence_User.time >= '.$_SESSION['fourth_phase_time_start']), 
+							array(), array('Sentence_User.time desc'), array());	
 
 	$results = execute($sql, array(), PDO::FETCH_ASSOC);
 	

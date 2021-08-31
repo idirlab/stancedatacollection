@@ -6,9 +6,11 @@
 	session_start();
 	$username = $_SESSION['username'];
 	
-	$sql = gen_select_query(array('count(*) as count', 'response'), array('Sentence_User'), array('Sentence_User.username = '.$username, 'Sentence_User.sentence_id = '.$sentence_id), array(), array(), array());	
-	if($sentence_id && $username)$results = execute($sql, array(), PDO::FETCH_ASSOC);	
-	if($results[0]['count'] == 0)#a new response
+	$sql = gen_select_query(array('count(*) as count', 'response'), array('Sentence_User'), 
+							array('Sentence_User.username = '.$username, 'Sentence_User.sentence_id = '.$sentence_id), array(), array(), array());	
+	if($sentence_id && $username) $results = execute($sql, array(), PDO::FETCH_ASSOC);
+	// echo($results);
+	if($results[0]['count'] == 0) # a new response
 	{
 		if(strcmp($response, '-2') != 0 && strcmp($username,'"factchecker"') != 0)
 		{
@@ -17,7 +19,7 @@
 		}
 		$sql = gen_insert_query(array('Sentence_User'), array('sentence_id', 'username', 'response', 'context_seen', 'time'), array($sentence_id, $username, $response, $context_seen, '"'.date("Y-m-d H:i:s").'"'));		
 	}
-	else if($results[0]['count'] == 1)# responded before
+	else if($results[0]['count'] == 1) #responded before
 	{
 		if($results[0]['response'] == -2 && strcmp($username,'"factchecker"') != 0)
 		{
@@ -48,13 +50,4 @@
 	}
 	$activity_sql = gen_insert_query($tables=array('Activity'), $fields=array('username', 'time', 'action', 'sentence_id', 'response', 'context_seen'), $values=array($username, '"'.date("Y-m-d H:i:s").'"', $action, $sentence_id, $response, $context_seen));
 	if($sentence_id && $username)$results = execute($activity_sql, array(), PDO::FETCH_ASSOC);
-	
-	/*FINAL Stage*/
-	/*$sql = gen_select_query(array('sentence_id', 'sum(if(response = -1, 1, 0)) as NFS', 'sum(if(response = 0, 1, 0)) as UFS', 'sum(if(response = 1, 1, 0)) as CFS'), array('Sentence_User'), array('Sentence_User.sentence_id = '.$sentence_id), array(), array(), array());
-	$results = execute($sql, array(), PDO::FETCH_ASSOC);
-	if($results[0]['NFS'] >= 2 || $results[0]['UFS'] >= 2 || $results[0]['CFS'] >= 2)
-	{
-		$sql = 'delete from Remaining_06282016 where sentence_id = '.$sentence_id.';';
-		$results = execute($sql, array(), PDO::FETCH_ASSOC);
-	}*/
 ?>

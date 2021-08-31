@@ -55,7 +55,6 @@
 			    id = sentence_id and			    
 				Sentence_User.username = User.username and
 				Sentence_User.username = '.$username.' and
-				Sentence_User.time >= '.$_SESSION['fourth_phase_time_start'].' and
 				sentence_id in '.$_SESSION['training_sentences'].'
 			group by Sentence_User.username) A order by PAYMENT desc, ANSWERED desc;';
 	
