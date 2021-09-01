@@ -859,6 +859,7 @@ function post_response(sentence_id, context_seen)
 		dataType: "text",
 		success: function(data)
 		{
+			console.log("set_response:", data);
 			if(is_training == 1)
 			{
 				show_training_message(sentence_id);
