@@ -38,7 +38,7 @@
 			} else {
 				echo "-2";#unverified account
 			}
-		} elseif(($_SESSION['project']=='"WildFire"')) {
+		} elseif($_SESSION['project']=='"WildFire"') {
 			$sql = gen_select_query(array('verification'), array('User'), array('username = '.$username, 'password = '.$encrypted_password));
 			$results = execute($sql, array(), PDO::FETCH_ASSOC);
 			if(strcmp($results[0]['verification'], "verified") == 0)

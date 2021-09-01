@@ -714,7 +714,7 @@ function show_sentence(sentence_id, sentence, REGION, ANSWERED_message, QUALITY_
 	$('#button_context').click(function(){
 		if($('#button_context').text().localeCompare("More Context") == 0)
 		{
-			context = get_context(sentence_id);
+			context = get_context(sentence, sentence_id);
 			$('#button_context').text('Less Context');
 			context_seen = 1;
 		}
@@ -820,11 +820,10 @@ function get_sentence(sentence_id)
 			var project = $('#project').val();
 			if(project=='WildFire') {
 				console.log(data.claim, data.tweet)
-				show_sentence(data.id, "<b>Factual claim:"+data.claim+"<br><br>Tweet: "+data.tweet+"</b>", data.REGION, data.ANSWERED_message, data.QUALITY_message, data.PAYMENT_message, data.RANK_message, data.total_message);
+				show_sentence(data.id, "<b>Factual claim: "+data.claim+"<br><br>Tweet: "+data.tweet+"</b>", data.REGION, data.ANSWERED_message, data.QUALITY_message, data.PAYMENT_message, data.RANK_message, data.total_message);
 			} else if(project=='ClaimBuster') {
 				show_sentence(data.id, "<b>"+data.name+": "+data.text+"</b>", data.REGION, data.ANSWERED_message, data.QUALITY_message, data.PAYMENT_message, data.RANK_message, data.total_message);
 			}
-			
 		}
 	});
 }
@@ -903,7 +902,7 @@ function show_training_message(sentence_id)
 	});
 }
 
-function get_context(sentence_id)
+function get_context(sentence, sentence_id)
 {
     $.ajax({
 		url: "get_context.php",
@@ -913,14 +912,22 @@ function get_context(sentence_id)
 		success: function(data)
 		{
 			console.log("get_context:", data);
-			var data = jQuery.parseJSON(data);
-			var context = "";
-			for (i = 0; i < data.length-1; i++)
-			{
-				context += data[i].name + ": " + data[i].text + "</br>";
+			var project = $('#project').val();
+			if(project=='WildFire') {
+				// Different from claimbuster's multiple claim, wildfire only has one record in data
+				var data = jQuery.parseJSON(data)[0];
+				var context = sentence+"</br>";
+				for(var key in data) {
+					context += key + ": " + data[key] + "</br>";
+				}
+			} else if(project=='ClaimBuster') {
+				var data = jQuery.parseJSON(data);
+				var context = "";
+				for (i = 0; i < data.length-1; i++) {
+					context += data[i].name + ": " + data[i].text + "</br>";
+				}			
+				context += "<b>"+data[i].name + ": " + data[i].text + "</b></br>";
 			}
-			
-			context += "<b>"+data[i].name + ": " + data[i].text + "</b></br>";
 			$('#div_sentence').html(context);
 		}		
     });          
