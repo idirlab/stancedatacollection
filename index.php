@@ -32,51 +32,25 @@
 				<a class="navbar-brand" href="index.php" title="ClaimBuster">
         			<img  class='img-responsive claimbuster-logo' src="image/claimbuster_wout_text.png">
     			</a>
-				<a class="navbar-brand claimbuster-title" href="index.php">IDIR annotation tool</a>
+				<a class="navbar-brand claimbuster-title" href="index.php">Wildfre annotation tool</a>
 			</div>
 			
 			<div id="navbar_signin_signup" class="navbar-collapse collapse">
 				<form class="navbar-form navbar-left">
 					<div class="row">
-						<div class="col-sm-8">
+						<div class="col-sm-7">
 							<div class="form-group">
 								<input type="text" placeholder="Username" class="form-control" id="input_username">
 								<input type="password" placeholder="Password" class="form-control" id="input_password" for='inputsm'>
 							</div>
 						</div>
-
-						<div class="col-sm-2">
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_new_user">New User</button>
-						</div>
-						<div class="col-sm-2">
-							<div class="dropdown">
-								<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-									Try project demos
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-									<li><a href="http://idir.uta.edu/claimbuster">ClaimBuster Demo</a></li>
-									<li><a href="http://idir.uta.edu/stance_detection">WildFire Stance Detection Demo</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					
-					<div class="row" style="margin-top: 10px">
-						<div class="form-group col-lg-8">
-							<!-- <div class="col-sm-6 col-md-4"> -->
-								<label style="color:white; font-size: 1.25em;">Select project:</label>
-								<select id="project" class="form-control">
-								<option>WildFire</option>
-								<option>ClaimBuster</option>
-								</select> 
-							<!-- </div> -->
-						</div>
-						<div class="form-group col-lg-3">
+						<div class="form-group col-lg-2">
 							<button id="button_sign_in" type="button" class="btn btn-success pull_top">Sign In</button>
 							<button id="button_forgot_password" type="button" class="btn btn-link">Forgot username/password?</button>
 						</div>
-						
+						<div class="col-sm-2">
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_new_user">New User</button>
+						</div>
 					</div>
 				</form>
 			</div>

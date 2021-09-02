@@ -2,7 +2,7 @@
 	session_start();
 	$username=$_REQUEST["username"];
 	$email=$_REQUEST["email"];
-	$_SESSION["project"] = $_REQUEST["project"];
+	// $_SESSION["project"] = $_REQUEST["project"];
 
 	include_once("db.php");
 	

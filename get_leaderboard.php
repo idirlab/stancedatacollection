@@ -3,33 +3,6 @@
 	session_start();
 	$username = $_SESSION['username'];
 	
-	////added momentarily for payment display purpose. March 30, 2016.
-	/*$leaderboard_sql = 'select USERNAME,ANSWERED, 
-			round(if( RANK_W <= 0, 3-7*RANK_W/0.2, if(RANK_W<=0.3, pow((0.3-RANK_W)/0.3, 2.5)*3, 0) )*pow((A.LEN/18.4217), 1.5)*pow(0.6, A.SKIPPED/A.ANSWERED),2) as QUALITY,
-	round(if( RANK_W <= 0, 3-7*RANK_W/0.2, if(RANK_W<=0.3, pow((0.3-RANK_W)/0.3, 2.5)*3, 0) )*pow((A.LEN/18.4217), 1.5)*ANSWERED/100*pow(0.6, A.SKIPPED/A.ANSWERED),2) as PAYMENT
-			from (select 
-			    Sentence_User.username as USERNAME, 
-	
-				round(-0.2*(sum(if(screening = -1 and response = -1, 1, 0))+sum(if(screening = 0 and response = 0, 1, 0))+sum(if(screening = 1 and response = 1, 1, 0)))/(sum(screening != -3 and response != -2))
-				+0.7*(sum(if(screening = 0 and response = 1, 1, 0))+sum(if(screening = 1 and response = 0, 1, 0)))/(sum(screening != -3 and response != -2))
-				+0.7*(sum(if(screening = -1 and response = 0, 1, 0))+sum(if(screening = 0 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2))
-				+2.5*(sum(if(screening = -1 and response = 1, 1, 0))+sum(if(screening = 1 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2)), 3) as RANK_W,
-	
-				sum(if(Sentence_User.response != -2, 1, 0)) as ANSWERED,
-				sum(if(Sentence_User.response = -2, 1, 0)) as SKIPPED,
-				avg(if(Sentence_User.response != -2, length, null)) as LEN
-			from
-			    Sentence_User,
-			    Sentence,
-				User
-			where
-			    id = sentence_id and
-				Sentence_User.username = User.username and
-				Sentence_User.username != "factchecker" and
-				Sentence_User.time >= '.$_SESSION['third_phase_time_start'].'	
-			group by Sentence_User.username) A order by PAYMENT desc, ANSWERED desc;'; 
-	$leaderboard_results = execute($leaderboard_sql, array(), PDO::FETCH_ASSOC);
-	$_SESSION['leaderboard_results'] = $leaderboard_results;*/
 	//added momentarily for payment display purpose. March 30, 2016.
 	$results = $_SESSION['leaderboard_results'];
 	
