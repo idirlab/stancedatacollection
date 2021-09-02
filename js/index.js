@@ -880,12 +880,10 @@ function show_training_message(sentence_id)
 			console.log('show_training_message:', data);
 			data = data.split('^');
 			$('#top_well').removeClass("highlight");
-			if(data[1].localeCompare("Correct!") == 0)
-			{
+			if(data[1].localeCompare("Correct!") == 0) {
 				$('#top_well').addClass("correct");
 			}
-			else
-			{
+			else {
 				$('#top_well').addClass("wrong");
 			}
 			$('#span_REGION_status').html(data[1]+"<br>"+data[0]+"<br>"+'<button id="button_next" type="button" class="btn btn-primary pull-left">'+"Next"+'</button>&nbsp&nbsp');

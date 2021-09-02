@@ -435,7 +435,8 @@
 			else  { #regular question
 				$sql = gen_select_query(array('sentence_id'), array('Sentence_User'), array('username = '.$username));	
 				$results = execute($sql, array(), PDO::FETCH_COLUMN);
-				if(count($results))$already_answered = '('.implode(', ', $results).')';
+
+				if(count($results)) $already_answered = '('.implode(', ', $results).')';
 				else $already_answered = '(-1)';
 			
 				$sql = 'select Sentence_User.username as USERNAME	
@@ -472,7 +473,7 @@
 
 				$top_quality_sentences = execute($sql, array(), PDO::FETCH_COLUMN);
 				$top_quality_sentences_string = '("'.implode('","', $top_quality_sentences).'")';
-				$sql = gen_select_query(array('Sentence.id', 'Sentence.text', 'Sentence.claim', 'Sentence.claim_author'), 
+				$sql = gen_select_query(array('Sentence.id', 'Sentence.tweet', 'Sentence.claim', 'Sentence.claim_author'), 
 							    array('Sentence'), 
 								array('Sentence.id NOT IN '.$already_answered, 'Sentence.id NOT IN '.$top_quality_sentences_string, 'screening = -3'), 
 								array(), array('RAND()'), array('1'));
@@ -497,7 +498,7 @@
 		}
 		// var_dump($sql);
 		$results = execute($sql, array(), PDO::FETCH_ASSOC); // [id, name, text]
-		
+		// var_dump($results);
 		if(count($results)) {
 			$sql = 'select A.USERNAME, A.ANSWERED,
 					(case when A.RANK_W <= 0.0 and A.ANSWERED >= 4 then 1
