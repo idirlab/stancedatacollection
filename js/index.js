@@ -5,11 +5,11 @@ var universities = [
 	];
 	
 var text_response = {'-1': 'Tweet doesn\'t believe the truthfulness/veracity of factual claim', 
-					 '0': 'Tweet holds neutral attitude or cannot confirm the truthfulness of the factual claim.', 
+					 '0': 'Tweet holds neutral attitude or cannot confirm the truthfulness of the factual claim', 
 					 '1': 'Tweet believes the truthfulness/veracity of factual claim', 
 					 '-2': 'Skip this sentence',
 					 '2': 'Tweet discusses unrelated topic to factual claim',
-					 '3': 'Tweet and factual claim pair is problematic.'
+					 '3': 'Tweet and factual claim pair is problematic'
 					};
 var logged_out = 1;
 var is_training = 1;

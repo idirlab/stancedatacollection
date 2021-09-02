@@ -32,7 +32,7 @@
 				<a class="navbar-brand" href="index.php" title="ClaimBuster">
         			<img  class='img-responsive claimbuster-logo' src="image/claimbuster_wout_text.png">
     			</a>
-				<a class="navbar-brand claimbuster-title" href="index.php">Wildfre annotation tool</a>
+				<a class="navbar-brand claimbuster-title" href="index.php">Wildfire annotation tool</a>
 			</div>
 			
 			<div id="navbar_signin_signup" class="navbar-collapse collapse">
@@ -157,7 +157,7 @@
 									<span class="caret"></span>
 								</button>								
 								<ul id='ul_major_options' class="dropdown-menu major-options" role="menu" aria-labelledby="dropdownMenu">
-																				<li><a tabindex="-1">Academic Partnership Ed Curriculum & Instruction - MEd Mathematics</a></li>
+									<li><a tabindex="-1">Academic Partnership Ed Curriculum & Instruction - MEd Mathematics</a></li>
 									<li><a tabindex="-1">Academic Partnership Ed Curriculum & Instruction - MEd Science</a></li>
 									<li><a tabindex="-1">Academic Partnership Ed Curriculum & Instruction - MEd Triple Literacy</a></li>
 									<li><a tabindex="-1">Academic Partnership Ed Leadership & Policy Studies - MEd</a></li>
@@ -473,18 +473,7 @@
 			<div class='center-block'><p class='justified_para'><h2>Thank you for participating in data collection for IDIR project!<br></h2><!--<h4>ClaimBuster uses computational power to do tasks that are tedious and time-consuming for fact-checkers, such as finding claims by politicians that should be checked.<br>Note: Participants are paid for every labeled sentence. Pay rate depends on work quality and the length/complexity of labeled sentences.</h4>--></p></div>
 			<br>
 			<!--<p class='justified_para'><h2>ClaimBuster data collection is PAUSED for now. If you have contributed, you can login and see your payment by clicking the "Leaderboard" button.</h2></p>-->
-			<h3>1. ClaimBuster Data Annotation</h2>
-			<div class='row'>
-				<div class='col-md-2'></div>
-				<div class='col-md-8'>
-					<div class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/R30KinquvvQ"></iframe>
-					</div>
-				</div>
-				<div class='col-md-2'></div>
-			</div>
-
-			<h3>2. WildFire Stance Detection Annotation</h2>
+			<h3>WildFire Stance Detection Annotation Tutorial</h2>
 			<div class='row'>
 				<div class='col-md-2'></div>
 				<div class='col-md-8'>

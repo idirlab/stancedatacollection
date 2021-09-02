@@ -10,21 +10,12 @@ function getConnect() {
     
     if(!$db) {
         if($local) {
-            if($_SESSION['project']=='"WildFire"') {
-                $config = array(
-                    'user' => 'root',
-                    'password' => '',
-                    'server' => 'localhost',
-                    'database' => 'wildfire',
-                    );  
-            } elseif($_SESSION['project']=='"ClaimBuster"') {
-                $config = array(
-                    'user' => 'root',
-                    'password' => '',
-                    'server' => 'localhost',
-                    'database' => 'factchecker_presidential_debate',
-                    );  
-            }
+            $config = array(
+                'user' => 'root',
+                'password' => '',
+                'server' => 'localhost',
+                'database' => 'wildfire',
+                );  
         } else {
             $config = array(
                 'user' => 'factchecker',
