@@ -91,8 +91,8 @@
 				$_SESSION['screening_questioned'] = 1;
 			}			
 		}
-		
-		if($is_screening == 1 && strcmp($username, '"factchecker"') != 0) #screening question
+		# screening question
+		if($is_screening == 1 && strcmp($username, '"factchecker"') != 0) 
 		{	
 			$class_screening = randomFloat(0,30);
 			if($class_screening <= 10)
@@ -107,8 +107,7 @@
 			{
 				$class_screening = '1';
 			}
-			// 
-			$sql = gen_select_query(array('Sentence.id', 'Sentence.text', 'Sentence.claim', 'Sentence.claim_author'), 
+			$sql = gen_select_query(array('Sentence.id', 'Sentence.tweet', 'Sentence.claim', 'Sentence.claim_author'), 
 									array('Sentence'), 
 									array('screening = '.$class_screening, 'Sentence.id not in '.$_SESSION['training_sentences'].' '), 
 									array(), array('RAND()'), array('1'));
@@ -181,9 +180,9 @@
 								array('Sentence.id = '.$sentence_id), 
 								array(), array(), array());
 	}
-	
+	$prev_sql = $sql;
 	$results = execute($sql, array(), PDO::FETCH_ASSOC); // [id, name, text]
-	var_dump($results);
+	// var_dump($results);
 	if(count($results)) {
 		$sql = 'select A.USERNAME, A.ANSWERED,
 				(case when A.RANK_W <= 0.0 and A.ANSWERED >= 4 then 1
@@ -217,29 +216,25 @@
 		$_SESSION['sentence_id'] = $results[0]['id'];
 		
 		$sql = 'select USERNAME,ANSWERED,
-						if(ANSWERED >= 50, round(if( RANK_W <= 0, 3-7*RANK_W/0.2, if(RANK_W<=0.3, pow((0.3-RANK_W)/0.3, 2.5)*3, 0) )*pow((A.LEN/18.4217), 1.5)*pow(0.6, A.SKIPPED/A.ANSWERED),2), 0) as QUALITY,
-						if(ANSWERED >= 50, round(if( RANK_W <= 0, 3-7*RANK_W/0.2, if(RANK_W<=0.3, pow((0.3-RANK_W)/0.3, 2.5)*3, 0) )*pow((A.LEN/18.4217), 1.5)*ANSWERED/100*pow(0.6, A.SKIPPED/A.ANSWERED),2), 0) as PAYMENT
-				from (select 
-				Sentence_User.username as USERNAME, 
-				
-				round(-0.2*(sum(if(screening = -1 and response = -1, 1, 0))+sum(if(screening = 0 and response = 0, 1, 0))+sum(if(screening = 1 and response = 1, 1, 0)))/(sum(screening != -3 and response != -2))
-				+0.7*(sum(if(screening = 0 and response = 1, 1, 0))+sum(if(screening = 1 and response = 0, 1, 0)))/(sum(screening != -3 and response != -2))
-				+0.7*(sum(if(screening = -1 and response = 0, 1, 0))+sum(if(screening = 0 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2))
-				+2.5*(sum(if(screening = -1 and response = 1, 1, 0))+sum(if(screening = 1 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2)), 3) as RANK_W,
-				
-				sum(if(Sentence_User.response != -2, 1, 0)) as ANSWERED,
-				sum(if(Sentence_User.response = -2, 1, 0)) as SKIPPED,
-				avg(if(Sentence_User.response != -2, length, null)) as LEN
-				from
-					Sentence_User,
-					Sentence,
-					User
-				where
-					id = sentence_id and
-					Sentence_User.username = User.username and
-					Sentence_User.username != "factchecker" and
-					sentence_id not in '.$_SESSION['training_sentences'].'
-					group by Sentence_User.username) A order by PAYMENT desc, ANSWERED desc;';
+					   if(ANSWERED >= 50, round(if( RANK_W <= 0, 3-7*RANK_W/0.2, if(RANK_W<=0.3, pow((0.3-RANK_W)/0.3, 2.5)*3, 0) )*pow(0.6, A.SKIPPED/A.ANSWERED),2), 0) 
+					   as QUALITY,
+					   if(ANSWERED >= 50, round(if( RANK_W <= 0, 3-7*RANK_W/0.2, if(RANK_W<=0.3, pow((0.3-RANK_W)/0.3, 2.5)*3, 0) )*ANSWERED/100*pow(0.6, A.SKIPPED/A.ANSWERED),2), 0)
+					   as PAYMENT
+				from (select Sentence_User.username as USERNAME, 
+							 round(-0.2*(sum(if(screening = -1 and response = -1, 1, 0))+sum(if(screening = 0 and response = 0, 1, 0))+sum(if(screening = 1 and response = 1, 1, 0)))/(sum(screening != -3 and response != -2))
+							 +0.7*(sum(if(screening = 0 and response = 1, 1, 0))+sum(if(screening = 1 and response = 0, 1, 0)))/(sum(screening != -3 and response != -2))
+							 +0.7*(sum(if(screening = -1 and response = 0, 1, 0))+sum(if(screening = 0 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2))
+							 +2.5*(sum(if(screening = -1 and response = 1, 1, 0))+sum(if(screening = 1 and response = -1, 1, 0)))/(sum(screening != -3 and response != -2)), 3) 
+							 as RANK_W,				
+							 sum(if(Sentence_User.response != -2, 1, 0)) as ANSWERED,
+							 sum(if(Sentence_User.response = -2, 1, 0)) as SKIPPED
+					  from Sentence_User, Sentence, User
+					  where id = sentence_id and
+							Sentence_User.username = User.username and
+							Sentence_User.username != "factchecker" and
+							sentence_id not in '.$_SESSION['training_sentences'].'
+							group by Sentence_User.username) A 
+							order by PAYMENT desc, ANSWERED desc;';
 		
 		if($_SESSION['message_counter'] == 0)
 		{
@@ -249,6 +244,8 @@
 			$PAYMENT_message = 0;
 			$RANK_message = 0;
 			$total_message = 0;
+			// var_dump($sql);
+			// var_dump($results_message);
 			foreach($results_message as $key=>$v)
 			{
 				$total_message = $total_message + 1;
@@ -324,7 +321,8 @@
 			$results[0]['RANK_message'] = $_SESSION['RANK_message'];
 			$results[0]['total_message'] = $_SESSION['total_message'];						
 		}
-		$results[0]['sql'] = $sql;						
+		$results[0]['sql'] = $sql;
+		$results[0]['prev_sql'] = $prev_sql;
 		echo json_encode($results[0]);
 	}
 	else
