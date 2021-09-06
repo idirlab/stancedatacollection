@@ -5,6 +5,7 @@
 	
 	//added momentarily for payment display purpose. March 30, 2016.
 	$results = $_SESSION['leaderboard_results'];
+	// var_dump($results);
 	
 	$user = -1;
 	$winner_10 = array();//array('mcwizard', 'dxl3182', 'nrd1216', 'lawanda18', 'danb11', 'ajdashdash' , 'Alucard', 'anna.prieto', 'Charis92', 'dxl3182', 'JE_4489', 'jsn6522', 'Leaf90', 'nadi', 'sakiforu', 'aminataj', 'AramintaK96', 'benderwd40', 'carcinoPoet', 'danb11', 'dlehddbs92', 'dustinh', 'j.kathryn', 'kidkatie', 'knitty1997', 'Monica_16', 'pec6938', 'sakiforu', 'Sfj8667', 'stefaguas');
@@ -20,13 +21,8 @@
 		$results[$i]['prize'] = "";
 		if(array_key_exists($results[$i]['USERNAME'], $winner_200))
 		{
-			//$winner_200[$i] = $winner_200[$results[$i]['USERNAME']];
-			//unset($winner_200[$results[$i]['USERNAME']]);
 			for ($j = 0; $j < $winner_200[$results[$i]['USERNAME']]; $j++)
-			{
-				//if($j < $winner_200[$results[$i]['USERNAME']]-1 )$results[$i]['prize'] = $results[$i]['prize'].'$200, ';
-				//else $results[$i]['prize'] = $results[$i]['prize'].'$200';
-			
+			{	
 				if(strcmp($results[$i]['prize'], "") != 0)$results[$i]['prize'] = $results[$i]['prize'].', ';
 				$results[$i]['prize'] = $results[$i]['prize'].'$200';
 			}
@@ -34,13 +30,8 @@
 	
 		if(array_key_exists($results[$i]['USERNAME'], $winner_100))
 		{
-			//$winner_100[$i] = $winner_100[$results[$i]['USERNAME']];
-			//unset($winner_100[$results[$i]['USERNAME']]);
 			for ($j = 0; $j < $winner_100[$results[$i]['USERNAME']]; $j++)
 			{
-#				if($j < $winner_100[$results[$i]['USERNAME']]-1 )$results[$i]['prize'] = $results[$i]['prize'].'$100, ';
-#				else $results[$i]['prize'] = $results[$i]['prize'].'$100';
-
 				if(strcmp($results[$i]['prize'], "") != 0)$results[$i]['prize'] = $results[$i]['prize'].', ';
 				$results[$i]['prize'] = $results[$i]['prize'].'$100';
 			}
@@ -48,13 +39,8 @@
 	
 		if(array_key_exists($results[$i]['USERNAME'], $winner_10))
 		{
-			//$winner_10[$i] = $winner_10[$results[$i]['USERNAME']];
-			//unset($winner_10[$results[$i]['USERNAME']]);
 			for ($j = 0; $j < $winner_10[$results[$i]['USERNAME']]; $j++)
-			{
-#				if($j < $winner_10[$results[$i]['USERNAME']]-1 )$results[$i]['prize'] = $results[$i]['prize'].'$10, ';
-#				else $results[$i]['prize'] = $results[$i]['prize'].'$10';
-			
+			{	
 				if(strcmp($results[$i]['prize'], "") != 0)$results[$i]['prize'] = $results[$i]['prize'].', ';
 				$results[$i]['prize'] = $results[$i]['prize'].'$10';
 			}

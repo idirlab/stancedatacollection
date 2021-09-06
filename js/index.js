@@ -421,7 +421,7 @@ function get_leaderboard()
 		success: function(data)
 		{
 			data = jQuery.parseJSON(data);
-			//console.log(data);
+			console.log("get_leaderboard:", data);
 			$('#modal_leaderboard').modal('show');
 			$('#selectable_leaderboard').empty();
 			$('#selectable_leaderboard').append('<li class="list-group-item"><div class="row"><div class="col-md-3">'+'<b>USERNAME</b>'+'</div><div class="col-md-3">'+'<b>ANSWERED</b>'+'</div><div class="col-md-3">'+'<b>PAY RATE (&cent;)</b>'+'</div><div class="col-md-3">'+'<b>PAYMENT ($)</b>'+'</div></div></li>');
@@ -667,7 +667,6 @@ function show_sentence(sentence_id, sentence, REGION, ANSWERED_message, QUALITY_
 						<li class="list-group-item"> \
 							<input type="radio" name="iCheck" id="-1"><label>'+text_response['-1']+'</label> \
 						</li> \
-						<br> \
 						<li class="list-group-item"> \
 							<input type="radio" name="iCheck" id="2"><label>'+text_response['2']+'</label> \
 						</li> \
@@ -805,7 +804,7 @@ function get_sentence(sentence_id)
 			}
 			data = jQuery.parseJSON(data);
 			console.log(data.claim, data.tweet)
-			show_sentence(data.id, "<b>Factual claim: "+data.claim+"<br><br>Tweet: "+data.tweet+"</b>", data.REGION, data.ANSWERED_message, data.QUALITY_message, data.PAYMENT_message, data.RANK_message, data.total_message);
+			show_sentence(data.id, "<b>Factual claim:</b> "+data.claim+"<br><br><b>Tweet</b>: "+data.tweet, data.REGION, data.ANSWERED_message, data.QUALITY_message, data.PAYMENT_message, data.RANK_message, data.total_message);
 		}
 	});
 }
