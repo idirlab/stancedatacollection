@@ -27,7 +27,6 @@ function getConnect() {
         $dsn= "mysql:host=${config['server']};dbname=${config['database']}";
         $db = new PDO($dsn, $config['user'], $config['password']);
     }
-    // return $config;
     return $db;
 }
 
