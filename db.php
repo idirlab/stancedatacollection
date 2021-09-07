@@ -6,7 +6,7 @@ date_default_timezone_set('America/Chicago');
 function getConnect() {
     # TODO: change local to server
     global $db;
-    $local = TRUE;
+    $local = FALSE;
     
     if(!$db) {
         if($local) {
@@ -18,10 +18,10 @@ function getConnect() {
                 );  
         } else {
             $config = array(
-                'user' => 'factchecker',
-                'password' => 'checkfact',
+                'user' => 'wildfire',
+                'password' => '123456',
                 'server' => 'idir-server2.uta.edu',
-                'database' => 'factchecker_presidential_debate',
+                'database' => 'wildfire',
                 );
         }
         $dsn= "mysql:host=${config['server']};dbname=${config['database']}";
