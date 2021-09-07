@@ -526,79 +526,74 @@ function load_survey_instructions()
 	var container = $('.jumbotron .container').first();
 	container.empty();
 	container.append('<p class="justified_para top_margin">You will be shown a pair of tweet and factual claim. \
-						All you need to do is to decide whether the tweet believes the truthfulness/veracity of factual claim. \
-						Your five options will always be TODO:<br><br><img src="image/1.png" class="img-responsive center-block with-border" alt="Figure 1"><span class="center-block">Figure 1</span><br> \
+						All you need to do is to <b>decide whether the tweet believes the truthfulness/veracity of factual claim.</b> \
+						Your five options will always be:<br><br><img src="image/1.png" class="img-responsive center-block with-border" alt="Figure 1"><span class="center-block">Figure 1</span><br> \
 						<b>Annotation instruction:</b>\
-						<br>Step1: Read factual claim and tweet, if you think the tweet-claim pair is problematic(e.g. tweet is not in English; factual claim is a question, etc.), please choose TODO:. Else go to step2. \
-						<br>Step2: If the author of tweet discusses unrelated topic with regard to factual claim, then label the pair with “Y”. Else go to step 3. \
-						<br>Step3: Assign the label to column G based on the criterion below: \
-						<br>&nbsp;&nbsp;Positive: The author of tweet supports the veracity of the factual claim. Twitter user believes the truthfulness of factual claim. Or we can deduce user believe in what factual claim said is happened. Twitter user provides his own opinion or provides extra background information about the claim.\
-						<br>&nbsp;&nbsp;Negative: The author of tweet denies the veracity of the factual claim. Tweet user doesn’t believe the truthfulness of factual claim. Twitter user shows fact that contradicts to factual claim. \
-						<br>&nbsp;&nbsp;Neutral: Tweets hold neutral attitude or cannot confirm the truthfulness of the factual claim. Tweet almost only repeats the content of factual claim and doesn’t add more contextual information. The author of tweet makes their own comment without a clear contribution to assessing the veracity of the factual claim. \
-						<br><b>Examples of positive tweet-claim pairs:</b> \
-						<br>1.User provides extra background information about the factual claim. \
-						<br>Factual claim: The largest bust in U.S. history’ 412 Muslims arrested from Michigan! \
-						<br>Tweet: 412 Michigan Muslims Arrested ‘LARGEST BUST IN U.S. HISTORY’!! They Hit The MOTHERLOAD! https://freedomdaily.com/?p=360808 via @Freedom_Daily \
-						<br>2.User provides his own opinion about the factual claim. \
-						<br>Factual claim: "Ohio student suspended for staying in class during National Walkout Day" \
-						<br>Tweet: Patriot attorney needed.  Reach out to this family.  Ohio student suspended for staying in class during National Walkout Day https://truepundit.com/ohio-student-suspended-staying-class-national-walkout-day/… \
-						<br>3.We can deduce user believe in what factual claim said is happened. \
-						<br>Factual claim: Emboldened by election, Texas Republicans kill Medicaid funding for kids with disabilities. \
-						<br>Tweet: Emboldened By Election, Smug & Unsavory Texas Republicans Kill Medicaid Funding For Kids w/ Disabilities @GregAbbott_TX Misguided & pathetic \
-						<br>4.We can deduce user believe in what factual claim said is happened. \
-						<br>Factual claim: Police find 19 white female bodies in freezers with ‘Black Lives Matter’ carved into skin.\
-						<br>Tweet: Did you know: #Police Find 19 White Female Bodies In Freezers With “Black Lives Matter” Carved Into Skin. \
-						<br>5.We can deduce user believe in what factual claim said is happened. \
-						<br>Factual claim: KAMALA HARRIS Says Schools in Berkeley Weren’t Integrated When She Was a Kid — But Yearbook Pictures Prove She’s Lying.\
-						<br>Tweet: It is like these morons don\'t know how the Internet works.  We can look up your lies!  Unreal...  KAMALA HARRIS Says Schools in Berkeley Weren\'t Integrated When She Was a Kid -- But Yearbook Pictures Prove She\'s Lying. \
+						<br>&emsp;<b>Step1</b>: Read factual claim and tweet, if tweet is not in English/tweet has serious grammar mistakes/factual claim is a question, please choose <b>Tweet and factual claim pair is problematic</b>. Else go to step2. \
+						<br>&emsp;<b>Step2</b>: If tweet discusses unrelated topic with regard to factual claim, then please choose <b>Tweet discusses unrelated topic to factual claim</b>. Else go to step 3. \
+						<br>&emsp;<b>Step3</b>: Choose option based on the criterion below: \
+						<br>&emsp;&emsp;<b>- Tweet believes the truthfulness/veracity of factual claim(Positive)</b>: The author of tweet supports the veracity of the factual claim. Twitter user believes the truthfulness of factual claim. Or we can deduce user believe in what factual claim said is happened. Twitter user provides his own opinion or provides extra background information about the claim.\
+						<br>&emsp;&emsp;<b>- Tweet holds neutral attitude or cannot confirm the truthfulness of the factual claim(Neutral)</b>: Tweets hold neutral attitude or cannot confirm the truthfulness of the factual claim. Tweet almost only repeats the content of factual claim and doesn’t add more contextual information. The author of tweet makes their own comment without a clear contribution to assessing the veracity of the factual claim. \
+						<br>&emsp;&emsp;<b>- Tweet doesn\'t believe the truthfulness/veracity of factual claim(Negative)</b>: The author of tweet denies the veracity of the factual claim. Tweet user doesn’t believe the truthfulness of factual claim. Twitter user shows fact that contradicts to factual claim. \
 						\
-						<br><b>Examples of positive tweet-claim pairs:</b> \
-						<br>1.User provides extra background information about the factual claim. \
-						<br>Factual claim: The largest bust in U.S. history’ 412 Muslims arrested from Michigan! \
-						<br>Tweet: 412 Michigan Muslims Arrested ‘LARGEST BUST IN U.S. HISTORY’!! They Hit The MOTHERLOAD! https://freedomdaily.com/?p=360808 via @Freedom_Daily \
-						<br>2.User provides his own opinion about the factual claim. \
-						<br>Factual claim: "Ohio student suspended for staying in class during National Walkout Day" \
-						<br>Tweet: Patriot attorney needed.  Reach out to this family.  Ohio student suspended for staying in class during National Walkout Day https://truepundit.com/ohio-student-suspended-staying-class-national-walkout-day/… \
-						<br>3.We can deduce user believe in what factual claim said is happened. \
-						<br>Factual claim: Emboldened by election, Texas Republicans kill Medicaid funding for kids with disabilities. \
-						<br>Tweet: Emboldened By Election, Smug & Unsavory Texas Republicans Kill Medicaid Funding For Kids w/ Disabilities @GregAbbott_TX Misguided & pathetic \
-						<br>4.We can deduce user believe in what factual claim said is happened. \
-						<br>Factual claim: Police find 19 white female bodies in freezers with ‘Black Lives Matter’ carved into skin.\
-						<br>Tweet: Did you know: #Police Find 19 White Female Bodies In Freezers With “Black Lives Matter” Carved Into Skin. \
-						<br>5.We can deduce user believe in what factual claim said is happened. \
-						<br>Factual claim: KAMALA HARRIS Says Schools in Berkeley Weren’t Integrated When She Was a Kid — But Yearbook Pictures Prove She’s Lying.\
-						<br>Tweet: It is like these morons don\'t know how the Internet works.  We can look up your lies!  Unreal...  KAMALA HARRIS Says Schools in Berkeley Weren\'t Integrated When She Was a Kid -- But Yearbook Pictures Prove She\'s Lying. \
+						<br><br><b>Examples of positive tweet-claim pairs:</b> \
+						<br><b>&emsp;1.User provides extra information(They hit the motherland) related to factual claim.</b> \
+						<br>&emsp;&emsp;Factual claim: The largest bust in U.S. history’ 412 Muslims arrested from Michigan! \
+						<br>&emsp;&emsp;Tweet: 412 Michigan Muslims Arrested ‘LARGEST BUST IN U.S. HISTORY’!! They Hit The MOTHERLOAD! https://freedomdaily.com/?p=360808 via @Freedom_Daily \
+						<br><b>&emsp;2.User provides his own opinion about the factual claim.</b> \
+						<br>&emsp;&emsp;Factual claim: "Ohio student suspended for staying in class during National Walkout Day" \
+						<br>&emsp;&emsp;Tweet: Patriot attorney needed.  Reach out to this family.  Ohio student suspended for staying in class during National Walkout Day https://truepundit.com/ohio-student-suspended-staying-class-national-walkout-day/… \
+						<br><b>&emsp;3.We can deduce user believe in what factual claim said is happened.</b> \
+						<br>&emsp;&emsp;Factual claim: Emboldened by election, Texas Republicans kill Medicaid funding for kids with disabilities. \
+						<br>&emsp;&emsp;Tweet: Emboldened By Election, Smug & Unsavory Texas Republicans Kill Medicaid Funding For Kids w/ Disabilities @GregAbbott_TX Misguided & pathetic \
+						<br><b>&emsp;4.We can deduce user believe in what factual claim said is happened.</b> \
+						<br>&emsp;&emsp;Factual claim: Police find 19 white female bodies in freezers with ‘Black Lives Matter’ carved into skin.\
+						<br>&emsp;&emsp;Tweet: Did you know: #Police Find 19 White Female Bodies In Freezers With “Black Lives Matter” Carved Into Skin. \
+						<br><b>&emsp;5.We can deduce user believe in what factual claim said is happened.</b> \
+						<br>&emsp;&emsp;Factual claim: KAMALA HARRIS Says Schools in Berkeley Weren’t Integrated When She Was a Kid — But Yearbook Pictures Prove She’s Lying.\
+						<br>&emsp;&emsp;Tweet: It is like these morons don\'t know how the Internet works.  We can look up your lies!  Unreal...  KAMALA HARRIS Says Schools in Berkeley Weren\'t Integrated When She Was a Kid -- But Yearbook Pictures Prove She\'s Lying. \
 						\
-						<br><b>Examples of negative tweet-claim pairs:</b> \
-						<br>1.Twitter user shows fact that contradicts to factual claim. \
-						<br>Factual claim: We got rid of the Johnson Amendment. \
-						<br>Tweet: That\'s 4 more Pinocchios for @realDonaldTrump as it pertains to his shifting claim that ‘we got rid’ of the Johnson Amendment. Fact: The Johnson Amendment is still a thing. "It\'s still on the books." \
-						<br>2.Twitter user shows fact that contradicts to factual claim. \
-						<br>Factual claim: Rick Scott won and he won by a lot. \
-						<br>Tweet: @realDonaldTrump on Fox News: “Rick Scott won and he won by a lot." Reality: Scott won by 10,033 votes. Out of more than 8 million cast. #AlternativeFacts \
-						<br>3.Tweet user doesn’t believe the truthfulness of factual claim. \
-						<br>Factual claim: ISIS is in 32 countries. \
-						<br>Tweet: "ISIS is in 32 countries."  I think he meant IKEA. \
-						<br>4.Tweet user doesn’t believe the truthfulness of factual claim. \
-						<br>Factual claim: Jennifer Lawrence links 9/11 to Trump\'s election.\
-						<br>Tweet: A New Conspiracy Theory Falsely Claims Jennifer Lawrence Blamed Trump for 9/11 A meme with over 11,000 shares quotes Lawrence as blaming Trump for September 11 because he stole the election, but it\'s totally bogus. \
+						<br><br><b>Examples of negative tweet-claim pairs:</b> \
+						<br><b>&emsp;1.Twitter user shows fact that contradicts to factual claim.</b> \
+						<br>&emsp;&emsp;Factual claim: We got rid of the Johnson Amendment. \
+						<br>&emsp;&emsp;Tweet: That\'s 4 more Pinocchios for @realDonaldTrump as it pertains to his shifting claim that ‘we got rid’ of the Johnson Amendment. Fact: The Johnson Amendment is still a thing. "It\'s still on the books." \
+						<br><b>&emsp;2.Twitter user shows fact that contradicts to factual claim.</b> \
+						<br>&emsp;&emsp;Factual claim: Rick Scott won and he won by a lot. \
+						<br>&emsp;&emsp;Tweet: @realDonaldTrump on Fox News: “Rick Scott won and he won by a lot." Reality: Scott won by 10,033 votes. Out of more than 8 million cast. #AlternativeFacts \
+						<br><b>&emsp;3.Tweet user doesn’t believe the truthfulness of factual claim.</b> \
+						<br>&emsp;&emsp;Factual claim: ISIS is in 32 countries. \
+						<br>&emsp;&emsp;Tweet: "ISIS is in 32 countries."  I think he meant IKEA. \
+						<br><b>&emsp;4.Tweet user doesn’t believe the truthfulness of factual claim.</b> \
+						<br>&emsp;&emsp;Factual claim: Jennifer Lawrence links 9/11 to Trump\'s election.\
+						<br>&emsp;&emsp;Tweet: A New Conspiracy Theory Falsely Claims Jennifer Lawrence Blamed Trump for 9/11 A meme with over 11,000 shares quotes Lawrence as blaming Trump for September 11 because he stole the election, but it\'s totally bogus. \
 						\
-						<br><b>Examples of neutral tweet-claim pairs:</b> \
-						<br>1.Tweet almost only repeats the content of factual claim and doesn’t add more contextual information. \
-						<br>Factual claim: the media distorted what happened with a baby at his rally. \
-						<br>Tweet: DONALD TRUMP Says the MEDIA (reporters) distorted what happened with a baby at his rally.  @cspanwj #tcot \
-						<br>2.Tweet almost only repeats the content of factual claim and doesn’t add more contextual information. \
-						<br>Factual claim: "Google search spike suggests many people don’t know why they voted for Brexit." \
-						<br>Tweet: Google search spike suggests people don\'t know why they Brexited #brexit http://theverge.com/2016/6/24/12022880/google-search-spike-brexit-why-leave-eu?utm_campaign=theverge&utm_content=article&utm_medium=social&utm_source=twitter…\
+						<br><br><b>Examples of neutral tweet-claim pairs:</b> \
+						<br><b>&emsp;1.Tweet almost only repeats the content of factual claim and doesn’t add more contextual information.</b> \
+						<br>&emsp;&emsp;Factual claim: the media distorted what happened with a baby at his rally. \
+						<br>&emsp;&emsp;Tweet: DONALD TRUMP Says the MEDIA (reporters) distorted what happened with a baby at his rally.  @cspanwj #tcot \
+						<br><b>&emsp;2.Tweet almost only repeats the content of factual claim and doesn’t add more contextual information.</b> \
+						<br>&emsp;&emsp;Factual claim: "Google search spike suggests many people don’t know why they voted for Brexit." \
+						<br>&emsp;&emsp;Tweet: Google search spike suggests people don\'t know why they Brexited #brexit http://theverge.com/2016/6/24/12022880/google-search-spike-brexit-why-leave-eu?utm_campaign=theverge&utm_content=article&utm_medium=social&utm_source=twitter…\
 						\
-						<br><b>Examples of unrelated tweet-claim pairs:</b> \
-						<br>1.Tweet discusses difference topic. \
-						<br>Factual claim: The chances of being killed by a refugee committing a terrorist act is 1 in 3.6 billion.\
-						<br>Tweet: @ItizBiz and @TB_Timesshe was decapitated and ruled a suicide!!??? \
-						<br>2.The tweet doesn’t talk about whether Paul Ryan has blocked gun laws or not. Even the tweet indeed talks about the Paul Ryan and gun laws, we still need to label pair as Unrelated. \
-						<br>Factual claim: Paul Ryan has blocked all action to strengthen our gun laws. \
-						<br>Tweet: Wisconsin students are marching 50 miles to Paul Ryan&apos;s hometown for action on gun laws… https://goo.gl/fb/6SPZtQ http://bitly.com/2sjBBbW \
-						<br>TODO:If you need more information to decide on your answer please click the “More context” button to see the sentences that were spoken before the sentence you are being asked about. \
+						<br><br><b>Examples of unrelated tweet-claim pairs:</b> \
+						<br><b>&emsp;1.Tweet discusses difference topic.</b> \
+						<br>&emsp;&emsp;Factual claim: The chances of being killed by a refugee committing a terrorist act is 1 in 3.6 billion.\
+						<br>&emsp;&emsp;Tweet: @ItizBiz and @TB_Timesshe was decapitated and ruled a suicide!!??? \
+						<br><b>&emsp;2.The tweet doesn’t talk about whether Paul Ryan has blocked gun laws or not. Even the tweet indeed talks about the Paul Ryan and gun laws, we still need to label pair as Unrelated.</b> \
+						<br>&emsp;&emsp;Factual claim: Paul Ryan has blocked all action to strengthen our gun laws. \
+						<br>&emsp;&emsp;Tweet: Wisconsin students are marching 50 miles to Paul Ryan&apos;s hometown for action on gun laws… https://goo.gl/fb/6SPZtQ http://bitly.com/2sjBBbW \
+						\
+						<br><br><b>Examples of problematic tweet-claim pairs:</b> \
+						<br><b>&emsp;1.Tweet is not in English.</b> \
+						<br>&emsp;&emsp;Factual claim: Winston Churchill said, "The fascists of the future will call themselves anti-fascists."\
+						<br>&emsp;&emsp;Tweet: Links mag alles, denken ze, nee zelfs \'weten\' ze.... #verpletterendeverantwoordelijkheid @jdecleulaer @vanranstmarc \
+						<br><b>&emsp;2.Factual claim is a question.</b> \
+						<br>&emsp;&emsp;Factual claim: Is the Red Cross \'Not Helping California Wildfire Victims\' \
+						<br>&emsp;&emsp;Tweet: Don’t forget tomorrow is HAT DAY! Your $2 donation to the Red Cross will help California wildfire victims! \
+						<br><b>&emsp;3.Factual claim is only a noun phrase.</b> \
+						<br>&emsp;&emsp;Factual claim: Fake News about the Florida School Shooting. \
+						<br>&emsp;&emsp;Tweet: Reading: YouTube\'s crackdown on fake news: Promoting bonkers Florida school shooting conspiracies \
+						<br><br>If you need more information to decide on your answer please click the “More context” button to see the sentences that were spoken before the sentence you are being asked about. \
 						If you are still unsure you can select the “skip sentence” button.<br><br>There will be 40 training questions at the beginning. \
 						We will show the correct answer and a brief explanation after you submit your response. \
 						The actual data collection will start after you are done with the initial 40 training questions. \

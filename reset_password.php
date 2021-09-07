@@ -23,8 +23,7 @@
 				<meta name="author" content="">
 
 				<link rel="icon" type="image/png" href="image/idirlogo2-small-icon.png"/>
-				<title>IDIR Annotation Tool</title>
-
+				<title>Wildfire Annotation Tool</title>
 				<!-- Bootstrap core CSS -->
 				<link href="bootstrap-3.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
 				<link href="iCheck/skins/square/blue.css" rel="stylesheet">
