@@ -10,7 +10,6 @@
 	$profession = $_REQUEST["profession"];
 	$university = $_REQUEST["university"];
 	$major = $_REQUEST["major"];
-	$_SESSION['project'] = $_REQUEST["project"];
 	
 	$random_key = md5(uniqid(rand()));
 	include_once("db.php");
@@ -20,8 +19,8 @@
 	$mail->isSMTP();                                      // Set mailer to use SMTP
 	$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 	$mail->SMTPAuth = true;                               // Enable SMTP authentication
-	// $mail->Username = 'classifyfact@gmail.com';                 // SMTP username
-	// $mail->Password = 'classifyfact123';                           // SMTP password
+	// $mail->Username = 'classifyfact@gmail.com';                 // Previous SMTP username
+	// $mail->Password = 'classifyfact123';                           // Previous SMTP password
 	$mail->Username = 'zhuzhengyuan824@gmail.com';                 // SMTP username
 	$mail->Password = 'kobe81kobe81';                           // SMTP password
 	$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
@@ -31,13 +30,13 @@
 	// $mail->From = 'classifyfact@gmail.com';
 	// $mail->FromName = 'ClassifyFact Account';
 	$mail->From = 'zhuzhengyuan824@gmail.com';
-	$mail->FromName = 'Joey';
+	$mail->FromName = 'Wildfire Annotation: forget password: new user';
 	$mail->addAddress($unquoted_email);     // Add a recipient
 	$mail->addReplyTo('zhuzhengyuan824@gmail.com', 'Information');
 	$mail->isHTML(true);                                  // Set email format to HTML
 
-	$mail->Subject = 'IDIR Lab ClassifyFact Team: Account Verification Message';
-	$mail->Body    = 'Hello,<br><br>This is an automatic response sent to those who wish to register with ClassifyFact.<br><br>Thank you for signing up. Please follow the verification link below to get your account verified and complete the registration process.<br><br>'.'<b>Verification Link:</b> <a href=http://idir-server2.uta.edu/classifyfact_survey/verify_user.php?random_key='.$random_key.'&username='.str_replace('"','',$username).'&project='.str_replace('"','',$_SESSION['project']).'>http://idir-server2.uta.edu/classifyfact_survey/verify_user.php?random_key='.$random_key.'&username='.str_replace('"','',$username).'&project='.str_replace('"','',$_SESSION['project']).'</a>'.'<br><br><b>Received this message by mistake?</b><br>This message is sent when an email address is registered to a ClassifyFact account. You may have received this email in error because another customer entered this email address by mistake. Please delete this email. Your email address will not be registered unless you follow the verification link listed above. <br><br>Regards.<br>IDIR Lab ClassifyFact Team<br>http://idir-server2.uta.edu/classifyfact_survey/<br>contact: classifyfact@gmail.com';
+	$mail->Subject = 'IDIR Lab: Account Verification Message';
+		$mail->Body    = 'Hello,<br><br>This is an automatic response sent to those who wish to register with ClassifyFact.<br><br>Thank you for signing up. Please follow the verification link below to get your account verified and complete the registration process.<br><br>'.'<b>Verification Link:</b> <a href=http://idir-server2.uta.edu/classifyfact_survey/verify_user.php?random_key='.$random_key.'&username='.str_replace('"','',$username).'>http://idir-server2.uta.edu/classifyfact_survey/verify_user.php?random_key='.$random_key.'&username='.str_replace('"','',$username).'</a>'.'<br><br><b>Received this message by mistake?</b><br>This message is sent when an email address is registered to a ClassifyFact account. You may have received this email in error because another customer entered this email address by mistake. Please delete this email. Your email address will not be registered unless you follow the verification link listed above. <br><br>Regards.<br>IDIR Lab ClassifyFact Team<br>http://idir-server2.uta.edu/classifyfact_survey/<br>contact: classifyfact@gmail.com';
 
 	if(!$mail->send())
 	{
