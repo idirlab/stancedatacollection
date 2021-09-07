@@ -16,6 +16,7 @@
 
 	$sql = gen_select_query(array('verification'), array('User'), array('username = '.$username, 'password = '.$encrypted_password));
 	$results = execute($sql, array(), PDO::FETCH_ASSOC);
+	var_dump($results);
 	if(strcmp($results[0]['verification'], "verified") == 0)
 	{	
 		$_SESSION['username'] = $username;
