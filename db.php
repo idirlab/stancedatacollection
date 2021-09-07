@@ -20,7 +20,7 @@ function getConnect() {
             $config = array(
                 'user' => 'wildfire',
                 'password' => '123456',
-                'server' => 'idir-server2.uta.edu',
+                'server' => 'localhost',
                 'database' => 'wildfire',
                 );
         }

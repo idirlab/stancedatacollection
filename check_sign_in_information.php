@@ -6,13 +6,13 @@
 	$encrypted_password = '"'.md5($password).'"';
 	include_once("db.php");
 	$db_tmp = getConnect();
-	
+	var_dump($db_tmp);
 	$sql = gen_select_query(array('username', 'count(*) as count'), array('User'), array('username = '.$username, 'password = '.$encrypted_password));
 	
 	$results = execute($sql, array(), PDO::FETCH_ASSOC);
 	
 	if(strcmp($results[0]['count'], "0") == 0) echo "-1";#wrong information
-	
+
 	$sql = gen_select_query(array('verification'), array('User'), array('username = '.$username, 'password = '.$encrypted_password));
 	$results = execute($sql, array(), PDO::FETCH_ASSOC);
 	if(strcmp($results[0]['verification'], "verified") == 0)
