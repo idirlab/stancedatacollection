@@ -6,7 +6,7 @@ $db = null;
 function getConnect() {
     # TODO: change local to server
     global $db;
-    $local = TRUE;
+    $local = FALSE;
     
     if(!$db) {
         if($local) {
@@ -25,6 +25,7 @@ function getConnect() {
                 );
         }
         $dsn= "mysql:host=${config['server']};dbname=${config['database']}";
+        return $dsn;
         $db = new PDO($dsn, $config['user'], $config['password']);
     }
     return $db;
