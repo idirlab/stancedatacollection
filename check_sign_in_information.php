@@ -4,7 +4,6 @@
 	$password = $_REQUEST["password"];
 
 	$encrypted_password = '"'.md5($password).'"';
-	var_dump($encrypted_password);
 	// var_dump($encrypted_password);
 	include_once("db.php");
 	$db_tmp = getConnect();
