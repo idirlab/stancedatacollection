@@ -4,7 +4,7 @@
 	$password = $_REQUEST["password"];
 
 	$encrypted_password = '"'.md5($password).'"';
-	var_dump($encrypted_password);
+	// var_dump($encrypted_password);
 	include_once("db.php");
 	$db_tmp = getConnect();
 	// var_dump($db_tmp);
@@ -17,14 +17,14 @@
 
 	$sql = gen_select_query(array('verification'), array('User'), array('username = '.$username, 'password = '.$encrypted_password));
 	$results = execute($sql, array(), PDO::FETCH_ASSOC);
-	var_dump($results);
+	// var_dump($results);
 	if(strcmp($results[0]['verification'], "verified") == 0)
 	{	
 		$_SESSION['username'] = $username;
 		$_SESSION['answered'] = 0;
 		$_SESSION['screening_questioned'] = 0;
 		
-		$_SESSION['message_counter'] =  rand(20, 30);
+		$_SESSION['message_counter'] = rand(20, 30);
 		$_SESSION['just_logged_in'] =  1;
 		
 		$_SESSION['REGION'] = 0;
