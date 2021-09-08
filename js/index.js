@@ -357,7 +357,7 @@ function insert_new_user()
 		dataType: "text",
 		success: function(data)
 		{
-			console.log("insert_new_user", data);
+			console.log("insert_new_user:", data);
 			$('#modal_new_user').modal('hide');
 			alert(data);
 		}

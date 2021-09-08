@@ -25,7 +25,7 @@
 	$mail->Password = 'kobe81kobe81';                           // SMTP password
 	$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 	$mail->Port = 465;                                 // TCP port to connect to
-	$mail->SMTPDebug = 0;
+	$mail->SMTPDebug = 3;
 
 	// $mail->From = 'classifyfact@gmail.com';
 	// $mail->FromName = 'ClassifyFact Account';
