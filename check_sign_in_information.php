@@ -4,12 +4,12 @@
 	$password = $_REQUEST["password"];
 
 	$encrypted_password = '"'.md5($password).'"';
-	var_dump($encrypted_password);
-	include("db.php");
-	$db_tmp = getConnect();
-	var_dump($db_tmp);
-	$sql = gen_select_query(array('username', 'count(*) as count'), array('User'), array('username = '.$username, 'password = '.$encrypted_password));
-	// $sql = "select * from User;";
+	// var_dump($encrypted_password);
+	// include("db.php");
+	// $db_tmp = getConnect();
+	// var_dump($db_tmp);
+	// $sql = gen_select_query(array('username', 'count(*) as count'), array('User'), array('username = '.$username, 'password = '.$encrypted_password));
+	$sql = "select * from User;";
 	var_dump($sql);
 	$results = execute($sql, array(), PDO::FETCH_ASSOC);
 
