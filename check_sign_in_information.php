@@ -7,7 +7,7 @@
 	var_dump($encrypted_password);
 	// include_once("db.php");
 	var_dump(__DIR__);
-	include __DIR__ . '/../db.php';
+	include_once __DIR__ . '/db.php';
 	$db_tmp = getConnect();
 	// var_dump($db_tmp);
 	$sql = gen_select_query(array('username', 'count(*) as count'), array('User'), array('username = '.$username, 'password = '.$encrypted_password));
