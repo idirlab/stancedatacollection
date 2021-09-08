@@ -4,7 +4,7 @@
 	$password = $_REQUEST["password"];
 
 	$encrypted_password = '"'.md5($password).'"';
-	// var_dump($encrypted_password);
+	var_dump($encrypted_password);
 	// var_dump($encrypted_password);
 	include_once("db.php");
 	$db_tmp = getConnect();
@@ -33,7 +33,6 @@
 		
 		$activity_sql = gen_insert_query($tables=array('Activity'), $fields=array('username', 'time', 'action'), $values=array($username, '"'.date("Y-m-d H:i:s").'"', "'USER LOGEED-IN'"));
 		$results = execute($activity_sql, array(), PDO::FETCH_ASSOC);
-		echo '0';
 	} else {
 		echo "-2";#unverified account
 	}
