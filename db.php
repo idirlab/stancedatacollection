@@ -1,12 +1,12 @@
 <?php
 $db = null;
 #date_default_timezone_set('UTC');
-date_default_timezone_set('America/Chicago');
+// date_default_timezone_set('America/Chicago');
 
 function getConnect() {
     # TODO: change local to server
     global $db;
-    $local = FALSE;
+    $local = TRUE;
     
     if(!$db) {
         if($local) {
