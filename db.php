@@ -18,7 +18,7 @@ function getConnect() {
                 );  
         } else {
             $config = array(
-                'user' => 'wildfire',
+                'user' => 'root',
                 'password' => '123456',
                 'server' => 'localhost',
                 'database' => 'wildfire',
