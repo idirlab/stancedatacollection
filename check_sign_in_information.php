@@ -5,7 +5,7 @@
 
 	$encrypted_password = '"'.md5($password).'"';
 	// var_dump($encrypted_password);
-	include_once("db.php");
+	include("db.php");
 	$db_tmp = getConnect();
 	// var_dump($db_tmp);
 	$sql = gen_select_query(array('username', 'count(*) as count'), array('User'), array('username = '.$username, 'password = '.$encrypted_password));
