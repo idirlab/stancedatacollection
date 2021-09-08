@@ -46,6 +46,7 @@
 
 	if(!$mail->send())
 	{
+		var_dump($mail->ErrorInfo);
 		echo "We could not send email to your address. Please check the email address and try signing up again.";
 		echo 'Mailer Error: ' . $mail->ErrorInfo;
 	}
