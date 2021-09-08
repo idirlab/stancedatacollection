@@ -25,7 +25,7 @@
 	$mail->Password = 'kobe81kobe81';                           // SMTP password
 	$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 	$mail->Port = 465;                                 // TCP port to connect to
-	$mail->SMTPDebug = 3;
+	$mail->SMTPDebug = 0;
 
 	// $mail->From = 'classifyfact@gmail.com';
 	// $mail->FromName = 'ClassifyFact Account';
@@ -42,7 +42,7 @@
 					   <a href=http://idir.uta.edu/wildfire_annotation/verify_user.php?random_key='.$random_key.'&username='.str_replace('"','',$username).'>
 					   http://idir.uta.edu/wildfire_annotation/verify_user.php?random_key='.$random_key.'&username='.str_replace('"','',$username).'</a>'.'<br>
 					   <br><b>Received this message by mistake?</b><br>This message is sent when an email address is registered to a ClassifyFact account. You may have received this email in error because another customer entered this email address by mistake. Please delete this email. Your email address will not be registered unless you follow the verification link listed above. <br>
-					   <br>Regards.<br>IDIR Lab Wildfire Project<br>http://idir.uta.edu/wildfire_annotation/<br>contact: zhengyuan.zhu@mavs.uta.edu';
+					   <br>Regards.<br>IDIR Lab Wildfire Project<br>http://idir.uta.edu/wildfire_annotation/<br>contact: idirlab@uta.edu';
 
 	if(!$mail->send())
 	{

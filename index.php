@@ -40,7 +40,7 @@
 					<div class="row">
 						<div class="col-sm-7">
 							<div class="form-group">
-								<input type="text" placeholder="Username" class="form-control" id="input_username">
+								<input type="text" placeholder="AccountID" class="form-control" id="input_username">
 								<input type="password" placeholder="Password" class="form-control" id="input_password" for='inputsm'>
 							</div>
 						</div>

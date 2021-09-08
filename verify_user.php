@@ -18,7 +18,7 @@
 	
 	if(strcmp($results[0]['verification'], 'verified') == 0)
 	{
-		echo "Your account is verified successfully! Please go to <a href='http://idir-server2.uta.edu/wildfire_annotation/'>http://idir-server2.uta.edu/wildfire_annotation/</a> and sign in now. Thanks!";
+		echo "Your account is verified successfully! Please go to <a href='http://idir.uta.edu/wildfire_annotation/'>http://idir.uta.edu/wildfire_annotation/</a> and sign in now. Thanks!";
 		return;
 	}
 	else
