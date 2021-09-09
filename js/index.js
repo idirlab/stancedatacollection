@@ -38,51 +38,10 @@ $(document).ready(function(){
 	$('#input_new_user_username').tooltip({'trigger':'focus', 'title': 'Allowed characters are 0-9, a-z, A-Z, PERIOD(.) and UNDERSCORE(_). Must be smaller than 16 characters.'});
 	$('#input_new_user_password').tooltip({'trigger':'focus', 'title': 'Allowed characters are 0-9, a-z, A-Z, PERIOD(.) and UNDERSCORE(_). Must be smaller than 16 characters.'});
 	$('#input_new_user_confirm_password').tooltip({'trigger':'focus', 'title': 'Both passwords should match.'});
-	//$('#button_profession').tooltip({'trigger':'focus','title':"Select your profession. If your profession is not in the list, select 'Other' and specify in the textbox. If you are a 'Student', select your major."});
 	
 	$(".reference-options li a").click(function()
 	{
 		$("#button_reference").text($(this).text());
-  	});
-  	
-	
-  	$('#input_other_profession').hide();
-  	$('#form_major').hide();
-  	$('#form_university').hide();
-  	$(".profession-options li a").click(function()
-	{
-		$("#button_profession").text($(this).text());
-		if($(this).text().localeCompare('Other') == 0)
-		{
-			$('#input_other_profession').show();
-		}
-		else
-		{
-			$('#input_other_profession').hide();
-		}
-		
-		if($(this).text().localeCompare('Student') == 0 || $(this).text().localeCompare('Professor') == 0)
-		{
-			$('#form_major').show();
-			$('#form_university').show();
-		}
-		else
-		{
-			$('#form_major').hide();
-			$('#form_university').hide();
-		}
-		
-  	});
-  	
-  	
-  	$(".university-options li a").click(function()
-	{
-		$("#button_university").text($(this).text());
-  	});
-  	
-  	$(".major-options li a").click(function()
-	{
-		$("#button_major").text($(this).text());
   	});
   	
   	$(".feedback-options li a").click(function()
@@ -127,23 +86,6 @@ $(document).ready(function(){
 	   		show_rules(1);
 	   		return;
 	   	}
-	   	if(!check_profession())
-	   	{
-	   		show_rules(1);
-	   		return;
-	   	}
-	   	if(!check_major())
-	   	{
-	   		show_rules(1);
-	   		return;
-	   	}
-	   	
-	   	if(!check_university())
-	   	{
-	   		show_rules(1);
-	   		return;
-	   	}
-	   	
 	   	check_username_exist();
 	   	
 	});
@@ -229,42 +171,6 @@ function check_email()
     return valid_characters.test($('#input_new_user_email').val());
 }
 
-function check_reference()
-{
-	return $('#button_reference').text().localeCompare("How did you hear about this Survey?");
-}
-
-function check_profession()
-{
-	if($('#button_profession').text().localeCompare("Other") == 0)
-	{
-		if($('#input_other_profession').val().localeCompare("Please Specify") == 0)
-		{
-			return false;
-		}
-		else return true;
-	}
-	return $('#button_profession').text().localeCompare("Select Your Profession");
-}
-
-function check_major()
-{
-	if($('#button_profession').text().localeCompare("Student") == 0 || $('#button_profession').text().localeCompare("Professor") == 0)
-	{
-		return $('#button_major').text().localeCompare("Select Your Major");
-	}
-	return true;
-}
-
-function check_university()
-{
-	if($('#button_profession').text().localeCompare("Student") == 0 || $('#button_profession').text().localeCompare("Professor") == 0)
-	{
-		return $('#button_university').text().localeCompare("Select Your University");
-	}
-	return true;
-}
-
 function check_full_name()
 {
 	var valid_characters = /^[0-9a-zA-Z \.,]+$/;
@@ -302,7 +208,7 @@ function check_confirm_password()
 
 function show_rules(number)
 {
-    if(number == 1)alert("Email Address: A valid email address.\n\nUsername: Allowed characters are 0-9, a-z, A-Z, PERIOD(.) and UNDERSCORE(_). Must be smaller than 16 characters.\n\nPassword: Allowed characters are 0-9, a-z, A-Z, PERIOD(.) and UNDERSCORE(_). Must be smaller than 16 characters. Both passwords should exactly match.\n\nSelect your profession. If your profession is not in the list, select 'Other' and specify in the textbox. If you are a 'Professor/Student', then please select your university and major.");
+    if(number == 1)alert("Email Address: A valid email address.\n\nUsername: Allowed characters are 0-9, a-z, A-Z, PERIOD(.) and UNDERSCORE(_). Must be smaller than 16 characters.\n\nPassword: Allowed characters are 0-9, a-z, A-Z, PERIOD(.) and UNDERSCORE(_). Must be smaller than 16 characters. Both passwords should exactly match.");
     else if(number == 2)alert("Password: Allowed characters are 0-9, a-z, A-Z, PERIOD(.) and UNDERSCORE(_). Must be smaller than 16 characters. Both passwords should match exactly.");
 }
 
@@ -332,27 +238,12 @@ function check_username_exist()
 
 function insert_new_user()
 {
-	var profession = $('#button_profession').text();
-	if(profession.localeCompare('Other') == 0)
-	{
-		profession = $('#input_other_profession').val();
-	}
-	var major = 'NULL';
-	var university = 'NULL';
-	if(profession.localeCompare('Student') == 0 || profession.localeCompare('Professor') == 0)
-	{
-		major = '"'+$('#button_major').text()+'"';
-		university = '"'+$('#button_university').text()+'"';
-	}
 	$.ajax({
 		url: "insert_new_user.php",
 		method: "POST",
 		data: { username : '"'+$('#input_new_user_username').val()+'"',
 				password : '"'+$('#input_new_user_password').val()+'"' ,
 				email : '"'+$('#input_new_user_email').val()+'"',
-				profession : '"'+profession+'"',
-				university : university,
-				major : major,
 			},
 		dataType: "text",
 		success: function(data)

@@ -29,7 +29,6 @@
 	$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 	$mail->Port = 465;                                 // TCP port to connect to
 	$mail->SMTPDebug = 0;
-
 	
 	$mail->From = 'idirlabuta@gmail.com';
 	$mail->FromName = 'Wildfire Annotation: forget password';

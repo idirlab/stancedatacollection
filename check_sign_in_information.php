@@ -5,7 +5,6 @@
 
 	$encrypted_password = '"'.md5($password).'"';
 	include_once("db.php");
-	$db_tmp = getConnect();
 	$sql = gen_select_query(array('username', 'count(*) as count'), array('User'), array('username = '.$username, 'password = '.$encrypted_password));
 	
 	$results = execute($sql, array(), PDO::FETCH_ASSOC);

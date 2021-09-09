@@ -7,9 +7,6 @@
 	$username = $_REQUEST["username"];
 	$password = $_REQUEST["password"];
 	$encrypted_password = '"'.md5($password).'"';
-	$profession = $_REQUEST["profession"];
-	$university = $_REQUEST["university"];
-	$major = $_REQUEST["major"];
 	
 	$random_key = md5(uniqid(rand()));
 	include_once("db.php");
@@ -48,9 +45,9 @@
 	}
 	else
 	{
-		echo "We have sent an email to your address. Please check your Inbox and verify your account. Sometimes, emails are stored in Spam folder. If you cannot find the email in your Inbox then please check the Spam folder. If you do not find the email at all, then please check the email address and try signing up again.";
-
-		$sql = gen_insert_query(array('User'), array(), array($username, $encrypted_password, $email, '"'.$random_key.'"', $profession, $university, $major,'0', '0', '1000' ));
+		$sql = gen_insert_query(array('User'), array(), array($username, $encrypted_password, $email, '"'.$random_key.'"', '0', '0', '0','0', '0', '1000' ));
 		$results = execute($sql, array(), PDO::FETCH_ASSOC);
+		echo $results;
+		echo "We have sent an email to your address. Please check your Inbox and verify your account. Sometimes, emails are stored in Spam folder. If you cannot find the email in your Inbox then please check the Spam folder. If you do not find the email at all, then please check the email address and try signing up again.";
 	}
 ?>
