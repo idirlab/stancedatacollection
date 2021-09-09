@@ -483,15 +483,6 @@
 				</div>
 				<div class='col-md-2'></div>
 			</div>
-			
-		<!--	<br>
-			<p class='justified_para'>Politicians make factual statements all the time. Some of these factual statements are interesting & important to many people and some are not. Also, not all factual statements are true. Journalists and reporters spend good amount of time to check veracity/truthfulness of interesting factual statements.</p>
-			<br><div class="well"><p class='justified_para'>For example, <i>"Our Air Force is older and smaller than at any time since it was founded in 1947."</i	>, said Republican candidate Mitt Romney on <a href="http://www.debates.org/index.php?page=october-22-2012-the-third-obama-romney-presidential-debate">third presidential debate in 2012</a>. Little did he knew that journalists will fact-check the statement and <a href="http://www.politifact.com/truth-o-meter/statements/2012/jan/18/mitt-romney/mitt-romney-says-us-navy-smallest-1917-air-force-s/">prove it false</a>. Similar false statements were also made by the other candidate, President Barack Obama. List of false statements in third presidential debate made by either candidates can be found <a href="http://www.politifact.com/truth-o-meter/article/2012/oct/22/fact-checking-third-presidential-debate/">here</a>.</p></div>
-			<p class='justified_para'><br>We want to determine  whether a sentence contains a factual statement and whether its truthfulness should be checked. You can help us by telling which factual statements in previous Presidential debates are check-worthy and would benefit the voting public. We believe this can be useful for journalist and reporters.
-			<br>
-			<br>Please feel free to use the 'Feedback' button (to the right of the browser window) to inform us your suggestions and/or report errors. You can also contact us at <a href="mailto:classifyfact@gmail.com">classifyfact@gmail.com</a>. Thanks!</p>
-
-			<button id="button_survey" type="button" class="btn btn-primary">Go to Survey</button>-->
 		</div>
 	</div>
 

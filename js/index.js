@@ -598,7 +598,7 @@ function load_survey_instructions()
 						We will show the correct answer and a brief explanation after you submit your response. \
 						The actual data collection will start after you are done with the initial 40 training questions. \
 						<br><br>Please feel free to use the “Feedback” button (to the right of the browser window) to inform us your suggestions and/or report errors. \
-						You can also contact us at <a href="mailto:classifyfact@gmail.com">classifyfact@gmail.com</a>. Thanks!</p>');
+						You can also contact us at <a href="mailto:idirlabuta@gmail.com">idirlabta@gmail.com</a>. Thanks!</p>');
 	
 	container.append('<div class="center-align"><input id="input_agree" type="checkbox"><label><b>I have carefully read and understood all the instructions.</b></label><br><br><button id="button_start_survey" type="button" class="btn btn-primary btn-lg" disabled>Start</button><br><br> </div>');
 	

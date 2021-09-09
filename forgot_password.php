@@ -34,7 +34,7 @@
 
 	// $mail->From = 'classifyfact@gmail.com';
 	// $mail->FromName = 'ClassifyFact Account';
-	$mail->From = 'zhuzhengyuan824@gmail.com';
+	$mail->From = 'idirlabuta@gmail.com';
 	$mail->FromName = 'Wildfire Annotation: forget password';
 	$mail->addAddress($unquoted_email);     // Add a recipient
 	$mail->addReplyTo('zhuzhengyuan824@gmail.com', 'Information');
@@ -42,7 +42,7 @@
 	$mail->isHTML(true);                                  // Set email format to HTML
 
 	$mail->Subject = 'IDIR Lab: Password Information';
-	$mail->Body    = 'Hello,<br><br>Your username is '.$username.',<br>Please click on the following link to reset your password.<br><br>'.'<a href=http://idir-server2.uta.edu/classifyfact_survey/reset_password.php?random_key='.$random_key.'&username='.str_replace('"','',$username).'>http://idir-server2.uta.edu/classifyfact_survey/reset_password.php?random_key='.$random_key.'&username='.str_replace('"','',$username).'</a>'.'<br><br>Regards.<br>IDIR ClassifyFact Team<br>http://idir-server2.uta.edu/classifyfact_survey/';
+	$mail->Body    = 'Hello,<br><br>Your username is '.$username.',<br>Please click on the following link to reset your password.<br><br>'.'<a href=http://idir.uta.edu/wildfire_annotation/reset_password.php?random_key='.$random_key.'&username='.str_replace('"','',$username).'>http://idir-server2.uta.edu/classifyfact_survey/reset_password.php?random_key='.$random_key.'&username='.str_replace('"','',$username).'</a>'.'<br><br>Regards.<br>IDIR Wildfire Team<br>http://idir.uta.edu/wildfire_annotation/';
 
 	if(!$mail->send())
 	{

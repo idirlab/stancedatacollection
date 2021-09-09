@@ -13,6 +13,6 @@
 	}
 	else
 	{
-		echo "There is some error with password reset. Please contact classifyfact@gmail.com";
+		echo "There is some error with password reset. Please contact idirlabuta@gmail.com";
 	}
 ?>

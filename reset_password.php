@@ -41,7 +41,7 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" href="index.php">ClassifyFact</a>
+							<a class="navbar-brand" href="index.php">Wildfire Annotation</a>
 						</div>						
 					</div>
 				</nav>				
