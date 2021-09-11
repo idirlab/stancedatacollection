@@ -20,10 +20,10 @@
 	$mail->Password = 'Idirerb414500uta';                           // SMTP password
 	$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 	$mail->Port = 465;                                 // TCP port to connect to
-	$mail->SMTPDebug = 3;
+	$mail->SMTPDebug = 0;
 
 	$mail->From = 'idirlabuta@gmail.com';
-	$mail->FromName = 'Wildfire Annotation: forget password: new user';
+	$mail->FromName = 'Wildfire Annotation: new user';
 	$mail->addAddress($unquoted_email);     // Add a recipient
 	$mail->addReplyTo('idirlabuta@gmail.com', 'Information');
 	$mail->isHTML(true);                                  // Set email format to HTML
