@@ -5,7 +5,7 @@ date_default_timezone_set('America/Chicago');
 
 function getConnect() {
     global $db;
-    $local = FALSE;
+    $local = True;
     
     if(!$db) {
         if($local) {
@@ -14,6 +14,7 @@ function getConnect() {
                 'password' => '',
                 'server' => 'localhost',
                 'database' => 'wildfire',
+                'port' => '3307'
                 );  
         } else {
             $config = array(
@@ -29,7 +30,6 @@ function getConnect() {
         } catch(Exception $e){
             return $e;
         }
-        
     }
     return $db;
 }
