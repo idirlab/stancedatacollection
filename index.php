@@ -137,7 +137,7 @@
 			<div class='center-block'><p class='justified_para'><h2>Thank you for participating in data collection for Wildfire project!<br></h2><!--<h4>ClaimBuster uses computational power to do tasks that are tedious and time-consuming for fact-checkers, such as finding claims by politicians that should be checked.<br>Note: Participants are paid for every labeled sentence. Pay rate depends on work quality and the length/complexity of labeled sentences.</h4>--></p></div>
 			<br>
 			<!--<p class='justified_para'><h2>ClaimBuster data collection is PAUSED for now. If you have contributed, you can login and see your payment by clicking the "Leaderboard" button.</h2></p>-->
-			<h3>WildFire Stance Detection Annotation Tutorial</h2>
+			<!-- <h3>WildFire Stance Detection Annotation Tutorial</h2>
 			<div class='row'>
 				<div class='col-md-2'></div>
 				<div class='col-md-8'>
@@ -146,7 +146,7 @@
 					</div>
 				</div>
 				<div class='col-md-2'></div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 

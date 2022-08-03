@@ -31,9 +31,9 @@
   - sentence_id:
   - username:
   - response:
-    - "1": important/positive
+    - "1": positive
     - "0": neutral
-    - "-1": not important/negative
+    - "-1": negative
     - "-2": skip
     - "2": (new) unrelated
     - "3": (new) problematic

@@ -482,8 +482,7 @@ function load_survey_instructions()
 						<br>&emsp;&emsp;Factual claim: Fake News about the Florida School Shooting. \
 						<br>&emsp;&emsp;Tweet: Reading: YouTube\'s crackdown on fake news: Promoting bonkers Florida school shooting conspiracies \
 						\
-						<br><br>If you need more information to decide on your answer please click the “More context” button to see the extra information: factual claim author, tweet author and when the tweet posted. \
-						If you are still unsure you can select the “skip sentence” button.<br><br>There will be 40 training questions at the beginning. \
+						<br><br>If you are unsure about the answer you can select the “skip sentence” button.<br><br>There will be 40 training questions at the beginning. \
 						We will show the correct answer after you submit your response. \
 						The actual data collection will start after you are done with the initial 40 training questions. \
 						<br><br>Please feel free to use the “Feedback” button (to the right of the browser window) to inform us your suggestions and/or report errors. \
@@ -579,7 +578,7 @@ function show_sentence(sentence_id, sentence, REGION, ANSWERED_message, QUALITY_
 	$('#button_previous_answers').on('click', function(){
 		get_previous_answers(sentence_id);
 	})
-	
+	// TODO: remove context button
 	var context_seen = 0;
 	$('#button_context').click(function(){
 		if($('#button_context').text().localeCompare("More Context") == 0)
@@ -628,12 +627,12 @@ function update_region_status(REGION)
 	case 3:
 		//console.log(REGION);
 		$('#span_REGION_status').css('background-color',"#FFFFCC");
-		$('#span_REGION_status').text("Our tool detected that the quality of your responses is not high. If the quality falls below a certain threshold, we won’t be able to consider your response for prize drawing. You can modify your previous responses, in order to improve the quality. Please spend more time on each sentence and read it more carefully. If necessary, use the “more context button”; if unsure, use the “skip” button.");
+		$('#span_REGION_status').text("Our tool detected that the quality of your responses is not high. If the quality falls below a certain threshold, we won’t be able to consider your response for prize drawing. You can modify your previous responses, in order to improve the quality. Please spend more time on each sentence and read it more carefully. If you unsure about the answer, use the “skip” button.");
 		break;
 	case 4:
 		//console.log(REGION);
 		$('#span_REGION_status').css('background-color',"#FF6666");
-		$('#span_REGION_status').text("Our tool detected that the quality of your responses is poor. If it cannot be improved, we won’t be able to consider your response for prize drawing. In order to improve the quality, please modify your previous responses. Please spend more time on each sentence and read it more carefully. If necessary, use the “more context button”; if unsure, use the “skip” button.");
+		$('#span_REGION_status').text("Our tool detected that the quality of your responses is poor. If it cannot be improved, we won’t be able to consider your response for prize drawing. In order to improve the quality, please modify your previous responses. Please spend more time on each sentence and read it more carefully. If you unsure about the answer, use the “skip” button.");
 		break;	
 	default:
 		//console.log(REGION);
