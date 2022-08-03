@@ -34,6 +34,16 @@ li span
 	text-align: justify;
 }
 
+.instruction_example_title
+{
+	font-size: 140%;
+}
+
+.instruction_example_text
+{
+	font-size: 120%;
+}
+
 label
 {
 	margin-left: 5px;
