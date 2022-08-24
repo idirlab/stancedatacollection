@@ -453,7 +453,7 @@ function load_survey_instructions() {
         '<p class="justified_para top_margin"> \
 		<h2>Annotate Instructions:</h2> \
 		<h4>You will be shown a tweet-claim pair, all you need to do is to decide <b>the truthfulness stance, which means whether the tweet author believes factual claim is true or false.</b></h4> \
-		<h5>Your five options will always be:<h5><br>\
+		<h4>Your five options will always be:<h4><br>\
 		<br><img src="image/1.png" class="img-responsive center-block with-border" alt="Figure 1"><span class="center-block">Figure 1</span> \
 		\
 		<h3><b>Option meanings and examples:</b></h3> \

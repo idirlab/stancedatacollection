@@ -17,7 +17,7 @@ function getConnect()
                     "password" => "",
                     "server" => "localhost",
                     "database" => "wildfire_groundtruth",
-                    "port" => "3306",
+                    "port" => "3307",
                 ];
             } else {
                 $config = [
@@ -25,7 +25,7 @@ function getConnect()
                     "password" => "",
                     "server" => "localhost",
                     "database" => "wildfire",
-                    "port" => "3306",
+                    "port" => "3307",
                 ];
             }
         } else {
