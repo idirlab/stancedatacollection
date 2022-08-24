@@ -2,31 +2,27 @@
 session_start();
 $username = $_REQUEST["username"];
 $password = $_REQUEST["password"];
-echo "dada";
 $encrypted_password = '"' . md5($password) . '"';
 include_once "db.php";
-echo "didi";
+
 $sql = gen_select_query(
     ["username", "count(*) as count"],
     ["User"],
     ["username = " . $username, "password = " . $encrypted_password]
 );
-echo "qqq";
-echo $sql;
 $results = execute($sql, [], PDO::FETCH_ASSOC);
-echo "111";
+
 if (strcmp($results[0]["count"], "0") == 0) {
     echo "-1";
 } #wrong information
-echo "---";
+
 $sql = gen_select_query(
     ["verification"],
     ["User"],
     ["username = " . $username, "password = " . $encrypted_password]
 );
-echo "000";
 $results = execute($sql, [], PDO::FETCH_ASSOC);
-echo "222";
+echo strcmp($results[0]["verification"], "verified");
 if (strcmp($results[0]["verification"], "verified") == 0) {
     $_SESSION["username"] = $username;
     $_SESSION["answered"] = 0;

@@ -13,7 +13,7 @@ var text_response = {
     3: "The tweet-claim pair is problematic",
 };
 var logged_out = 1;
-var is_training = 1;
+var is_training = 0;
 var training_index = -1;
 
 window.onbeforeunload = function (e) {

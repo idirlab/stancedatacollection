@@ -1,4 +1,5 @@
 <?php
+include_once "GLOBAL.php";
 $db = null;
 #date_default_timezone_set('UTC');
 date_default_timezone_set("America/Chicago");
@@ -6,12 +7,12 @@ date_default_timezone_set("America/Chicago");
 function getConnect()
 {
     global $db;
-    $local = true;
-    $groundtruth = true;
+    // $local = true;
+    // $groundtruth = true;
 
     if (!$db) {
-        if ($local) {
-            if ($groundtruth) {
+        if ($LOCAL) {
+            if ($GROUNDTRUTH_ENV) {
                 $config = [
                     "user" => "root",
                     "password" => "",
@@ -29,7 +30,7 @@ function getConnect()
                 ];
             }
         } else {
-            if ($groundtruth) {
+            if ($GROUNDTRUTH_ENV) {
                 $config = [
                     "user" => "root",
                     "password" => "123456",
@@ -50,6 +51,7 @@ function getConnect()
         try {
             $db = new PDO($dsn, $config["user"], $config["password"]);
         } catch (Exception $e) {
+            log_error($e);
             return $e;
         }
     }
