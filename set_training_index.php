@@ -1,38 +1,51 @@
 <?php
-	session_start();
-	$username = $_SESSION['username'];
-	$sentence_id=$_REQUEST["sentence_id"];
-	$response=$_REQUEST["response"];
-	include_once("db.php");
-	
-	$sql = gen_select_query(array('screening'), array('Sentence'), array('id = '.$sentence_id));
-	$results = execute($sql, array(), PDO::FETCH_ASSOC);
-	$screening = $results[0]['screening'];
-	
-	$sql = gen_select_query(array('text'), array('Sentence_Explanation', 'Explanation'), array('sentence_id = '.$sentence_id, 'Sentence_Explanation.explanation_id = Explanation.id'));
-	$results = execute($sql, array(), PDO::FETCH_ASSOC);
-	$explanation = $results[0]['text'];
-	if($screening == $response)
-	{
-		$explanation = $explanation . "^" . "Correct!";
-	}
-	else
-	{
-		$explanation = $explanation . "^" . "Wrong!";
-	}
+session_start();
+$username = $_SESSION["username"];
+$sentence_id = $_REQUEST["sentence_id"];
+$response = $_REQUEST["response"];
+include_once "db.php";
 
-	$sql = gen_select_query(array('idx'), array('User_Training'), array('username = '.$username));
-	$results = execute($sql, array(), PDO::FETCH_ASSOC);
-	$idx = $results[0]['idx'];
-	
-	if($idx < 40)
-	{
-		$idx = $idx+1;
-		$sql = gen_update_query($tables=array('User_Training'), $fields=array('idx'), $values=array($idx), $where=array('username = '.$username));
-		execute($sql, array(), PDO::FETCH_ASSOC);
-	}	
-	
-	$sql = 'select USERNAME,ANSWERED, INCORRECT,
+$sql = gen_select_query(["screening"], ["Sentence"], ["id = " . $sentence_id]);
+$results = execute($sql, [], PDO::FETCH_ASSOC);
+$screening = $results[0]["screening"];
+
+$sql = gen_select_query(
+    ["text"],
+    ["Sentence_Explanation", "Explanation"],
+    [
+        "sentence_id = " . $sentence_id,
+        "Sentence_Explanation.explanation_id = Explanation.id",
+    ]
+);
+$results = execute($sql, [], PDO::FETCH_ASSOC);
+$explanation = $results[0]["text"];
+if ($screening == $response) {
+    $explanation = $explanation . "^" . "Correct!";
+} else {
+    $explanation = $explanation . "^" . "Wrong!";
+}
+
+$sql = gen_select_query(
+    ["idx"],
+    ["User_Training"],
+    ["username = " . $username]
+);
+$results = execute($sql, [], PDO::FETCH_ASSOC);
+$idx = $results[0]["idx"];
+
+if ($idx < 40) {
+    $idx = $idx + 1;
+    $sql = gen_update_query(
+        $tables = ["User_Training"],
+        $fields = ["idx"],
+        $values = [$idx],
+        $where = ["username = " . $username]
+    );
+    execute($sql, [], PDO::FETCH_ASSOC);
+}
+
+$sql =
+    'select USERNAME,ANSWERED, INCORRECT,
 			if(ANSWERED >= 50, round(if( RANK_W <= 0, 3-7*RANK_W/0.2, if(RANK_W<=0.3, pow((0.3-RANK_W)/0.3, 2.5)*3, 0) )*pow((A.LEN/18.4217), 1.5)*pow(0.6, A.SKIPPED/A.ANSWERED),2), -100000) as QUALITY,
 			if(ANSWERED >= 0, round(if( RANK_W <= 0, 3-7*RANK_W/0.2, if(RANK_W<=0.3, pow((0.3-RANK_W)/0.3, 2.5)*3, 0) )*pow((A.LEN/18.4217), 1.5)*ANSWERED/100*pow(0.6, A.SKIPPED/A.ANSWERED),2), -100000) as PAYMENT
 			from (select 
@@ -54,11 +67,21 @@
 			where
 			    id = sentence_id and			    
 				Sentence_User.username = User.username and
-				Sentence_User.username = '.$username.' and
-				sentence_id in '.$_SESSION['training_sentences'].'
+				Sentence_User.username = ' .
+    $username .
+    ' and
+				sentence_id in ' .
+    $_SESSION["training_sentences"] .
+    '
 			group by Sentence_User.username) A order by PAYMENT desc, ANSWERED desc;';
-	
-	$results = execute($sql, array(), PDO::FETCH_ASSOC);
-	
-	echo $explanation. "^" . $idx. "^". $results[0]['INCORRECT']. "^". $results[0]['PAYMENT'];
+
+$results = execute($sql, [], PDO::FETCH_ASSOC);
+
+echo $explanation .
+    "^" .
+    $idx .
+    "^" .
+    $results[0]["INCORRECT"] .
+    "^" .
+    $results[0]["PAYMENT"];
 ?>
