@@ -1,0 +1,241 @@
+li span
+{
+	color: white;
+	margin-top: 10px;
+	margin-right: 5px;
+}
+
+.panel-title
+{
+	font-size: 150%;
+	font-style: italic;
+}
+
+.title
+{
+	margin-top: 10px;
+	font-size: 200%;
+}
+
+.footer
+{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #E9E9E9;
+}
+
+.table th, .table td
+{ 
+	border-top: none; 
+}
+
+.justified_para
+{
+	text-align: justify;
+}
+
+.instruction_example_title
+{
+	font-size: 140%;
+}
+
+.instruction_example_text
+{
+	font-size: 120%;
+}
+
+label
+{
+	margin-left: 5px;
+	font-size: 150%;
+	font-weight: normal !important;
+}
+
+.well
+{
+	font-size: 150%;
+	margin: 0;
+}
+
+.well-sm
+{
+	font-size: 130% !important;
+	margin: 0;
+}
+
+.center-block
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.with-border
+{
+	border: 3px solid !important;
+}
+
+.vcenter
+{		
+	display: inline-block !important;
+	vertical-align: middle !important;
+	float: none !important;
+}
+
+#button_forgot_password
+{
+	font-size: 0.75em;
+	color: white;
+	padding: 0;
+}
+
+#button_context
+{
+	margin-top: 5px;
+}
+
+.pull_top
+{
+	margin-top: 0;
+}
+
+.top_margin
+{
+	margin-top: 45px;
+}
+
+#feedback
+{
+	float: left;
+	position: fixed;
+	top: calc(50% - 47px);
+	right: 0;
+}
+
+#feedback a
+{
+	background: #FF4500;
+	border-radius: 5px 0 0 5px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+	border: 3px solid #fff;
+	border-right: 0;
+	display: block;
+	padding: 20px 12px;
+	transition: all .2s ease-in-out;
+}
+
+#feedback a:hover
+{
+	padding-right: 20px;
+}
+
+#modal_consent .modal-body
+{
+	height: 600px;
+	overflow-y:scroll !important;
+}
+
+#modal_leaderboard .modal-body
+{
+	height: 600px;
+	overflow-y:scroll !important;
+}
+
+#ul_major_options
+{
+	height: 200px;
+	overflow-y: scroll;
+}
+
+.center-align
+{
+	margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 90%;
+    font-size: 110%;
+    background-color: #ffffff;
+}
+
+.user
+{
+	background-color: #ffd700;
+}
+
+.winner
+{
+	background-color: #8DDF00;
+}
+
+.ui-autocomplete {
+	max-height: 200px;
+	z-index: 1100;
+	overflow-y: auto;
+	/* prevent horizontal scrollbar */
+	overflow-x: hidden;
+}
+/* IE 6 doesn't support max-height
+* we use height instead, but this forces the menu to always be this tall
+*/
+* html .ui-autocomplete {
+	height: 100px;
+}
+
+.codename
+{
+	font-size: 200%;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #fff;	
+	font-size: 200%;
+}
+
+/*.navbar-default .navbar-header*/
+/*{*/
+/*	height: 80px;*/
+/*}*/
+
+.well-sm
+{
+	margin-top: 130px;
+	margin-bottom: 10px;
+}
+
+.tips
+{
+	font-size: 130% !important;
+}
+
+.message
+{
+	font-size: 130% !important;
+	margin-bottom: 5px;
+}
+
+.wildfire-logo
+{
+	max-height: 50px;
+	margin-top: -25%;
+}
+
+.claimbuster-title
+{
+	padding-left: 0;
+}
+
+.correct
+{
+	background-color: #66FF66;
+}
+
+.wrong
+{
+	background-color: #FF6666;
+}
+
+.highlight
+{
+	background-color: #BBBBFF;
+}

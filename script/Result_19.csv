@@ -1,0 +1,1062 @@
+sentence_id,Max_Label,Negative_cnt,Neutral_cnt,Positive_cnt,Diff_cnt,tweet,claim
+251,dif,0,0,0,3,"Well, well, well...
+The Walt Disney Company's CEO, Bob Chapek, publicly opposes Florida's controversial ""Don't Say Gay"" bill.
+
+https://www.westernjournal.com/huge-4-disney-employees-arrested-human-trafficking-operation/?utm_source=email&utm_medium=AE&utm_campaign=can&utm_content=2022-03-17",Disney CEO Bob Chapek was arrested for human trafficking.
+252,pos,0,0,3,0,"With the money Elon Musk spent to buy Twitter shares, he could have given every American family $2,000,000, a house in Bel Air, 2 Bentleys, lifetime Netflix subscription, and still had enough left over to save all endangered animals and cancel all student and medical debt.","""With the money Elon Musk spent to buy Twitter shares, he could have given every American family $100,000 and still had enough left over to cancel all student debt."""
+281,neu,0,3,0,0,So are the rumors true? The FBI lost Hunter Biden's laptop?,The FBI lost Hunter Biden's laptop.
+292,pos,0,0,3,0,"AND ALL OF THIS INFORMATION IS ON THE LAPTOP, WITCH THE FBI HAS LOST OR HIDING.
+https://trendingpolitics.com",The FBI lost Hunter Biden's laptop.
+401,dif,0,0,0,3,"Moral Quandry:
+You have bought a loaf of bread at the grocery store and when you go home you realize you received 2 loaves of bread.
+What do you do?
+--
+Addendum: Your delicious lemonade and ice cream were replaced by that bread loaf.","""You go to a store, they don't have bread."""
+404,dif,0,0,0,3,Aldi keeps stuffing more and more patio furniture into our local store. They're running out of places to put it. It's not selling. People go there for rock bottom prices on bread and produce. Many don't have an extra $500 for furniture.,"""You go to a store, they don't have bread."""
+410,dif,0,0,0,3,Out of bread have to go to the bread store,"""You go to a store, they don't have bread."""
+412,dif,0,0,0,5,"Talking about the economy:
+
+""When you go to the store and bread is $1.50....""
+
+Quote from Walter Eisenberg on #MorningJoe
+
+WHO ARE THESE PEOPLE??
+
+Democrats do not have a clue!","""You go to a store, they don't have bread."""
+422,dif,0,0,0,3,Nobody in Florida should have to go to the company store and buy bread with Disney Dollars.,"""You go to a store, they don't have bread."""
+431,dif,0,0,0,3,"Q: If you have a $10 bill and go to the store for some milk, bread and half of Moscow, how much change will you get?","""You go to a store, they don't have bread."""
+433,pos,0,0,3,0,"Alopecia isn't a medical disease; it's an aesthetic one. Nobody is less healthy because they don't have hair, they just don't have hair.","""Alopecia isn't a medical disease; it's an aesthetic one."""
+514,neu,0,3,0,0,"I don't know what to make of this news source (as there has been a lot of  fake news out there). What do you think?
+
+https://realrawnews.com/2022/02/putin-vows-to-crush-child-traffickers-in-ukraine/","""Putin Vows to 'Crush' Child Traffickers in Ukraine"""
+780,dif,0,0,0,3,"Following the invasion in Ukraine, Biden issued a press release. Biden then spoke to the Ukrainian President, then the leaders of the G7. 
+
+Joe Biden hasn't publicly addressed the American people. 
+
+We need an America First President, not America last. ",Ukraine issued a press release about Joe Biden
+802,neg,3,0,0,0,"Biden repeats false claim about trips to Iraq and Afghanistan, this time to graduating midshipmen https://www.foxnews.com/politics/biden-iraq-afghanistan-about-40-times-administration-says-its-half-of-that #FoxNews hiden biden is a joke and can't remember how many times he has been anywhere, let alone middle east !total fraud and the worst ever president","""I've been in and out of Iraq and Afghanistan over 40 times."""
+811,neg,3,0,0,0,"They all lie so much, they don't even know the truth.
+
+https://www.foxnews.com/politics/biden-iraq-afghanistan-about-40-times-administration-says-its-half-of-that","""I've been in and out of Iraq and Afghanistan over 40 times."""
+821,neg,3,0,0,0,"Hey @WHCOS @VP @PressSec  @DeptofDefense @PentagonPresSec @SECNAV @USNavyCNO, why does @POTUS have such a problem telling the truth? Are honor offenses a thing of the past at @NavalAcademy?
+https://www.foxnews.com/politics/biden-iraq-afghanistan-about-40-times-administration-says-its-half-of-that","""I've been in and out of Iraq and Afghanistan over 40 times."""
+830,neg,3,0,0,0,Joe and his delusional world. https://www.foxnews.com/politics/biden-iraq-afghanistan-about-40-times-administration-says-its-half-of-that #FoxNews,"""I've been in and out of Iraq and Afghanistan over 40 times."""
+841,neu,0,3,0,0,Did Biden really go to Afghanistan/Iraq 40 times?,"""I've been in and out of Iraq and Afghanistan over 40 times."""
+863,neg,3,0,0,0,"The 2020 election was not ""stolen"" from Donald Trump. Trump failed to win the election. As a result, Trump lost. His narcissistic ego could not stand the thought that he lost, so, in his diseased mind, he conjured up a delusional story of how the election was ""stolen"" from him.","The 2020 election ""was stolen from Donald J. Trump."""
+872,neg,3,1,0,0,Did Donald Trump assert that the 2020 election was stolen while knowing that claim to be false?: https://fb.pollking.com/ @funpollking .....HEY AMERICA....75.4%......SAID......  NO ........,"The 2020 election ""was stolen from Donald J. Trump."""
+881,pos,0,1,4,0,"Old News Becomes New News!!!
+
+""'Drop and Roll' - How The 2020 Election Was Stolen From Donald Trump""
+The Gateway Pundit Published November 18, 2020
+
+https://rumble.com/vb8ksn-drop-and-roll-how-the-2020-election-was-stolen-from-donald-trump.html","The 2020 election ""was stolen from Donald J. Trump."""
+882,neu,0,3,0,0,"Ali Alexander believes the 2020 election was ""stolen"" from Donald #Trump.
+
+Continue reading at https://10ztalk.com/2022/06/29/stop-the-steal-founder-fears-hunter-biden-mitt-romney-will-genocide-us-all-with-star-charts/ | 10z viral","The 2020 election ""was stolen from Donald J. Trump."""
+892,neu,0,3,0,0,Watch: Ivanka Rejects Donald Trump's Claims That 2020 Election Was Stolen https://www.msn.com/en-us/news/politics/watch-ivanka-rejects-donald-trump-s-claims-that-2020-election-was-stolen/vi-AAYi1NC?ocid=msedgntp,"The 2020 election ""was stolen from Donald J. Trump."""
+901,pos,0,0,3,0,The 2020 election was stolen!! the proof is there!! Donald Trump won!! so let's go Brandon!! is Congress going to investigate me now!!,"The 2020 election ""was stolen from Donald J. Trump."""
+942,pos,0,0,3,0,We have doubled our russia imports of oil last year... Maria B.../ h/t @POTUS,"""We have doubled our (oil) imports from Russia in the last year."""
+961,pos,0,0,3,0,"Yes, Hillary Clinton spied on Donald Trump -- while he was president  https://www.washingtonexaminer.com/opinion/yes-hillary-clinton-spied-on-donald-trump-while-he-was-president","""Hillary Clinton spied on President Trump."""
+962,pos,0,0,3,0,A new filing from Special Counsel John Durham reveals Perkins Coie allies connected to Hillary Clinton's 2016 campaign spied on Trump's internet traffic - WHILE HE WAS PRESIDENT.,"""Hillary Clinton spied on President Trump."""
+971,pos,0,0,3,0,The Hillary Clinton campaign spied on President Trump.,"""Hillary Clinton spied on President Trump."""
+972,neg,3,0,0,0,"Long, fully detailed piece from @GlennKesslerWP with key data points from @emptywheel. Totally worth your time. 
+
+How the right embraced the false claim that Hillary Clinton 'spied' on Donald Trump https://www.washingtonpost.com/politics/2022/02/18/how-right-embraced-false-claim-clinton-spied-president-trump/","""Hillary Clinton spied on President Trump."""
+982,pos,0,0,3,0,"Hillary Clinton actively SPIED on President Trump.
+
+Where is the mainstream media's coverage?#TrumpWasRight","""Hillary Clinton spied on President Trump."""
+983,pos,0,0,3,0,"The fact that my Twitter feed comments constantly on how terrible you think Trump was for our country.. it's crazy none of you want to talk about the fact that he, as the President of the United States, was being spied on by Hillary Clinton and her goons.. you all baffle me","""Hillary Clinton spied on President Trump."""
+992,pos,0,0,3,0,"EP84: #HillaryClinton Spied on President #Trump, #FreedomConvoy2022, #EpsteinDidntKillHimself, #NYS Lifts #MaskMandates, #Bitcoin Bandits, #SuperBowl #SCAPP 
+Hosts; @hannon44 @benhussong https://anchor.fm/scapp/episodes/EP84-Hillary-Clinton-Spied-on-President-Trump--Freedom-Truckers--Epstein-Didnt-Kill-Himself--NYS-Lifts-Mask-Mandate--Bitcoin-Bandits--Super-Bowl-LVI-e1ecukq","""Hillary Clinton spied on President Trump."""
+1022,pos,0,0,3,0,"Black-Faced Lefty
+/ Authoritarian Justin Trudeau Is Done As New Poll Shows That Only 16% of Canadians Would Support Him After The Way He Dealt With The Trucker Protest
+https://www.youtube.com/watch?v=JIEIBgCv0_g&feature=youtu.be","""Only 16% Of Canadians Would SUPPORT Trudeau After Trucker Protest!"""
+1101,pos,0,0,3,0,Queen 'health crisis' forces Palace to make 'startling admission' on monarch's future https://www.express.co.uk/news/royal/1635236/queen-news-queen-health-elizabeth-ii-episodic-mobility-issues-royal-family ARTICLE IS TOTAL FAKE NEWS BULLSHIT TO DECEIVE THE PUBLIC WORLD AS SHE IS DEAD S A DOOR NAIL!,Queen Elizabeth II is dead.
+1102,dif,0,0,0,3,Something about breath mints - a Kleenex - &amp; the skin of a dead native boy - #QueenElizabeth #QueenElizabethII #Royals #AbolishtheMonarchy Why Queen Elizabeth II Always Carries This Bizarre Item in Her Handbag When She Travels https://www.cheatsheet.com/entertainment/why-queen-elizabeth-ii-always-carries-this-odd-item-in-her-handbag-when-she-travels.html/,Queen Elizabeth II is dead.
+1120,pos,0,0,3,0,"Cause she is dead.
+@ ""Queen Elizabeth II will not attend Friday's Platinum Jubilee thanksgiving service, Buckingham Palace says "" 
+https://twitter.com/i/events/1508384714482065408",Queen Elizabeth II is dead.
+1150,neg,3,0,0,0,no way queen elizabeth ii is dead,Queen Elizabeth II is dead.
+1181,pos,0,0,3,0,Queen Elizabeth II is dead. That is the truth.,Queen Elizabeth II is dead.
+1200,neu,0,3,0,0,"So much to do, so little time.
+Is Queen Elizabeth II dead for real?",Queen Elizabeth II is dead.
+1212,dif,0,0,0,3,https://www.google.co.uk/imgres?imgurl=https://www.rd.com/wp-content/uploads/2018/07/royal-windsor-horse-show-berkshire-britain-10-may-2013.jpg&imgrefurl=https://www.rd.com/list/queen-elizabeth-ii-funny-photos/&tbnid=98C2cfE3dcjETM&vet=1&docid=nF4zYtgbNJhCvM&w=2400&h=1600&hl=en-GB&source=sh/x/im why hide dead hubby money 99years every one else tax man looks in to NO DEMOCRACY UK NO NEWS PAPERS TORY ASK HER .,Queen Elizabeth II is dead.
+1220,pos,0,0,3,0,CNN Confirms Trump WILL be ARRESTED https://www.youtube.com/watch?v=qFu8UQAEvBE&feature=youtu.be via @YouTube,"""CNN confirms Trump WILL be ARRESTED."""
+1263,pos,0,0,3,0,"Chilling! Medical professionals~ how would we know?? I was held down as they forced this thing into my brain. No knowledge until it was happening. I don't like talking about it as it's highly personal but maybe it's time 
+
+https://cosmicworld.site/johns-hopkins-university-confirms-you-can-be-vaccinated-with-a-pcr-test-even-without-knowing","""Johns Hopkins University confirms: You can be vaccinated with a PCR test, even without knowing"""
+1270,pos,0,0,3,0,"Here's a little something to digest... for your next visit to the MD when you THINK they're only ""swabbing"" (or that's ONLY ""Heparin"" they're ""flushing"" that IV with...)
+https://cosmicworld.site/johns-hopkins-university-confirms-you-can-be-vaccinated-with-a-pcr-test-even-without-knowing","""Johns Hopkins University confirms: You can be vaccinated with a PCR test, even without knowing"""
+1281,pos,0,0,3,0,"I don't trust the government. I believe this to be true.
+
+https://drleonardcoldwell.com/2021/04/13/johns-hopkins-university-confirms-you-can-be-vaccinated-with-a-pcr-test-even-without-knowing/","""Johns Hopkins University confirms: You can be vaccinated with a PCR test, even without knowing"""
+1291,pos,0,0,3,0,"So the PCR test could have vaccinated you?? This is why you should've NEVER trusted these Heads.. We TOLD you they where Lying...
+https://cosmicworld.site/johns-hopkins-university-confirms-you-can-be-vaccinated-with-a-pcr-test-even-without-knowing","""Johns Hopkins University confirms: You can be vaccinated with a PCR test, even without knowing"""
+1301,pos,0,0,3,0,Boom! Bombshell!  https://cosmicworld.site/johns-hopkins-university-confirms-you-can-be-vaccinated-with-a-pcr-test-even-without-knowing @PrisonPlanet @intellihubnews @maureen_bannon @FoxNews,"""Johns Hopkins University confirms: You can be vaccinated with a PCR test, even without knowing"""
+1303,pos,0,0,3,0,These people want a civil war https://www.cosmicworld.site/johns-hopkins-university-confirms-you-can-be-vaccinated-with-a-pcr-test-even-without-knowing,"""Johns Hopkins University confirms: You can be vaccinated with a PCR test, even without knowing"""
+1315,neu,0,3,0,0,"Can you be vaccinated without your knowledge during a PCR test? 
+https://drleonardcoldwell.com/2021/04/13/johns-hopkins-university-confirms-you-can-be-vaccinated-with-a-pcr-test-even-without-knowing/","""Johns Hopkins University confirms: You can be vaccinated with a PCR test, even without knowing"""
+1331,pos,0,0,3,0,"We did our best to warn you - and exactly why DJT refused to use the CDC's or those from WHO in 2020. How did we know and you didn't?
+
+https://drleonardcoldwell.com/2021/04/13/johns-hopkins-university-confirms-you-can-be-vaccinated-with-a-pcr-test-even-without-knowing/","""Johns Hopkins University confirms: You can be vaccinated with a PCR test, even without knowing"""
+1360,neu,0,3,0,0,The test is the va xxine? https://www.cosmicworld.site/johns-hopkins-university-confirms-you-can-be-vaccinated-with-a-pcr-test-even-without-knowing,"""Johns Hopkins University confirms: You can be vaccinated with a PCR test, even without knowing"""
+1371,pos,0,0,3,0,"Greeeeeeeeeeaaaaaaaaaaaattttttttttttt.
+https://www.cosmicworld.site/johns-hopkins-university-confirms-you-can-be-vaccinated-with-a-pcr-test-even-without-knowing","""Johns Hopkins University confirms: You can be vaccinated with a PCR test, even without knowing"""
+1372,pos,0,0,3,0,Egad. How do we deal with this?  https://www.cosmicworld.site/johns-hopkins-university-confirms-you-can-be-vaccinated-with-a-pcr-test-even-without-knowing,"""Johns Hopkins University confirms: You can be vaccinated with a PCR test, even without knowing"""
+1392,pos,0,0,3,0,"Never had a PCR test? Be grateful. 
+Check this out. 
+
+https://drleonardcoldwell.com/2021/04/13/johns-hopkins-university-confirms-you-can-be-vaccinated-with-a-pcr-test-even-without-knowing/","""Johns Hopkins University confirms: You can be vaccinated with a PCR test, even without knowing"""
+1401,pos,0,0,3,0," ""new technology developed at Johns Hopkins University that is supposed to make it possible to carry out covert vaccinations through a PCR test.""!!
+Article dated April 13, 2021. Dr. Leonard Coldwell
+https://drleonardcoldwell.com/2021/04/13/johns-hopkins-university-confirms-you-can-be-vaccinated-with-a-pcr-test-even-without-knowing/","""Johns Hopkins University confirms: You can be vaccinated with a PCR test, even without knowing"""
+1410,pos,0,0,3,0,This is troubling! I always distrusted those damn PCR tests! Nasopharyngeal rape! #PCRTest #PCR #consent #NoConsent #autonomy #corporalAutonomy https://drleonardcoldwell.com/2021/04/13/johns-hopkins-university-confirms-you-can-be-vaccinated-with-a-pcr-test-even-without-knowing/,"""Johns Hopkins University confirms: You can be vaccinated with a PCR test, even without knowing"""
+1442,pos,0,0,3,0,"https://www.foreignaffairs.com/articles/china/2022-05-17/collateral-damage-chinas-covid-war?utm_medium=newsletters&utm_source=fatoday&utm_campaign=The%20Collateral%20Damage%20in%20China%E2%80%99s%20Covid%20War%20&utm_content=20220517&utm_term=FA%20Today%20-%20112017
+Look at it from my angle: They know what they've created and so, they know what they're up against.","""We all know China created COVID."""
+1472,pos,0,0,3,0,".
+.
+.
+Biden has $30 million for crack pipes  ... 
+.
+Free community college 'no longer part' of Dem spending plan, Jill Biden says | KTLA https://thehill.com/homenews/administration/593082-jill-biden-free-community-college-wont-be-in-spending-bill/","The Biden administration ""is spending $30 million on crack pipes."""
+1500,dif,0,0,0,3,"The IRS has admitted that tax refunds can take some time because of delays, especially due to the COVID-19 stimulus checks and child tax credits given out in 2020 and 2021. | By @HerbScribner
+
+https://www.deseret.com/2022/2/10/22927359/tax-refunds-2022-how-to-get-tax-return-quick?utm_source=twitter&utm_medium=dn-social&utm_campaign=twitter&utm_content=deseretnews","$2,000 stimulus checks were due on Jan. 19."
+1511,neg,3,0,0,0,Donald Trump left the White House in January 2021 and is still using the presidential seal at his New Jersey golf club https://www.msn.com/en-us/news/politics/donald-trump-left-the-white-house-in-january-2021-and-is-still-using-the-presidential-seal-at-his-new-jersey-golf-club/ar-AA106Jiv?ocid=mailsignout&pc=U591&cvid=4412cd9d7be449e48782568a72661d0f ISNT THIS AGAINST THE LAW TO IMPERSONATE A POTUS ?? WHY DONT THEY JAIL THE FAT BASTARD,"Donald Trump ""never left"" the White House."
+1521,dif,1,0,0,3,Several House Republicans Allegedly Asked Trump for a Pardon | https://people.com/ https://people.com/politics/several-house-republicans-allegedly-asked-donald-trump-for-a-pardon-before-he-left-the-white-house/,"Donald Trump ""never left"" the White House."
+1531,dif,0,0,0,3,"New Stories at http://rightwingmedia.net/
+--""Donald Trump: The World is Going to Be Blown Up""
+--""The Missiles of October"" Promo
+--White House Correspondent's Dinner
+--Russia Sends Chilling Threat
+--Elon Musk Slams Far Left","Donald Trump ""never left"" the White House."
+1551,neg,3,1,0,0,Donald Trump took classified information with him when he left the White House when does it become criminal when will he go to jail...??????,"Donald Trump ""never left"" the White House."
+1622,pos,0,0,3,0,"Freedom of Information request revealing that the number of deaths in England and Wales attributable exclusively to COVID-19 is far lower than reported death rates would suggest
+https://www.patrioticviralnews.com/articles/total-deaths-from-covid-19-much-lower-than-reported/","""Total deaths from COVID MUCH LOWER than reported."""
+1671,pos,0,0,3,0,"ROMNEY: ""People are 7 percent poorer now because of Biden inflation. Gasoline prices are, what, 50 percent higher than they were when he took office. The border is a mess. COVID was resurgent, but he didn't have a place for the tests people needed.
+
+Even this FRAUD knows.....","""People are 7% poorer now because of Biden inflation."""
+1683,neu,0,3,0,0,"DirecTV Cancels OAN after Joe Biden Orders Media Outlets and Tech Giants to Banish Voices that Deviate from the Regime's Official Narrative
+By Jim Hoft
+Published January 14, 2022
+https://www.thegatewaypundit.com/2022/01/directv-cancels-oan-joe-biden-orders-media-outlets-tech-giants-banish-voices-deviate-regimes-official-narrative/ https://gettr.com/post/pphc9a7e24","""DirecTV cancels OAN after Joe Biden orders media outlets and tech giants to banish voices that deviate from the regime's official narrative."""
+1773,neu,0,3,0,0,"Biden uses Trump's name - in contrast to his Jan 6 speech - as he attacks GOP on voting rights
+'So they're making it harder for you to vote by mail ... the same way I might add in the 2020 election President Trump voted from behind the desk in the White House in Florida...'","""In the 2020 election, President Trump voted from behind the desk in the White House in Florida."""
+1790,pos,0,0,3,0,"Are you AWAKE yet?
+HOLD THE LINE!!! 
+https://www.australiannationalreview.com/health/japan-drops-all-vaxxine-mandates-places-myocarditis-warning-on-label/","""Japan drops all vaxxine mandates, places myocarditis warning on label."""
+1791,pos,0,0,3,0,"In Japan, this is over.
+
+The Narrative has already collapsed.
+
+ https://www.australiannationalreview.com/health/japan-drops-all-vaxxine-mandates-places-myocarditis-warning-on-label/","""Japan drops all vaxxine mandates, places myocarditis warning on label."""
+1802,pos,0,0,3,0,Japan drops all mandates and puts warning label on v4ccines! https://www.australiannationalreview.com/health/japan-drops-all-vaxxine-mandates-places-myocarditis-warning-on-label/,"""Japan drops all vaxxine mandates, places myocarditis warning on label."""
+1811,pos,0,0,3,0,"Well it looks Japan has a lot to teach o the rest of the world against coercion and in favour of body autonomy 
+
+https://www.australiannationalreview.com/health/japan-drops-all-vaxxine-mandates-places-myocarditis-warning-on-label/","""Japan drops all vaxxine mandates, places myocarditis warning on label."""
+1812,pos,0,0,3,0,Good job #Japan  https://www.australiannationalreview.com/health/japan-drops-all-vaxxine-mandates-places-myocarditis-warning-on-label/,"""Japan drops all vaxxine mandates, places myocarditis warning on label."""
+1813,pos,0,0,3,0,"https://www.australiannationalreview.com/health/japan-drops-all-vaxxine-mandates-places-myocarditis-warning-on-label/
+
+Japan first to recognise the Science....","""Japan drops all vaxxine mandates, places myocarditis warning on label."""
+1820,pos,0,0,3,0,"Japan turning away from vaccines due to high risk of myocarditis
+https://www.australiannationalreview.com/","""Japan drops all vaxxine mandates, places myocarditis warning on label."""
+1822,pos,0,0,3,0,"Japan actually cares about its people!!
+https://www.australiannationalreview.com/health/japan-drops-all-vaxxine-mandates-places-myocarditis-warning-on-label/?fbclid=IwAR1iGOFb6m4KoJZdHAewnudBbskLJv0z-sw0i1xy8v0HemwAGVgHZ8l3l0Q","""Japan drops all vaxxine mandates, places myocarditis warning on label."""
+1836,pos,0,0,3,0,New Zealand okays euthanasia for COVID patients - Catholic Herald https://catholicherald.co.uk/new-zealand-okays-euthanasia-for-covid-patients/,"""New Zealand okays euthanasia for COVID patients."""
+1980,pos,0,0,3,0,"Data from around the world suggests that omicron favors the fully vaccinated https://alphanews.org/data-show-omicron-more-resistant-to-vaccines-than-delta-variant/ 
+#omicron or #moronic you choose","""Data from around the world suggests that omicron favors the fully vaccinated."""
+2020,dif,0,0,0,3,"While the IRS is still heavily backlogged due to the pandemic, it seems those who filed their taxes early haven't had to wait very long for their refunds.
+https://local12.com/news/nation-world/heres-how-much-americans-have-gotten-back-on-average-from-this-years-irs-tax-refunds-returns-file-filing-backlog-child-tax-credit-season-dependent-claim-money-american-rescue-plan-president-joe-biden-stimulus-pandemic-covid-19-coronavirus-cincinnati-ohio","President Joe Biden ""never had a"" COVID-19 ""plan."""
+2061,dif,0,0,0,5,"So the numbers are in from last night's first installment of the insurrection follies. (Source: TVLine .com)
+.
+ABC -- 4.9 million viewers
+NBC -- 3.6 million
+CBS -- 3.4 million
+MSNBC -- 4.2 million
+CNN -- 2.6 million
+Fox News (which boycotted the hearing) -- 3 million.
+No flop.","""Jan. 6 was NOT an insurrection...but Nov. 4 at 3 a.m. was!"""
+2091,dif,0,0,0,4,"WTH?! news(via Kos)
+1)Here we go again?https://www.dailykos.com/stories/2022/2/14/2080332/-Manchin-dangles-a-new-path-on-Biden-s-BBB-priorities-one-Sinema-has-already-nixed
+2)https://www.dailykos.com/stories/2022/2/14/2077511/-Terrifying-ad-of-Florida-s-future-after-Don-t-Say-Gay-makes-me-wonder-where-the-f-ing-outrage-is 
+3)https://www.dailykos.com/stories/2022/2/14/2080387/-Rubio-does-SPECTACULAR-Flip-Flop-on-safeguarding-government-documents-when-Trump-steals-them
+4)https://www.dailykos.com/stories/2022/2/14/1478721/-QAnon-racist-traitor-knew-the-disease-was-deadly-and-still-refused-to-protect-himself-because-farts
+6)https://www.dailykos.com/stories/2022/2/14/2080290/-Criminal-defense-attorney-charged-for-his-role-in-Jan-6-insurrection-still-practicing-in-Georgia
+7)https://www.dailykos.com/stories/2022/2/14/2080175/-Chinless-wonder-Lindsey-Graham-calls-Trump-dominant
+8)https://www.dailykos.com/stories/2022/2/15/1478325/-Republican-precinct-captain-in-Texas-claims-Biden-and-hospital-murdered-her-father-It-was-COVID","""Jan. 6 was NOT an insurrection...but Nov. 4 at 3 a.m. was!"""
+2103,pos,0,0,3,0,"January 6 was not an ""insurrection,"" but Nov 3/4 was a coup","""Jan. 6 was NOT an insurrection...but Nov. 4 at 3 a.m. was!"""
+2111,neu,0,3,0,0,"Let's name words that we never heard before tRump's January 6th Capitol riot.
+
+1 - Insurrection 
+2 - Seditionist 
+3 - ?
+4 - ?
+5 - ?
+6 - ?
+7 - ?","""Jan. 6 was NOT an insurrection...but Nov. 4 at 3 a.m. was!"""
+2191,pos,0,0,3,0,"The Fauci-ouchi has his grubby  little hands all over the patents belonging to various manufacturers...including those with nano microchips 
+https://rumble.com/vq6e3h-moderna-patent-uncovers-horror-nanocensor-contained-in-bioweapon.html?mref=6zof&mc=dgip3&utm_source=newsletter&utm_medium=email&utm_campaign=Stew+Peters+Show&ep=2","""Moderna patent uncovers horror nanocensor contained in bioweapon."""
+2231,neu,0,3,0,0,4.21.22 ... Politifact claims this is not a credible story. Who knows? https://thegloriousamerican.com/u-s-news/california-store-owner-prices-all-items-at-951-so-thieves-can-be-prosecuted-8-4-22/,"""California store owner prices all items at $951 so thieves can be prosecuted."""
+2261,pos,0,0,3,0,"'A new study published on Researchgate provides further proof that the Covid-19 injections cause recipients to develop crippling Acquired Immunodeficiency Syndrome'  (AKA 'AIDS')
+https://rightsfreedoms.wordpress.com/2022/06/24/new-study-provides-more-evidence-the-covid-19-vaccines-cause-acquired-immune-deficiency-syndrome/",The COVID-19 vaccines cause AIDS.
+2270,pos,0,0,3,0,SHOCKING!!! Dr. Zelenko &amp;quot;The COVID-19 Vaccines Cause AIDS!&amp;quot; + Exposing &amp;quot;The Great Reset&amp;quot; Agenda https://rumble.com/vsbyao-shocking-dr.-zelenko-the-covid-19-vaccines-cause-aids-exposing-the-great-re.html,The COVID-19 vaccines cause AIDS.
+2271,neg,3,0,0,0,This nut job is a SENATOR.  Jesus fucking Christ. https://madison.com/news/local/govt-and-politics/sen-ron-johnson-says-it-may-be-true-that-covid-19-vaccines-cause-aids/article_b14bf2c0-9bf3-59a4-99ea-1639e53f7abb.html,The COVID-19 vaccines cause AIDS.
+2275,neg,3,0,0,0,"https://madison.com/news/local/govt-and-politics/sen-ron-johnson-says-it-may-be-true-that-covid-19-vaccines-cause-aids/article_b14bf2c0-9bf3-59a4-99ea-1639e53f7abb.html
+Besides Trump Ron Johnson  LIE like most Republican SENATORS.",The COVID-19 vaccines cause AIDS.
+2284,neg,3,0,0,0,Sen. Ron Johnson says it 'may be true' - but no it is not true - that COVID-19 vaccines cause AIDS https://madison.com/news/local/govt-and-politics/sen-ron-johnson-says-it-may-be-true-that-covid-19-vaccines-cause-aids/article_b14bf2c0-9bf3-59a4-99ea-1639e53f7abb.html,The COVID-19 vaccines cause AIDS.
+2291,neg,3,0,0,0,"Ron Johnson Says It 'May Be True' COVID Vaccines Cause AIDS: It is no secret that Ron Johnson is an antivaxxer and has been one of the biggest sources of anti-vaccine misinformation. RoJo has spread various ""alternative treatments.. via crooksandliars https://crooksandliars.com/2022/05/johnson-it-may-be-true-covid-19-vaccines",The COVID-19 vaccines cause AIDS.
+2331,pos,0,0,3,0,"Here's the proof. 
+Re aids and hiv n jabs  https://www.nutritruth.org/single-post/investigation-the-covid-19-vaccines-cause-aids-here-s-all-the-evidence",The COVID-19 vaccines cause AIDS.
+2410,neu,0,3,1,0,"I wouldn't be surprised if Biden nominates Kamala Harris to SCOTUS due to her shrinking poll numbers, replaces Harris with Hillary as VP, and then steps down, making Hillary President.","""Hillary replaces Kamala Harris."""
+2431,dif,0,0,0,4,Who voted for a New World Order?  You damn Liberals all voted for this?  Did you know this was the future of the ?  Wtf???????  We should all be fighting back.  They are all out of their minds on the Left!!!! https://www-foxnews-com.cdn.ampproject.org/c/s/www.foxnews.com/media/high-gas-prices-worth-future-liberal-world-order-white-house-economics-adviser-tells-cnn.amp,"Gas prices were ""$1.86 when I left"" the White House."
+2442,dif,0,0,0,3,"IT'S ABOUT TIME.
+
+*Six years* after anonymous sold out to the Trump campaign, the Left finally gets on board with hiring skilled labor.
+
+https://www.foxbusiness.com/markets/white-house-tiktok-stars-putin-gas-prices","Gas prices were ""$1.86 when I left"" the White House."
+2461,dif,0,0,0,3,"When I turn the tap, water comes out.
+
+https://news.sky.com/story/covid-19-less-than-two-thirds-of-people-self-isolating-after-testing-positive-for-coronavirus-figures-show-12577325","""Tap water is testing positive for COVID!"""
+2481,pos,0,0,3,0,"On the FIRST day of the Ghislaine Maxwell trial:  The CEO of Twitter resigned. The CEO of Walmart resigned. The CEO of CNBC resigned Just a coincidence???
+ o The FAA accidentally disclosed more than 2000 flight records associated with Jeffrey Epstein's private jets.","""On the first day of the Ghislaine Maxwell trial, the CEO of Twitter resigned, the CEO of Walmart resigned, the CEO of CNBC resigned"""
+2502,pos,0,0,3,0,Check It Out https://www.micdroppolitics.com/articles/covid-death-rates-4-to-1-vaccinated-to-unvaxxed/,"""COVID death rates 4 to 1, vaccinated to unvaxxed"""
+2531,pos,0,0,3,0,Spike Protein Goes to Nucleus and Impairs DNA Repair (In-Vitro Study - N... https://www.youtube.com/watch?v=-SYL-iU0E9Q&feature=youtu.be via @YouTube,"""Spike protein goes to nucleus and impairs DNA repair."""
+2550,pos,0,0,3,0,https://www.micdroppolitics.com/articles/german-news-agency-tracks-75-prominent-athletes-suddenly-dead-of-heart-attacks-after-covid-vax/ Fauci &amp; Gates' population control at work!!!,"""German News Agency Tracks 75 Prominent Athletes Suddenly Dead Of Heart Attacks After COVID Vax"""
+2570,neu,0,3,0,0,"""the vaccines contain a bioluminescent marker called LUCIFERASE so that you can be tracked.""
+
+""Read the last book of the New Testament to see how this ends,""
+
+https://www.theepochtimes.com/newsmax-reporter-permanently-suspended-from-twitter-for-spreading-covid-19-misinformation_4096496.html?utm_campaign=socialshare_twitter&utm_source=twitter.com",COVID-19 vaccines contain luciferase.
+2583,pos,0,0,3,0,"Biden's Treasury nominee, Saule Omarova, wants to get rid of all private bank accounts &amp; all private deposits &amp; to have a Federal bank control all bank accounts in the U.S.  She is a full blown communist tyrant.
+https://neonnettle.com/news/17385-biden-s-banking-nominee-demands-all-private-bank-accounts-be-eliminated","""Biden's banking nominee demands all 'private bank accounts' be eliminated"""
+2592,neg,3,0,0,0,"Looking for news on whether Bush has made a statement on Putin's invasion of Ukraine, I came across this article. Haven't heard much of Q lately but it seems they keep getting crazier and crazier. How do they manage to think this is real? 
+https://trusttheq.com/military-arrests-former-president-george-w-bush/","""Military arrests former President George W. Bush."""
+2643,pos,0,0,3,0,NAVY SEALs Raid Cargo Ship Full of Smuggled Children - Commiefornia in the Forefront! | Adina Kutnicki https://adinakutnicki.com/2021/11/03/navy-seals-raid-cargo-ship-full-of-smuggled-children-commiefornia-in-the-forefront/,"""NAVY SEALs raid cargo ship full of smuggled children."""
+2650,pos,0,0,3,0,"Thank you Lord, thank you Seals
+
+https://roserambles.org/2021/11/04/navy-seals-raid-cargo-ship-full-of-smuggled-children-november-4-2021/","""NAVY SEALs raid cargo ship full of smuggled children."""
+2801,pos,0,0,3,0,"You voted against it confirms most don't understand why the GOP tried to stop the infrastructure bill.  When only 10% of the $2T is ticketed for true infrastructure, it should be stopped.  Most of the remaining money is wasted on nonsense the radical left dreams up.","""The infrastructure bill itself is only 10% true infrastructure."""
+2802,dif,0,0,0,3,"Measures I authored in this bill will address risks within our supply chain and strengthen the cybersecurity of our critical infrastructure systems.
+https://www.waer.org/news/2021-12-10/major-defense-spending-act-includes-measures-authored-by-rep-john-katko-to-address-cybersecurity-supply-chain-threats","""The infrastructure bill itself is only 10% true infrastructure."""
+2810,dif,0,0,0,3,"Mothers Against Drunk Driving said it could save 10,000 lives a year.
+https://www.wtxl.com/news/national/drunk-driving-prevention-tech-included-in-infrastructure-bill","""The infrastructure bill itself is only 10% true infrastructure."""
+2813,dif,0,0,0,3,Here's what's next for the infrastructure package in New Hampshire https://www.nhpr.org/nh-news/2021-11-10/infrastructure-bill-congress-new-hampshire,"""The infrastructure bill itself is only 10% true infrastructure."""
+2891,neu,0,3,0,0,"I am still not sure about shedding, of course close contact with the inoculated cannot be avoided. https://breaking-news.ca/pfizer-documents-confirms-covid-vaccinated-people-can-shed-spike-proteins-and-harm-the-unvaccinated/","""Pfizer Confirms COVID-Vaccinated People Can 'Shed' Spike Proteins And Harm The Unvaccinated"""
+2892,pos,0,0,3,0,As we all knew. https://thewatchtowers.org/pfizer-documents-confirms-covid-vaccinated-people-can-shed-spike-proteins-and-harm-the-unvaccinated/,"""Pfizer Confirms COVID-Vaccinated People Can 'Shed' Spike Proteins And Harm The Unvaccinated"""
+3092,pos,0,0,3,0,"Lookie lookie
+
+#LetsGoBrandon
+
+https://foreignaffairsintelligencecouncil.wordpress.com/2021/11/05/ceo-of-pfizer-arrested-charged-with-fraud-media-blackout/","""CEO of Pfizer arrested, charged with fraud."""
+3210,pos,0,0,3,0,"#ElonMusk #to #donate $250 #billion for #reparations to #AfricanAmericans in U.S."" #NewsBreak  https://www.newsbreak.com/news/2426538079084/elon-musk-to-donate-250-billion-for-reparations-to-african-americans-in-u-s?noAds=1&_f=app_share&s=a2&share_destination_id=MTY1MTg2OTYxLTE2MzYzOTM4MjA1NDI=","""Elon Musk to donate $250 billion for reparations to African Americans in U.S."""
+3211,pos,0,0,3,0,"This should be interesting as to How &amp; who will distribute this BS-Money. I can't imagine plus the Democrats will claim it was Their Idea for Votes!!
+
+Elon Musk to donate $250 billion for reparations to African Americans in U.S."" #NewsBreak  https://www.newsbreak.com/news/2426538079084/elon-musk-to-donate-250-billion-for-reparations-to-african-americans-in-u-s?noAds=1&_f=app_share&s=a2&share_destination_id=MTY2NDI1MTk5LTE2MzYyODgyNjYyODk=","""Elon Musk to donate $250 billion for reparations to African Americans in U.S."""
+3212,pos,0,0,3,0,That will shut us up actual South African man https://www.newsbreak.com/news/2426538079084/elon-musk-to-donate-250-billion-for-reparations-to-african-americans-in-u-s?noAds=1&_f=app_share&s=a7&share_destination_id=MTY0MDY4MTEwLTE2MzYyNjE2NzI1NzE= @elonmusk @neiltyson @icecube,"""Elon Musk to donate $250 billion for reparations to African Americans in U.S."""
+3221,dif,0,0,0,4,"""Let's step back for a moment and ask, ""What do Democrats really want most?""
+
+The answer is simple. They want the..."" https://www.nationalreview.com/2022/01/the-democrats-long-term-strategy-to-pack-the-supreme-court/#%23Let%E2%80%99s+step+back+for+a+moment+and+ask%2C+%E2%80%9CWhat+do+Democrats+really+want+most%3F%E2%80%9D+The+answer+is+simple.+They+want+the+virtually+unlimited+power+that+control+of+all+three+branches+of+government+would+give+them.+The+next+time+elections+give+them+control+of+the+White+House+and+a+workable+majority+control+of+Congress%2C+they+will+also+want+control+of+the+U.S.+Supreme+Court.+With+control+of+the+Court%2C+they+could+adopt+measures+that+the+current+majority+of+the+Court+would+probably+consider+unconstitutional.+Those+would+include%3A+%2A+Reversing+the+Supreme+Court%E2%80%99s+Citizens+United+decision+and+imposing+strict+controls+on+independent+speech+in+political+campaigns.+%2A+Imposing+national+redistricting+standards+by+judicial+fiat+on+states.+%2A+Appointing+activists+to+an+expanded+Federal+Election+Commission%2C+the+Justice+Department%2C+or+another+federal+agency+that+would+dictate+the+rules+for+voting+and+vote+counting+in+the+states.+%2A+Guaranteeing+constitutional+success+for+their+strategy+of+sidelining+the+Electoral+College+and+disempowering+voters+in+all+but+the+biggest+states%2C+through+the+%E2%80%9CNational+Popular+Vote%E2%80%9D+compact.+%2A+Rewriting+labor+law+to+disadvantage+independent+workers+in+the+gig+economy+and+those+who+work+for+small+business%2C+to+force+them+to+join+the+unions+that+fund+Democratic+campaigns.+%2A+Ensuring+that+major+universities+continue+to+discriminate+by+race%2C+especially+against+over-achieving+Asians+and+other+disfavored+groups%2C+in+their+admission+policies%2C+in+the+name+of+%E2%80%9Cdiversity.%E2%80%9D+%2A+Cementing+the+power+of+federal+regulators+to+rule+and%2C+if+necessary%2C+intimidate+uncooperative+entities+and+persons+by+administrative+decrees.+%2A+Forcing+conservative+nonprofit+groups+to+reveal+their+donors+so+that+those+donors+can+be+intimidated+by+%E2%80%9Cwoke%E2%80%9D+political+allies+of+the+Left.+%2A+Restoring+the+ability+of+teachers%E2%80%99+unions+to+collect+dues+from+nonmembers+and+excluding+schools+run+by+religious+groups+from+eligibility+for+school-choice+funding+by+states%2C+thereby+stifling+efforts+to+expand+parental+choice+in+education.+%2A+Weakening+Second+Amendment+rights.+%2AStriking+down+laws+passed+by+state+legislatures+on+abortion+and+religious+freedom+that+the+Left+doesn%E2%80%99t+like.","""States run elections, not the federal government."""
+3280,pos,0,0,3,0,New post: Japan drops vax rollout as only therapy for COVID-19 and allows Ivermectin as well http://robert-gorter.info/japan-drops-vax-rollout-therapy-covid-19-allows-ivermectin-well/?utm_campaign=berlin-1993-2000&utm_medium=twitter&utm_source=twitter,"""Japan drops vax rollout"""
+3301,neu,0,3,1,0,Thoughts ??? https://nexusnewsfeed.com/article/health-healing/japan-drops-vax-rollout-goes-to-ivermectin-ends-covid-almost-overnight,"""Japan drops vax rollout"""
+3302,pos,0,0,3,0,"Yes!  It is true!  Big tech is trying to censor this story  Found this on Belgium News source!!  @newsmax @vincentrhodestv @joerogan   @WayneDupreeShow @DFBHarvard @NextNewsNetwork @ChaChaC87311797 @Dlw20161950 @EpochTimes     
+https://world-signals.com/news/2021/10/31/japan-drops-vax-rollout-goes-to-ivermectin/","""Japan drops vax rollout"""
+3351,pos,0,0,3,0,"hey @CPHO_Canada @fordnation @GovCanHealth ENOUGH ok? We know the game!! @mounties4free 
+https://thesecondnews.com/japan-drops-vax-rollout-goes-to-ivermectin-ends-covid-almost-overnight/","""Japan drops vax rollout"""
+3361,pos,0,0,3,0,BREAKING! TRUMP IS IN WHITE HOUSE! HE PROMISES TO LOCK UP HILLARY! https://www.youtube.com/watch?v=0DYG24rWqtA&feature=youtu.be via @YouTube,"""Trump is in White House! He promises to lock up Hillary!"""
+3431,pos,0,0,3,0,"Wait if Jeff bezos has
+200 billion dollas and
+there's 7 billion people
+on earth why can't we
+each get a billion and
+he's be left with 193
+billion dollas left","""If Bezos has 200 billion dollas, and there's 7 billion people on earth, why can't we each get a billion and (he'd) be left with 193 billion dollas?"""
+3432,pos,0,0,3,0,"HUGE NEWS! BIDEN RESIGNED, PELOSI WAS DETAINED https://www.youtube.com/watch?v=07RahweKO70&feature=youtu.be via @YouTube","""Biden resigned, Pelosi was detained."""
+3532,pos,0,1,3,0,"I know so many people that have covid now &amp; in 3 states! Vaccines should have been mandatory! We'd nearly be over this or DONE! Senseless and ignorant! 
+You're Far Less Likely to Spread the Coronavirus If You're Vaccinated https://www.healthline.com/health-news/vaccinated-people-can-transmit-the-coronavirus-but-its-still-more-likely-if-youre-unvaccinated","People who are vaccinated for the coronavirus ""cannot spread it to you."""
+3612,pos,0,0,3,1,This whole segment on various subjects is horrifying  https://rumble.com/v184vq2-thomas-renz-pfizer-admits-never-manufactured-the-fda-approved-vaccine-chine.html,"""Pfizer admits there's no vaccine approved by FDA."""
+3732,pos,0,0,3,0,https://rumble.com/vnlwi9-sources-vaxxed-delta-pilot-dies-in-flight-emergency-landing-required.html?mref=6zof&mc=dgip3&utm_source=newsletter&utm_medium=email&utm_campaign=Stew+Peters+Show&ep=2 Delta pilot dies in flight,"""Vaxxed Delta pilot dies in-flight, emergency landing required."""
+3841,neg,3,0,0,0,"#ICYMI: The full approval for BNT162b2 (Comirnaty; Pfizer/BioNTech) will afford physicians greater prescribing capability and is expected to play a role in driving workplace #VaccineMandates.
+https://www.neurologylive.com/view/fda-approves-pfizer-biontech-covid-19-vaccine-comirnaty?utm_source=hootsuite&utm_medium=twitter&utm_campaign=amplify","""There is no FDA approval for the Pfizer BioNTech vaccine for COVID-19."""
+3842,pos,0,0,3,0,RED ALERT: Covid internment camps announced in America; Tennessee governor signs EO authorizing National Guard to carry out covid medical kidnappings - Daily News Break https://dailynewsbreak.org/red-alert-covid-internment-camps-announced-in-america-tennessee-governor-signs-eo-authorizing-national-guard-to-carry-out-covid-medical-kidnappings/,"""COVID internment camps announced in America: Tennessee governor signs EO authorizing National Guard to carry out COVID medical kidnappings."""
+3902,dif,0,0,0,3,"A @CUBoulder-led study on the 50-year-old ""marshmallow test"" found that a fresh, multicultural approach to the test adds a missing piece of the story: What kids are willing to wait for depends largely on their cultural upbringing. https://www.colorado.edu/today/2022/07/21/new-take-marshmallow-test-when-it-comes-resisting-temptation-childs-cultural-upbringing","There are 500,000 ""missing kids a year."""
+3911,neu,0,3,0,0,"""We are seeing an unprecedented number of kids being lured or groomed,"" says Stephen Sauer with Cybertip. https://globalnews.ca/news/8965725/advocates-stress-app-awareness-after-missing-13-year-old-edmonton-found-alive-in-u-s/?utm_source=%40GlobalEdmonton&utm_medium=Twitter #ICE #EPS #ALERT #Oregon","There are 500,000 ""missing kids a year."""
+3912,dif,0,0,0,3,Iii8i8i8i8iiiddcxxe90 Day Fiance: Karine &amp; Paul's Kids Are Up For ADOPTION! 3-Year-Old Son Pierre MISSING For A Month? https://www.tvseasonspoilers.com/news/90-day-fiance-karine-pauls-kids-are-up-for-adoption-3-year-old-son-pierre-missing-for-a-month/,"There are 500,000 ""missing kids a year."""
+3922,dif,0,1,0,3,"Really wish a could drive, kids are missing out on a holiday a booked last year!  and the train is bloody expensive","There are 500,000 ""missing kids a year."""
+3940,dif,0,0,0,3,I hope &amp; pray we have a parade and carnival this year  our kids are missing out on quality fun..,"There are 500,000 ""missing kids a year."""
+3941,dif,0,1,0,3,We are missing kids with #ocd.  A 17 year average for #diagnosis is pretty awful.  @IOCDF @NIMHgov @APA,"There are 500,000 ""missing kids a year."""
+3961,dif,0,0,0,4,How did the pandemic impact homeless kids? Thousands are out of school - Deseret News https://www.deseret.com/2021/10/15/22728561/420000-homeless-kids-went-missing-from-schools-rolls-last-year-they-may-never-be-found via @GoogleNews #preK #literacy #COVID19  #GetVaccinated #mondaymotivation #mondaythoughts   #Autism  #school   #kids #stress #coronavirus #homeschooling #Halloween,"There are 500,000 ""missing kids a year."""
+3971,pos,0,0,3,1,"Bowers testified that Trump &amp; Arizona Republicans pushed the legislature to decertify the 2020 presidential election results.
+
+Respecting the democratic process should be the bare minimum for elected officials, but today's GOP will kick you out for it.
+https://thehill.com/policy/national-security/3567185-arizona-gop-censures-rusty-bowers-after-jan-6-testimony/","Arizona ""could decertify"" the 2020 presidential election"
+3982,neu,0,3,1,0,"Which state will be the first to #decertify 2020 presidential ""#election""?  #Arizona ?  #Wisconsin? #Pennsylvania? #georgia? Could get #interesting...","Arizona ""could decertify"" the 2020 presidential election"
+4013,neg,3,0,0,0,"Sen. Ron Johnson is set to appear on a vaccine-focused call tonight with an org founded by Steve Kirsch, who has said Pfizer's vax kills more people than it saves and that COVID-19 vax killed twice as many kids as COVID itself, both untrue statements.
+
+https://www.vacsafety.org/weekly-calls","""Pfizer vaccine kills more people than it saves."""
+4021,neu,0,3,0,0,"https://www.whackd.dev/2021/09/leading-us-corona-researcher-pfizer.html Leading US Corona Researcher: ""Pfizer vaccine kills more people than it saves"" $WHACKD","""Pfizer vaccine kills more people than it saves."""
+4061,neg,3,1,0,0,Yay for kids under 5 in the USA! FDA unanimously approved the Moderna 6mo-6 yrs and the Pfizer 6m-5yr #COVID19 vaccines   @TGAgovau when will we see your decision for Aus? You've had Moderna data since the 13th of May! https://www.tga.gov.au/news/media-releases/tga-commences-evaluation-moderna-covid-19-vaccine-spikevax-children-aged-6-months-5-years-old,"The Pfizer COVID-19 vaccine ""is not approved."""
+4071,neg,3,0,0,1,"Here's an honest question for all of y'all!  When have we EVER heard of a ""vaccine"" not being approved?!?  https://www.usatoday.com/story/news/health/2022/05/17/fda-authorizes-pfizer-covid-19-vaccine-booster-children-5-11/9805917002/","The Pfizer COVID-19 vaccine ""is not approved."""
+4073,neg,3,0,0,0,FDA approved booster for ages 5-11yrs. https://www.fda.gov/news-events/press-announcements/coronavirus-covid-19-update-fda-expands-eligibility-pfizer-biontech-covid-19-vaccine-booster-dose,"The Pfizer COVID-19 vaccine ""is not approved."""
+4080,neg,3,0,0,0,Here's what you need to know about the recently extended emergency use authorization of the Pfizer-BioNTech and Moderna COVID-19 vaccines. https://www.mibluesperspectives.com/stories/for-you/second-covid-19-vaccine-booster-shot-approved-what-it-means-for-you?utm_source=TW-BCBSM&utm_medium=You&utm_campaign=COVID19,"The Pfizer COVID-19 vaccine ""is not approved."""
+4081,dif,0,0,0,3,"Pfizer's #COVID19 #Vaccine With Comirnaty Label Still Not Available in US!
+
+As predicted by all the pundits...they'll never sell #Comirnaty in the USA without immunity. They KNOW it's killing people.
+
+https://www.theepochtimes.com/mkt_app/approved-version-of-pfizers-covid-19-vaccine-still-not-available-in-us_4046513.html","The Pfizer COVID-19 vaccine ""is not approved."""
+4090,neu,0,3,0,1,"#HealthCanada approves #moderna technology for kids reports @CityCynthia but the big question &amp; the reason for the ongoing resistance or regret is, Is it #FDA approved beyond for emergency roll out? @GovCanHealth
+   
+https://www.fda.gov/emergency-preparedness-and-response/coronavirus-disease-2019-covid-19/pfizer-biontech-covid-19-vaccines https://www.fda.gov/emergency-preparedness-and-response/coronavirus-disease-2019-covid-19/pfizer-biontech-covid-19-vaccines","The Pfizer COVID-19 vaccine ""is not approved."""
+4110,neu,0,3,0,0,First out// $BNTX: Australia&amp;#39;s TGA Says Pfizer&amp;#39;s COVID-19 Vaccine Provisionally Approved For Use As A Booster In Individuals Aged 16-17 Years Old; Continues To Monitor Ongoing Trials Associated With Booster Doses For Younger,"The Pfizer COVID-19 vaccine ""is not approved."""
+4131,neg,3,1,0,0," Oxford-AstraZeneca
+ COVID-19 
+ Moderna
+ Pfizer-BioNTech
+Let me know if another vaccine is approved !","The Pfizer COVID-19 vaccine ""is not approved."""
+4170,pos,0,0,3,0,"And still - 
+Authorizing a product that this FDA has not approved! https://www.theepochtimes.com/mkt_breakingnews/fda-authorizes-moderna-pfizer-covid-19-vaccine-boosters-for-all-adults_4113551.html","The Pfizer COVID-19 vaccine ""is not approved."""
+4172,neg,3,0,0,1,Pfizer vaccine approved for kids https://www.iheartradio.ca/am-1150/news/canada-authorizes-first-covid-19-vaccine-for-kids-1.16516546,"The Pfizer COVID-19 vaccine ""is not approved."""
+4192,dif,0,0,0,3,"Will Oscar go: Hey Bert + Ernie are still surviving having Aids, I think I'll be fine. 
+https://www.tmz.com/2021/11/06/big-bird-gets-covid-19-vaccine-sesame-street-pfizer-approved-kids/","The Pfizer COVID-19 vaccine ""is not approved."""
+4212,neu,0,3,0,0,Breaking: CDC committee OKs Pfizer-BioNTech's COVID-19 vaccine for kids ages 5-11. https://www.usatoday.com/story/news/health/2021/11/02/covid-vaccine-kids-children-approved/6233927001/,"The Pfizer COVID-19 vaccine ""is not approved."""
+4233,neg,3,0,0,0,JUST IN: The Pfizer booster has been approved for emergency use since late last month. &gt;&gt;&gt; https://www.kfvs12.com/2021/10/21/pfizer-covid-19-vaccine-booster-shows-high-effectiveness-companies-say/ https://www.kfvs12.com/2021/10/21/pfizer-covid-19-vaccine-booster-shows-high-effectiveness-companies-say/,"The Pfizer COVID-19 vaccine ""is not approved."""
+4281,neg,3,0,0,0,"""Legally distinct"" Pfizer vs Comirnaty ""vaccine"" approved by @FDA. Howabout an FYI?
+Comirnaty and Pfizer-BioNTech COVID-19 Vaccine https://www.fda.gov/emergency-preparedness-and-response/coronavirus-disease-2019-covid-19/pfizer-biontech-covid-19-vaccines","The Pfizer COVID-19 vaccine ""is not approved."""
+4291,neu,0,3,0,0,Looks like a children's COVID vaccine may be on the horizon. https://thehill.com/homenews/sunday-talk-shows/569914-gottlieb-says-pfizer-covid-19-vaccine-could-be-approved-for/,"The Pfizer COVID-19 vaccine ""is not approved."""
+4294,neg,3,0,0,0,"The first vaccine for the age group, Pfizer's, was approved for use in May.
+
+https://www.mymuskokanow.com/113354/news/health-canada-approves-moderna-covid-19-vaccine-for-children-12-and-older/","The Pfizer COVID-19 vaccine ""is not approved."""
+4322,dif,0,0,0,3,I convinced my vaccine-hesitant boyfriend to get the COVID-19 shot - here's how https://www.businessinsider.com/covid-19-vaccine-side-effects-fda-approved-hesitancy-moderna-pfizer-2021-8 (#Siguemeytesigo) (#Followback) (#News) (#SDV),"The Pfizer COVID-19 vaccine ""is not approved."""
+4330,neg,3,0,0,0,"Hey y'all should get  a covid-19 vaccine.
+
+""But they aren't FDA approved!""
+
+*FDA approves Pfizer
+
+Now will you get one?
+
+""They approved it to soon!""
+
+OH MY GOD WHAT WILL IT TAKE!?!","The Pfizer COVID-19 vaccine ""is not approved."""
+4341,neg,3,0,0,0,Heads up! The Pfizer vaccine is officially FDA approved.  https://www.mix965tulsa.com/news/trending/coronavirus-fda-grants-full-approval-pfizer-biontech-covid-19-vaccine/Z4UOA6XNWFGHPK3IVLJVJM4YWU/,"The Pfizer COVID-19 vaccine ""is not approved."""
+4362,neg,3,0,1,0,"Things that kill you in the USA:
+
+0.0018% COVID-19
+0.0003% attributed
+0.0001118%
+0.000003%  vs 
+0.000002% Lightning
+0.00000000905% J&amp;J ""blood clots""(just 3 people, we have treatments now)
+0.00000000000% FDA Approved COVID-19 Pfizer&amp;BioNtech vaccine
+
+Get the vaccine.","The Pfizer COVID-19 vaccine ""is not approved."""
+4370,neu,1,3,0,0,"Uuummm...really?...$$ talks
+
+Pfizer's Covid-19 shot fully approved by US regulator for use in over-16s https://www.rt.com/usa/532833-fda-pfizer-vaccine-covid-approval/","The Pfizer COVID-19 vaccine ""is not approved."""
+4371,neg,3,0,0,0,"Cubs win! Cubs win! I mean, Pfizer is fully FDA approved! Pfizer is fully FDA approved! https://www.fda.gov/news-events/press-announcements/fda-approves-first-covid-19-vaccine?fbclid=IwAR01IwPgXbXLPJ2G72oNtgGCIu4Y1OCoJAgB--26S3SDuf_u7sbqNQ0dZo4","The Pfizer COVID-19 vaccine ""is not approved."""
+4411,neg,3,0,0,0,"#Pfizer is now FDA APPROVED  
+
+https://fox5sandiego.com/news/coronavirus/us-regulators-give-full-approval-to-pfizer-covid-19-vaccine/","The Pfizer COVID-19 vaccine ""is not approved."""
+4491,pos,0,0,3,0,"Biden Orders VA To Withhold Health Benefits From Unvaccinated Veterans https://www.delawareohionews.com/national-news/biden-orders-va-to-withhold-health-benefits-from-unvaccinated-veterans/ via @DelawareOhNews
+
+I am a disabled veteran and I will not be forced to get any #deathjabs. 
+
+#IMPEACHBIDENNOW","""Biden orders VA to withhold benefits from unvaccinated veterans."""
+4680,pos,0,0,3,0,What a troll... https://newspunch.com/president-putin-bans-mandatory-vaccinations-in-russia-we-are-a-free-country/,"""President Putin bans mandatory vaccinations in Russia."""
+4681,pos,0,1,3,0,"ANTI-VAXXERS:
+
+FREEDOM (!!!!) IS INVITING YOU TO RUSSIA. 
+
+@RBReich @franifio #antivaxxers #antivax @lednabm 
+
+https://newspunch.com/president-putin-bans-mandatory-vaccinations-in-russia-we-are-a-free-country/","""President Putin bans mandatory vaccinations in Russia."""
+4811,neu,0,3,0,0,"https://www.maravipost.com/shocking-bill-gates-calls-for-the-withdrawal-of-all-covid-19-vaccines-the-vaccines-are-far-more-dangerous-than-anyone-imagined/
+Hello sir, I just want to know, is the statement in the article is given by you???!!! @BillGates","""Bill Gates calls for the withdrawal of all Covid-19 Vaccines; 'The vaccines are far more dangerous than anyone imagined.'"""
+4832,pos,0,0,3,0,Shocking Video Shows Taliban Hanging Man From US Black Hawk Helicopter O... https://www.youtube.com/watch?v=g314C0vXg2g&feature=youtu.be via @YouTube,"A video shows the ""Taliban hanging someone from a helicopter."""
+4871,pos,0,0,3,0,"1/4 Samsung Biologics is building a fifth plant for novel treatment types, including cell and gene therapy and mRNA and DNA vaccines! $MRNA $GSK $PFE #COVID19 #mRNA #CDMO #Samsung 
+https://bit.ly/3ga7u0N","The mRNA COVID-19 vaccines are ""really gene therapy."""
+4890,dif,0,0,0,3,Ed Silverman: STAT+: Pharmalittle: Pfizer says 'trust us' when it comes to a Covid-19 booster; FDA OKs extra dose of the mRNA shots for some people https://www.statnews.com/pharmalot/2021/08/13/pfizer-covid19-pandemic-vaccines-gene-therapy-sleep/?utm_campaign=rss,"The mRNA COVID-19 vaccines are ""really gene therapy."""
+4891,dif,0,0,0,3,Pharmalot.. Pharmalittle.. Good Morning: Pfizer says 'trust us' when it comes to a Covid-19 booster; FDA OKs extra dose of the mRNA shots for some people &amp; More news.. https://www.statnews.com/pharmalot/2021/08/13/pfizer-covid19-pandemic-vaccines-gene-therapy-sleep/ #pharma #Covid19 #pandemic #vaccine #opioids $PFE $JNJ $MRNA $BNTX $PM $JAZZ $BIIB $LLY,"The mRNA COVID-19 vaccines are ""really gene therapy."""
+4923,dif,0,0,0,3,I had NOTHING to do with the development of the MRNA vaccine but Albert Bourla wants to blame me b/c it does not work https://www.businessinsider.com/pfizer-ceo-constant-waves-covid-19-coronavirus-complacency-albert-bourla-2022-5,"""Pfizer CEO has not yet had vaccine."""
+4930,dif,0,0,0,4,"Ok, so traditional vaccines only had one dose. Anything fishy going on?
+@EpochTimes  #vaccine 
+https://www.theepochtimes.com/pfizer-ceo-fourth-covid-19-vaccine-dose-neccessary_4334523.html?utm_source=morningbriefnoe&utm_campaign=mb-2022-03-14&utm_medium=email&est=UNQS4l7N3TlPJquwwIViSBT1cDD6fw3TokCPttVt67G6axRpvH4%2F7xj3piU3Tx3SGA%3D%3D","""Pfizer CEO has not yet had vaccine."""
+4941,dif,0,0,0,3,Just in time for everyone to have had it. https://thehill.com/policy/healthcare/588988-pfizer-ceo-predicts-omicron-vaccine-will-be-ready-in-march/,"""Pfizer CEO has not yet had vaccine."""
+5082,dif,0,0,0,3,"99% chance I have covid, I'm dying and all I want is ben n Jerry's, donuts, chocolate, and maybe some in n out","There is a ""0.05% chance of dying from COVID."""
+5191,neg,3,0,0,0,"Fox ""News"" lies to its audience. Fox ""news"" kills its audience. All to create a sense of chaos the GOP thinks it can use to take back total power. https://www.mediamatters.org/fox-news/10-fox-figures-who-recklessly-promoted-ivermectin-effective-covid-19-treatment",Ivermectin is an effective treatment for COVID-19.
+5202,neg,3,0,0,0,"The drug is not approved for treatment of COVID-19 in Japan, &amp;the U.S. FDA, WHO, EU drug regulator &amp; Merck (MRK.N), which makes the drug, have warned against its use bc of a lack of scientific evidence that it has therapeutic effect.
+
+https://www.reuters.com/business/healthcare-pharmaceuticals/japans-kowa-says-ivermectin-effective-against-omicron-phase-iii-trial-2022-01-31/",Ivermectin is an effective treatment for COVID-19.
+5212,neg,3,0,0,0,"Merck &amp; Co.'s COVID-19 pill molnupiravir must first overcome misinformation
+Unproven claims on social media that ivermectin is effective against COVID-19 could lower demand for Merck &amp; Co.'s molnupiravir, a COVID-19 treatment the company hopes will soon b...https://www.linkedin.com/feed/update/urn:li:share:6876177689246474240",Ivermectin is an effective treatment for COVID-19.
+5242,neg,3,0,0,0,"No, you should not take horse dewormer. Wear a damn mask and get the damn shot.
+https://www.dailykos.com/stories/2021/9/3/2050134/-Ivermectin-is-NOT-a-highly-effective-treatment-for-COVID-19",Ivermectin is an effective treatment for COVID-19.
+5370,pos,0,0,3,0,"CDC Hiding the number of vaccine deaths!
+https://www.thegatewaypundit.com/2021/07/cdc-quietly-deletes-6000-covid-vaccine-deaths-cdc-website-total-one-day-caught-internet-sleuths-video/?ff_source=Twitter&ff_campaign=websitesharingbuttons","""CDC quietly deletes 6,000 COVID vaccine deaths from its CDC website total in one day."""
+5401,dif,0,0,0,4,"Right I'm NOT going to get drawn into a big debate about what I'm about to say!. It is NOT Vegan to have Vaccinations, im not an ''Anti Vaxxer'' conspiracy theory type. But a passionate Anti Vivisection campaigner!. https://nypost.com/2021/06/08/vegans-are-less-likely-to-get-severe-covid-study-says/","""You're not going to get COVID if you have these vaccinations."""
+5411,neu,0,3,0,0,"""You're not going to get COVID if you have these vaccinations,"".                                - Joe Biden (July 2021)","""You're not going to get COVID if you have these vaccinations."""
+5661,neu,0,3,0,0,A few of those who lost federal benefits are able to reclaim state benefits. So dig more into continuing claims to see the impact of the end of the federal UI bonus. #kbrs https://realeconomy.rsmus.com/initial-jobless-claims-rose-for-third-straight-as-millions-lost-federal-pandemic-benefits/,"""Before the pandemic, just over 40,000 were on continuing UI claims. Now, there are well over 100,000 on state or federal UI benefits."""
+5722,dif,0,0,0,4,#ZABhutto was judicially murdered. #IK's govt judicial murder took place by the conspiracy of its legal team in the SC by not producing the letter. U tube video by  Abid Andleeb is eye opener. #IK &amp; his Cabinet must watch it now  lest it becomes too late to react. @IK  @Urgent,"""There is a place in the U.S. where murder is legal."""
+5732,dif,0,0,0,3,"So last week K'von Wallace is called for a flag on a legal play and this week an attempted murder takes place, and nothing.","""There is a place in the U.S. where murder is legal."""
+5760,pos,0,0,3,0,"U.S. Military Arrests Dr. Deborah Birx
+Restored Republic
+May 29, 2021
+https://rumble.com/vhsp4l-u.s.-military-arrests-dr.-deborah-birx.html","""U.S. military arrests Dr. Deborah Birx."""
+5821,dif,0,0,0,3,Dominion lawyer says the voting technology company is 'still exploring' whether to sue Trump over election lies https://www.businessinsider.com/dominion-may-still-sue-donald-trump-election-lies-2021-8?utmSource=twitter&utmContent=referral&utmTerm=topbar&referrer=twitter via @businessinsider,Says Donald Trump was back on Twitter as of May 2021.
+5863,pos,0,0,3,0,"*Gas prices highest in a decade.
+*Worst jobs report in 2 decades.
+*Highest inflation in 3 decades.
+*Highest increase in illegal immigration in 4 decades.  
+
+Got to love the emotional voting skills...","""Gas prices highest in a decade. Worst jobs report in 2 decades. Highest inflation in 3 decades. Highest increase in illegal immigration in 4 decades."""
+5962,pos,0,0,3,0,"#BlackLivesMatter  says it stands with #HamasTerrorists   in #Israeli  conflict
+http://www.islamedianalysis.info/black-lives-matter-says-it-stands-with-hamas-terrorists-in-israeli-conflict/","""Black Lives Matter says it stands with Hamas terrorists in Israeli conflict."""
+6160,pos,0,0,3,0,"U.S. census bureau CONFIRMS huge conflict in total number of voters in the 2020. This time the data reported by census bureau conflicts with the election results. They said, their are obvious discrepancies with the results.","""U.S. Census Bureau confirms huge conflict in total number of voters in 2020 election."""
+6191,dif,0,0,0,3,"New Jersey's largest city unanimously passed a resolution Wednesday to suspend the business license of local Lukoil gas stations -- an action prompted by Russia's invasion of Ukraine last week.
+https://www.nbcnewyork.com/news/local/newark-council-suspends-franchise-owned-lukoil-gas-stations-licenses-due-to-russian-invasion/3580026/?_osource=SocialFlowFB_NYBrand","New Jersey ""will be out of gas for a week."""
+6202,dif,0,0,0,3,Top News Of The Week In Scotch Plains-Fanwood: 3 Winners In Juneteenth Student Design Contest; Erratic Driver Wanted After Police Chase. https://patch.com/new-jersey/scotchplains,"New Jersey ""will be out of gas for a week."""
+6260,pos,0,0,3,0,"DAVID LESTER STRAIGHT SERVES ON SEVERAL (TRUMP) PRESIDENTIAL TASK FORCES Inc HUMAN TRAFFICKING AND JUDICIAL CORRUPTION SAYS HILLARY CLINTON WAS TRIED, CONVICTED, AND WAS EXECUTED ON APRIL 26, 2021
+
+CONFIRMS what REAL RAW NEWS said!
+https://realrawnews.com/2021/04/hillary-clinton-hanged-at-gitmo/
+https://www.bitchute.com/video/Tp9c3zuse8UE/","""Hillary Clinton hanged at GITMO."""
+6320,neu,0,3,0,0,It's my third day with moldavite and I'm hearing that Hillary Clinton was hanged at Gitmo??,"""Hillary Clinton hanged at GITMO."""
+6381,pos,0,0,3,0,"Mario SaPut0
+@MJackshiite
+ 
+A Quarter of a MILLION ILLEGAL Votes found in ARIZONA'S AUDIT...so far!","""A quarter of a million illegal votes found in Arizona's audit."""
+6454,neu,0,3,0,0,".@GovAbbott credited ""simple math"" with the success in the nation's second-most populous state.
+https://cbs4local.com/news/nation-world/texas-gov-declares-state-close-to-herd-immunity-what-do-the-numbers-say","Texas ""could be very close to herd immunity."""
+6462,neg,3,0,0,0,"No, @GregAbbott_TX, 29% is NOT ""very close"" to the minimum of 70% that might be considered herd immunity. You are lying to Texans - again. #TxLege #COVID #Vaccine #GregAbbottLies   https://www.kvue.com/article/news/verify/texas-herd-immunity-covid-coronavirus-governor-greg-abbott/269-102ba761-2aa9-401c-8a2c-df00614eeb22","Texas ""could be very close to herd immunity."""
+6470,neg,3,0,0,0,Such a #COVIDIDIOT! @GovAbbott's claim that Texas is very close to herd immunity is not even close https://news.yahoo.com/gov-greg-abbotts-claim-texas-124005959.html?soc_src=community&soc_trk=tw via @YahooNews,"Texas ""could be very close to herd immunity."""
+6503,pos,0,0,3,0,To the seditious traitor: Keep telling your supporters the Covid-19 vaccines work https://www.vox.com/science-and-health/2021/3/18/22338032/trump-covid-19-vaccine-hesitancy-republicans?utm_campaign=vox&utm_content=entry&utm_medium=social&utm_source=twitter via @voxdotcom,"""Maybe (the COVID-19 vaccine) doesn't work, and they're simply not telling you that."""
+6554,pos,0,0,3,0,Bombshell: Moderna Chief Medical Officer Admits mRNA Alters DNA - The Washington Standard. Here to all you ppl that received your jabs read this ! https://thewashingtonstandard.com/bombshell-moderna-chief-medical-officer-admits-mrna-alters-dna/,"""Moderna chief medical officer admits: mRNA alters DNA."""
+6752,neg,3,1,0,0,"When joe biden really said ""but you go to a gun show you buy whatever you want no background check"" lmao ","""You go to a gun show, you can buy whatever you want, and no background check."""
+6842,pos,0,0,3,0,"First it was that 94% of Covid deaths, 'Covid isn't the primary reason for death. Now the injections being given are killing just as many people.https://www.thegatewaypundit.com/2021/03/exclusive-per-cdc-data-nearly-twice-many-vaccine-related-deaths-far-2021-1755-vaccine-deaths-past-decade-994/?fbclid=IwAR2U8vRAxKMbJbSL8VXIQBPcHSXPQ7e1LurF5fLyVTo9JjF1COwohoxFLsg","""Per the CDC, there are nearly twice as many vaccine-related deaths so far in 2021 (1,755) than all the vaccine deaths this past decade (994)."""
+6862,neg,3,0,0,0,"#ELB: @PolitiFact Rates as ""Mostly False"" Statement That Michigan election bills are ""designed to make it easier for people to vote."" https://electionlawblog.org/?p=121466","Michigan election bills are ""designed to make it easier for people to vote."""
+7080,neg,3,0,0,0,"Oh FFS.  The comments at the bottom show just how delusional these nimrods are.  They believe this BS and even more ridiculous BS
+
+https://realrawnews.com/2021/03/navy-seals-arrest-hillary-clinton/?fbclid=IwAR0UfHA-EyoZHQNUIjYuxNPrNrcqvfpb6yF4_Wolr-BCkspXzZWhQicZodw","""Navy SEALs arrest Hillary Clinton."""
+7210,pos,0,0,3,0,"The Republicans are lieing to us ..
+Claim: ""Marco Rubio's 'red flag' gun confiscation bill"" calls for guns to be confiscated ""without due process, based on unsubstantiated accusations.""
+
+Claimed by: National Association for Gun Rights:
+it's TRUE and it will.","""Marco Rubio's 'red flag' gun confiscation bill"" calls for guns to be confiscated ""without due process, based on unsubstantiated accusations."""
+7233,dif,0,1,0,4,"This week marks 1 year since @POTUS took office. With the American Rescue Plan, @HouseDemocrats delivered on our promise to #BuildBackBetter to: 
+ Put vaccines in arms
+ Money in peoples' pockets
+ Helped kids return to safer schools.","In the American Rescue Plan, ""just about 1% of the money is for vaccines."""
+7252,neu,0,3,0,0,"Crude oil prices are expected to keep rising and could reach as high as $100 a barrel by later this year. Plus, higher oil prices could result in higher prices at the pump this Fourth of July weekend. Read more of last week's top energy stories.  
+https://consumerenergyalliance.org/2021/06/ceas-top-5-favorite-energy-stories-this-week-june-25/","""Oil is now $61.30 a barrel and rising drastically! On Jan. 5, it was about $25 a barrel."""
+7312,neu,0,3,1,0,"Sen. Ron Johnson says riot at the Capitol on Jan 6, 2021 ""didn't seem like an armed insurrection to me."" FBI counterterrorism official was asked ""How many shots were fired?"" Answer: ""I'm only aware of one."" The one by Capitol police who shot Ashli Babbitt https://www.newsmax.com/politics/ron-johnson-capitol-riot-interview-firearms/2021/02/16/id/1010205/","Says Jan. 6 Capitol riot ""didn't seem like an armed insurrection."""
+7521,pos,0,0,4,0,"Trump Assassination Foiled, Deep State in Panic Mode!
+
+On Tuesday morning, January 26, at approximately 3:00 am, a sniper's bullet struck a panoramic casement window on the east wall of Trump's bedroom at his Mar-a-Lago estate. The round might have slain Trump had he not [1]","""Trump assassination foiled, Deep State in panic mode!"""
+7540,pos,0,0,3,0,Why has the White House been dark for 10 or is it 11 nights in a row? WTH,The White House was dark for 10 nights in a row.
+7551,pos,0,0,3,0,"Donald Trump is the first President in modern history did not start a new war.
+
+RT if you agree with me.","""Donald Trump is the first president in modern history (who) did not start a new war."""
+7560,neg,3,0,0,0,"First Draft Provides Hub To Counter Vaccine Misinformation: It calls out Turning Point Action cofounder Ryan Fournier for tweeting ""the Biden Administration lost 20 million COVID vaccines..."" when... https://www.mediapost.com/publications/article/360230/first-draft-provides-hub-to-counter-vaccine-misinf.html","""The Biden administration lost 20 million COVID vaccines."""
+7592,dif,0,0,0,3,"They saying Busta Rhymes got Halitosis, that's why they need him to wear a mask","""WHO now saying you do not need to wear a mask."""
+7602,dif,0,0,0,3,"just saying even once i get my vaccine im still gonna wear a mask
+don't need ppl thinking im conservative ","""WHO now saying you do not need to wear a mask."""
+7611,dif,0,0,0,3,"So Rand Paul is now saying that, because he wouldn't wear a mask &amp; caught covid, he doesn't need to get vaccinated because he got covid. 
+
+let's diagram that logic:
+
+no mask ---&gt; caught covid ---&gt; won't get vaccinated. 
+
+got it.","""WHO now saying you do not need to wear a mask."""
+7622,dif,0,0,0,3,"Gujju Girl saying tht plss plss plss plsssss TC of ur health  @Siva_Kartikeyan thalaivaawear mask  always n pls avoid crowd 
+I just want u all to b safe there
+GG missing u sooo sooo badly yarrr sending my luv
+u n fam pls TC okayy don't need anything else","""WHO now saying you do not need to wear a mask."""
+7662,pos,0,0,3,0,WHO now says:  No Masks needed https://rainbowwarrior2005.wordpress.com/2021/01/26/who-now-saying-you-do-not-need-to-wear-a-mask/?fbclid=IwAR1WXFi4N0aAL-HQsAnP8--Uv8Q0GBshrJXbnK9I9K4dsKFCg1c1ZEy8F5Y,"""WHO now saying you do not need to wear a mask."""
+7762,dif,0,0,0,3,"Biden fumes over Cuomo's DNC speech, book claims ""Every four years, Democrats asked themselves the same question about the NY Gov: 'How is Andrew Cuomo going to f- -k us this time?'' write the authors of ""Lucky: How Joe Biden Barely Won the Presidency.'' https://nypost.com/2021/03/02/book-says-biden-camp-fumed-over-cuomos-dnc-speech/","Says Joe Biden and Democrats ""have not legitimately won"" the presidency."
+7781,neu,0,3,0,0,"What is this now??
+https://arlinreport.com/2021/01/16/insurrection-act-signed-by-trump-jan-14-2021-inauguration-cancelled-trump-remains-in-office-abc-nbc-cbs-fox-cnn-msnbc-to-lose-licenses-truth11-com/","""Inauguration Cancelled, Trump Remains in Office."""
+7842,neg,3,0,0,0,"There are people who believe that :#TrumpRemainsinOffice.
+
+I had to read this piece 3 times.
+
+#Cult45 
+
+https://beforeitsnews.com/politics/2021/01/inauguration-cancelled-trump-remains-in-office-abc-nbc-cbs-fox-cnn-msnbc-to-loose-licenses-3223234.html?fbclid=IwAR2g1vNnIYJm10wlA2tkWENzuJr4q_QV9p0Q0IQrdJHZmzFvbEu9DMnfck4","""Inauguration Cancelled, Trump Remains in Office."""
+8112,neg,3,0,0,0,"""I won Georgia by hundreds of thousands of votes!"" LMBO!!!!  NO YOU DIDNT!!!! 
+
+Y'all go get your president - he's senile.","""We won Georgia easily. We won it by hundreds of thousands of votes."""
+8261,pos,0,0,3,0,"No #candidate has ever won both #Florida and #Ohio and lost. All of my #lawyers and everyone in my #Administration will continue to invent the most tremendous #lies, #deceptions, and #untruths that I #won them both, by a lot, until I am declared #President For Life! #SupremeCourt","""No candidate has ever won both Florida and Ohio and lost."""
+8271,neu,0,3,0,0,"@LivioOliveira e outros 38 curtiram
+
+Donald J. Trump @realDonaldTrump
+
+. 5 h
+No candidate has ever won both Florida and Ohio and lost. I won them both, by a lot! #SupremeCourt","""No candidate has ever won both Florida and Ohio and lost."""
+8272,neg,3,0,0,0,"Trump thinks that no candidate has ever won Florida and Ohio and lost the presidency, but two have.
+
+However, no candidate has ever won CA, OR, WA, HI, NV, AZ, NM, CO, MN, WI, IL, MI, GA, VA, PA, NY, ME, VT, NH, MA, RI, CT, NJ, DE, MD, and DC and lost the presidency.","""No candidate has ever won both Florida and Ohio and lost."""
+8442,neg,3,0,0,0,"Chesterfield's general registrar has provided polling data from recent presidential elections that contradicts state Sen. Amanda Chase's claim that the county's Southside voting precinct is ""infamous for having over 100% of the [registered] vote count.""
+https://www.chesterfieldobserver.com/articles/registrar-debunks-sen-chases-claims-of-voting-irregularities/","""In Chesterfield (Va.), the Southside precinct is infamous for having over 100% of the vote count..."""
+8451,pos,0,0,3,0,"It's National Lead Poisoning Prevention Week. I'm so glad we have a Governor who cares and wants to help WI cities get to 0% lead piping.
+
+Sadly, in 2019, Republicans stripped $40 million from the budget for lead pipe replacement - because they thought it helped MKE too much.","""In 2019, Republicans stripped $40 million from the budget for lead pipe replacement - because they thought it helped MKE too much."""
+8490,neu,0,3,0,0,"Any of my Dane Co/Madison/smart friends have any idea what this is all about? I mean, yeah, it's Jim Hoft. But still. https://www.thegatewaypundit.com/2020/11/breaking-exclusive-thousands-fake-votes-found-wisconsin-recount-dane-county-photos-report-gop-observer/?fbclid=IwAR1Na7mz6SG79Nh0HkSqBqkfJDaItZT9Sx7QNztM9lCt3UdclQmv1cA3zL0","""THOUSANDS of fake votes found at Wisconsin Recount in Dane County."""
+8521,neu,0,3,0,0,"""We've identified,"" she added, ""at least 450,000 ballots in the key states that miraculously only have a mark for Joe Biden on them and no other candidate."" https://www.breitbart.com/politics/2020/11/16/sidney-powell-lin-wood-promise-theres-ton-voter-fraud/","""At least 450,000 ballots in the key states ... miraculously only have a mark for Joe Biden on them, and no other candidate."""
+8543,pos,0,0,3,0,"Wow! Michigan just refused to certify the election results! Having courage is a beautiful thing. The USA stands proud!
+Just landed in Traverse City, Michigan. Big crowd!","""Michigan just refused to certify the election results!"""
+8791,pos,0,0,3,0,https://buffalochronicle.com/2020/11/07/mitt-romney-has-been-asked-to-lead-health-and-human-services-in-biden-administration/?fbclid=IwAR32HKhejp8x9lhtkqOqJ3yw8JaOZUNO1MsRgKq0sBa2nh7-3Bd4WGqTlgs  oh Joy,"""Mitt Romney has been asked to lead Health and Human Services in Biden administration."""
+8831,neu,0,3,0,0,"Ew, is this true?
+
+https://buffalochronicle.com/2020/11/07/mitt-romney-has-been-asked-to-lead-health-and-human-services-in-biden-administration/?fbclid=IwAR2dtVyJozaznOfI7kKbBCe6VXhwKryAsq48PRb9u4jXUspN3x435JG6nxg","""Mitt Romney has been asked to lead Health and Human Services in Biden administration."""
+9002,pos,0,0,3,0,"Lock this asshat up already. People actually died bc they didn't receive their medication on time. Just lock him up. 
+
+ https://www.rawstory.com/amp/usps-failed-to-deliver-27-percent-of-mail-in-ballots-in-south-florida-report-2649552498","""USPS failed to deliver 27% of mail-in ballots in South Florida"""
+9120,pos,0,0,3,0,"American Patriots. Your election is being stolen.
+
+Dem states are waiting to see how much you care. If the answer is not enough, they will find the Biden votes.
+
+Six states can't get the votes counted
+Six states in which Trump is leading
+Six states where the Dems are in charge","""Six states can't get the votes counted. Six states in which @realDonaldTrump is leading. Six states where Dems are in charge."""
+9170,pos,0,0,3,0,"Dems have removed any mention of ""God"" from their Platform. Why are they getting support from any Christian?","""Dems have removed any mention of 'God' from their Platform."""
+9180,pos,0,0,3,0,"Joe Biden called Black Youth SUPER PREDATORS. They will NEVER like him, or vote for him. They are voting for ""TRUMP"".","""Joe Biden called Black youth super predators."""
+9181,neg,3,0,0,0,Trump Falsely Claims Joe Biden Said 'Super Predators'. #Politics #BidenHarris2020 https://www.mediaite.com/trump/trump-mocked-for-false-claim-biden-called-black-youth-super-predators-he-thinks-hes-still-running-against-hillary/,"""Joe Biden called Black youth super predators."""
+9330,pos,0,0,3,0,"Great first step, the charges in Kenosha will be dropped as well, as they should be. #kenosha #KyleRittenhouse @KCCCK94
+@chris88len @knoernbl
+https://www.chicagotribune.com/news/breaking/ct-kyle-rittenhouse-gun-20201013-cp5ecbdjx5didir6bwdkxyoa3m-story.html","""BREAKING NEWS: All Charges Dropped for Kyle Rittenhouse."""
+9382,neg,3,0,0,0,"Random Falsehoods
+
+Donald Trump
+stated on September 29, 2020 in a debate:
+Says ballots in Wisconsin ""are being dumped in rivers"" or creeks.
+
+@MissioMusic #CanYouFeelTheSun @altnation #alt18","Says ballots in Wisconsin ""are being dumped in rivers"" or creeks."
+9390,pos,0,0,3,0,"Correction but Breaking: Shredded Pennsylvania Mail in ballot Applications were discovered in a trailer.
+
+The applications were for @realDonaldTrump. 
+
+The video evidence was submitted by a fan to @oldrowswig from Old Row, a Barstool Sports Company 
+
+This is not ok! Retweet.","""Shredded Pennsylvania Mail in ballot Applications were discovered in a trailer.
+The applications were for @realDonaldTrump."""
+9423,pos,0,0,3,0,"Our world ruler has said we are not allowed to return TIL normal until we TAKE his vaxcxcine. 
+https://beforeitsnews.com/survival/2020/09/the-government-has-released-their-initial-plans-to-force-a-vaccine-on-everyone-2760185.html?fbclid=IwAR1x54-7jt_6kHuIp9LdXNG5r0Eld_-sI1N5051I1g6d76YHJn5W4UgQQ8g","""The government has released their initial plans to force a vaccine on everyone."""
+9430,pos,0,0,3,0,The Government Has Released Their Initial Plans To Force a Vaccine on EVERYONE | Survival https://beforeitsnews.com/survival/2020/09/the-government-has-released-their-initial-plans-to-force-a-vaccine-on-everyone-2760185.html?fbclid=IwAR3DDLKhNrK4XuEC_vMYHW03o-ypeGo-rgJewFodtRxLTsFwjVD33DgcmuM        @SpeakerPelosi what can you tell the public about this. This is STUPID and unconstitutional,"""The government has released their initial plans to force a vaccine on everyone."""
+9451,pos,0,0,3,0,"Harold Eubanks 16 September
+Biden and Obama allowed grown men in restrooms with little girls. 
+TRUMP has rescued over 300 missing children from pedophiles and perverts. 
+Pick your President.","""Biden and Obama allowed grown men in restrooms with little girls. Trump has rescued over 300 missing children from (pedophiles) and perverts."""
+9492,pos,0,1,3,0,"Obama and Biden lost 494,000 manufacturing jobs in their 8 years together. @realDonaldTrump brought back 496,000 of them back in 3 years. #facts","In manufacturing, ""I brought back 700,000 jobs. (Obama and Biden) brought back nothing."""
+9510,neg,3,0,0,0,"#Debates2020 Trump: Biden said he went to Delaware State, but he forgot the name of his college. False: During a 2019 speech in South Carolina, Biden said he ""got started out of an HBCU, Delaware State"" but made no direct claim of attending the university. #LogicallyChecked","""You said you went to Delaware State but you forgot the name of your college."""
+9513,neu,0,3,0,0,"""Word on the street is that Joe Biden got tonight's debate questions in advance"" tweeted Starnes, citing radio station KXEL 1540's interview with political operative Jerome Corsi.","""Word on the street is that Joe Biden got tonight's debate questions in advance."""
+9610,pos,0,0,3,0,"Joe Biden Botches Pledge Of Allegiance In Wisconsin
+
+Stories from 3 sources
+
+https://collectedtimes.com/politics-daily/5f691db01f11580004955e28
+
+ #biden #trump #joebiden","""Joe Biden completely botches the Pledge of Allegiance."""
+9631,pos,0,0,3,0,This Is Real: Biden Waves To An Empty Field https://www.facebook.com/SeanHannity/posts/1675839649250962/ #ItIsVerySADToViewAPresidentialCandidateThisWay - Huumn - F.T.A ...,"""This Is Real: Biden Waves To An Empty Field."""
+9710,neu,0,3,0,0,Is this true? https://nworeport.me/2020/09/09/cdc-announces-that-students-may-be-kept-from-parents-overnight-as-ohio-sets-up-covid-19-fema-camps/,"""CDC announces that students may be kept from parents overnight as Ohio sets up COVID-19 FEMA camps."""
+9741,neg,3,0,0,0,"Trump Deliberately Lied about COVID-19 - Trump Deliberately Lied about COVID-19 Source: Trump deliberately played down virus, Woodward book says - BBC News President Donald Trump has admitted obtained that he downplayed the seriousness of... https://4wheeledlefty.tumblr.com/post/628834291660570624/trump-deliberately-lied-about-covid-19","Says President Donald Trump ""never downplayed the virus."""
+9750,pos,0,0,3,0,"Hey, #FoxAndFriends South Korea sprays rioters with a special dye so they can be identified later and arrested. I think this is a great idea! Do you think our Police should do the same?","""South Korea sprays rioters with dye so they can be identified & arrested later."""
+9751,neg,3,0,0,0,"Lewis Latimer, a black man, improved on the design of the light bulb that Thomas Edison invented in 1879 patented in 1880.
+
+https://neonnettle.com/news/12552-biden-a-black-man-invented-the-light-bulb-not-a-white-guy-named-edison-","""A Black man invented the light bulb, not a white guy named Edison."""
+9813,neu,0,3,1,0,"There it is.
+
+@JoeBiden: ""When I was Vice President, violent crime fell 15% in this country. We did it without chaos and disorder...The murder rate is up 26% in cities across the nation this year under Donald Trump. Do you feel really safer under Trump?""","""When I was vice president, violent crime fell 15% in this country. ... The murder rate now is up 26% across the nation this year under Donald Trump."""
+9844,neg,3,0,0,0,"Random False trump comments 
+
+""Cuomo ended cash bail ... and now the crime rate has gone through the roof.""
+
+@MissioMusic #CanYouFeelTheSun @altnation #alt18","""Cuomo ended cash bail ... and now the crime rate has gone through the roof."""
+9851,neu,0,3,0,0,"Trump's giving a speech in Biden's childhood hometown of Scranton ahead of his big convention speech tonight + is sticking in the knife. Says Biden left the town 68yrs ago. ""'He abandoned Scranton."" ""Joe Biden is no friend of Pennsylvania.""","Says Joe Biden ""abandoned Scranton."""
+9872,pos,0,0,3,0,"The same genius (Another Fake) who claimed his favorite, James Madison signed the Declaration of Independence. GOP Candidate Lies About Mexicans Selling ""Tens of Thousands"" of U.S. Kids Into Sex Slavery https://www.thenewcivilrightsmovement.com/2020/08/gop-candidate-says-mexicans-selling-tens-of-thousands-of-u-s-kids-into-sex-slavery/","Says James Madison ""signed the Declaration of Independence."""
+9920,pos,0,0,3,0,Bidens tax rate on a family making 75000 dollars would go from 12% to 25%. LET THAT SINK IN ALL YOU RIDING WITH BIDEN SUPPORTERS!  #fact #truth #NeverBidenNeverHarris,"""Biden's tax rate on a family making 75,000 dollars would go from 12% to 25%."""
+10002,neu,0,3,0,0,"What year did America invent slavery?
+I could only find where we ended it in this country.","""America was the ONLY country that ended"" slavery"
+10012,pos,0,0,3,0,"Fuck Black Lives Matter, my Black life always mattered for the last 33 years of living &amp; counting, the group &amp; entity known as ""Black Lives Matter"" need to be designated as a domestic terrorist organization, they are a neo marxist violent racist anti American group. ","""Black Lives Matter is a terrorist organization."""
+10021,pos,0,0,3,0,Black lives matter is a domestic terrorist organization                        Antifa is a domestic terrorist organization,"""Black Lives Matter is a terrorist organization."""
+10052,pos,0,0,3,0,Still think #BLM is a civil rights organization? It is not. https://drrichswier.com/2020/06/28/a-convicted-terrorist-sits-on-board-of-charity-handling-black-lives-matter-fundraising/,"""Black Lives Matter is a terrorist organization."""
+10054,neg,3,0,0,0,Ubisoft can fuck off https://www.vice.com/en/article/ep4774/ubisoft-game-used-black-lives-matter-fist-as-symbol-of-terrorist-organization,"""Black Lives Matter is a terrorist organization."""
+10060,pos,0,0,3,0,"Black Lives Matter is a terrorist organization. 
+
+Period.","""Black Lives Matter is a terrorist organization."""
+10072,pos,0,0,3,0,"With known ties to the Venezuela Communist Government, they could fall under the category of International Terrorist Organization
+
+https://amp.washingtontimes.com/news/2020/aug/6/rudy-giuliani-black-lives-matter-domestic-terroris/","""Black Lives Matter is a terrorist organization."""
+10101,neu,0,3,0,0,#Rudy Giuliani claims #Black Lives Matter #'will be proven to be a #terrorist organization - Jul 12 @ 12:48 PM ET https://oddcrimes.com/static/2020/07/12/Rudy-Giuliani-claims-Black-Lives-Matter-will-be-proven-to-be-a-terrorist-organization.php,"""Black Lives Matter is a terrorist organization."""
+10151,neg,3,0,0,0,"Family members said ""I vote for the party, all candidates lie and are the same"". 
+Biden lie: ""McDonald's (makes) you all sign noncompete contracts that you cannot go across town to try to get a job at Burger King.""
+Trump lie: ""NO COLLUSION!""","""McDonald's (makes) you all sign noncompete contracts that you cannot go across town to try to get a job at Burger King."""
+10183,pos,0,0,3,0,If any businesses refuse any legal tender call dept. of Revenue. (334) 242-1270. Report. They can be fined and sued.,Businesses that refuse any legal tender can be fined and sued.
+10220,pos,0,0,3,0,"Our country &amp; Constitution was built on a foundational separation of church an state.
+
+Today, #SCOTUS ruled public funds--taxpayer dollars--can go to religious schools.
+
+I think it's time the church and state get a constitutionally-mandated divorce. https://www.reuters.com/article/us-usa-court-religion/us-supreme-court-endorses-taxpayer-funds-for-religious-schools-idUSKBN2412FX","""Our country and Constitution was built on a foundational separation of church and state."""
+10261,neu,0,3,0,0,"Melendez cited medical research in a Tweet saying, ""There is no science or data to suggest that kids are at risk from COVID. Students should return to school, in person, and all school sports/activities should resume."" 
+https://kesq.com/news/education/2020/07/27/state-senator-melissa-melendez-discusses-reopening-schools/","""There is no science or data to suggest that kids are at risk from COVID."""
+10262,neg,3,0,0,0,"A California state lawmaker claimed there is ""no science or data to suggest that kids are at risk from COVID."" Medical experts say that's just plain wrong. https://www.capradio.org/articles/2020/07/10/california-lawmaker-makes-oversimplified-untrue-claim-about-covid-19-and-lack-of-risk-to-children/","""There is no science or data to suggest that kids are at risk from COVID."""
+10301,neg,3,0,0,0,"The moron in chief says 99% cases of COVID-19 are harmless, well why doesn't he fully expose himself to it and let's see how harmless it is. I'm not willing to find out what COVID-19 might do to me","Says 99% of COVID-19 cases ""are totally harmless."""
+10341,pos,0,0,3,0,"Wake up people.  Biden has 'always' been a racist.  Remember, he said Obama was a 'clean' man.  https://teamtrumpusa.com/1977-biden-said-integrating-black-students-would-turn-schools-into-a-jungle-a-racial-jungle/?fbclid=IwAR05ecNFQReHE5kE5ZPhbfilXXVyP1bmvjszpCmROr9GjjKNu7WeEh6oq74","""1977: Biden said integrating black students would turn schools into 'a jungle... a racial jungle.'"""
+10452,pos,0,0,3,0,"If we stopped ________ testing we would have very few cases, if any.","""If we stopped testing right now, we'd have very few cases, if any."""
+10460,neg,3,0,0,0,"45 says,""If we stopped testing (for coronavirus), we'd have few cases."" So if we stopped pregnancy tests, we'd have few pregnancies, right?","""If we stopped testing right now, we'd have very few cases, if any."""
+10521,pos,0,0,3,0,"Here we go!
+
+Donald Trump Rules The World. 
+
+Read.
+
+TRUMP IS WORKING...
+READ THIS
+
+US PRESIDENT,DONALD TRUMP HAS CANCELLED BILL GATES PROJECT KNOWN AS ID2020.
+
+The President of United States of America, Donald Trump has done the following;","Donald Trump ""cancelled Bill Gates project known as ID2020."""
+10522,pos,0,0,3,0,"Why is Juan lying? BLM's website says right on it that they want to defund the police. Joe Biden said he wants to reallocate funds. AOC said she wants to defund. City councils have voted to disband. This isn't a Republican talking point.
+
+#TheFive","Says Joe Biden wants to ""defund the police."""
+10601,dif,0,1,0,3,Don't send weapons used to quell peaceful protestors to an authoritarian. https://www.change.org/p/suspend-uk-export-of-tear-gas-rubber-bullets-and-riot-shields-to-usa?recruiter=43117218&utm_source=share_petition&utm_medium=twitter&utm_campaign=psf_combo_share_initial&recruited_by_id=03cfbfb0-67d9-0130-37e5-3c764e04981e via @UKChange,"""No tear gas was used and no rubber bullets were used."""
+10611,dif,1,0,0,3,SUSPEND UK EXPORTS FOR WEAPONS USED AS A MEANS OF CONTROL!! https://www.change.org/p/suspend-uk-export-of-tear-gas-rubber-bullets-and-riot-shields-to-usa?recruited_by_id=49aaf470-a53d-11ea-8909-d12ef9e56410&utm_source=share_petition&utm_medium=copylink&utm_campaign=psf_combo_share_initial&utm_term=psf_combo_share_message,"""No tear gas was used and no rubber bullets were used."""
+10621,neu,0,3,0,0,"All of the below SHOULD be used tonight! 
+
+Chemical irritants, such as pepper spray and tear gas;
+
+Rubber bullets;
+
+Baton rounds;
+
+Water cannon;
+
+Acoustic hailing devices, such as the Long-Range Acoustic Device (LRAD); and
+
+Stun grenades.","""No tear gas was used and no rubber bullets were used."""
+10972,dif,0,0,0,4,"Seasonal flu has killed an average of 17,000 people in England alone for each of the last 5 years. The precautions people are now taking over #coronavirusuk should be taken every year #covid19UK","""The flu killed 80,000 people in the U.S. last year"""
+11391,pos,0,0,3,0,"Lmaoooooo RT @rronnilynn: Trump said that ""HUNDREDS of Governors are calling him."". We only have 50. Think about that. Take all the time you need.","""Trump said 'hundreds' of governors are calling him...& we only have 50."""
+11401,pos,0,0,3,0,"Thanks to @UncleSamsNation
+
+Very simple
+
+Pick up a product
+
+Look at the barcode
+
+If the first 3 numbers are 690, 691, or 692, made in China
+
+If the first numbers are 00 thru 09, made in the USA
+
+#CoronaVirus #WuhanVirus #COVID19 #CCPVirus
+
+qt-covid19-news-371 by #BorderObserver","""Pick up a product. Look at the barcode. If the first 3 numbers are 690 or 691 or 692, the product was made in China."""
+11500,pos,0,0,3,0,Hospitals Get Paid More to List Patients as COVID-19 and Three Times as ... https://www.youtube.com/watch?v=LoiZtEf9vH8&feature=youtu.be via @YouTube. Again! Follow da monies back as to Whyz? CoV19 patient = $13k vs intubation machine adds $39k!,Hospitals get paid more to list patients as COVID-19.
+11730,pos,0,0,3,0,COVID-19 stands for Chinese Originated Viral Infectious Disease - 2019,"""COVID literally stands for Chinese Originated Viral Infectious Disease."""
+11732,pos,0,0,3,0,"COVID-19 ORIGIN: Yes, it truly is a #ChineseCoronavirus! Even it's name has China in it. 
+#Covid19 stands for:
+* Chinese
+* Originated
+* Viral
+* Infectious 
+* Disease
+* 2019","""COVID literally stands for Chinese Originated Viral Infectious Disease."""
+11741,pos,0,0,3,0,This:  All schools in Canada are closed for the rest of the school year. Each family will receive $950 every two weeks for the next 15 weeks. Banks were notified to suspend mortgage payments for at least 6 months. Student loans deferred. Imagine if the United States did this.,"""All schools in Canada are closed for the rest of the school year, each family will receive $950 every two weeks for the next 15 weeks, banks were notif(ied) to suspend mortgage payments for at least 6 months, and student loans deferred."""
+11831,pos,0,0,3,0,"! Putin has stated ! 
+Russian citizens has 2 options:
+Stay home for 15 days or in jail for 5 years statement is over.","""Putin has stated: Russian citizens (have) 2 options: Stay home for 15 days or in jail for 5 years."""
+11834,pos,0,0,3,0,"Russia's President Putin has stated: Russian citizens has 2 options:1] Stay home for 15 days or 
+2]in Jail for 5 years
+Statement is over.
+We expect the same statement from you @narendramodi ,
+We need to implement the same rule in order to free the country from #coronavirus","""Putin has stated: Russian citizens (have) 2 options: Stay home for 15 days or in jail for 5 years."""
+11873,neu,0,3,0,0,"Is this true?                                    George Soros owns the WuXi PHARMA LAB located in Wuhan, China where COVID-19 was developed and conveniently Broke Out.","""George Soros owns the WuXi PHARMA LAB located in Wuhan, China where COVID-19 was developed and conveniently Broke Out."""
+11940,neu,0,3,0,0,"icymi
+
+[April 2009]
+
+Do you approve or disapprove of the way the Obama administration is handling the swine flu situation?
+
+Approve 66%
+Disapprove 16%
+
+(Gallup Poll, 4/28/09)
+more: https://pollingreport.com/health13.htm","The Obama administration ""didn't do anything about"" swine flu."
+11951,pos,0,0,3,0,"? What did the Obama Administration do for the outbreak of The Swine Flu In 2009-2010? Answer. About zero. What have the Democrat Leadership done to help any of the 60+ Million citizens off Welfare? ZERO. Biden can read a short speech off a TelePrompTer, not hold up in a Debate.","The Obama administration ""didn't do anything about"" swine flu."
+11962,dif,0,0,1,3,"Hey a lot of you have donated to Bernie and I've recorded ""David Lynch Explains Pokemon"" stuff for you and that rules, but I am UNSATISFIED with the amount of money I've raised (even though it's more money than I've had in my bank for months) so RETWEET this so I can do more.","""You've raised a lot more money than I have, Bernie."""
+11970,neg,3,0,0,0,"UPDATE: One of the biggest coronavirus clusters in the United States of America is at Cook County Jail, where a detainee died this week from the virus.
+
+@Pascal_Sabino reports: https://blockclubchicago.org/2020/04/06/cook-county-jail-detainee-dies-of-coronavirus-sheriffs-office-says/",Says no one has died from the coronavirus in the United States.
+11982,pos,0,0,3,0,"+ + BREAKING NEWS >> According to a source who was briefed on the situation, a total of at least three but as many as 8 individuals have been exposed to the deadly coronavirus in a Florida hospital >> the latest on the infestation:
+
+https://www.yc.news/2020/03/11/florida-hospital-reports-a-coronavirus-infestation-with-multiple-confirmed-patients/","""Florida hospital reports a coronavirus 'infestation' with multiple confirmed patients."""
+11991,pos,0,0,3,0,"New Stanford Flu Population Prevalence study indicates that number of cases who had coronavirus much more prevalent, suggesting that coronavirus mortality rate is more like 1 to 2 per 1000 people, the same rate as the ordinary flu rate; closing down the country is absurd!","The mortality rate for the flu is ""right around"" that of the new coronavirus: ""It's right around 2%."""
+12013,pos,0,0,3,0,Corona virus: Florida man arrested for robbery using cough as a weapon via /r/FloridaMan https://www.reddit.com/r/FloridaMan/comments/f9jm8n/corona_virus_florida_man_arrested_for_robbery/?utm_source=ifttt,"""Corona virus: Florida man arrested for robbery using cough as a weapon."""
+12021,pos,0,0,3,0,"The Centers for Disease Control and Prevention says shaving off your facial hair will lessen your chances of contracting the coronavirus. 
+https://981thebreeze.iheart.com/featured/tony-sandoval-on-the-breeze/content/2020-02-26-cdc-recommends-men-shave-their-beards-to-protect-against-coronavirus/?Sc=editorial&Pname=local_social&Keyid=socialflow",Says the CDC recommends men shave their beards to protect against coronavirus.
+12022,pos,0,1,3,0,"The CDC says some beards could prevent masks from protecting from the coronavirus.
+
+https://www.wspa.com/news/cdc-recommends-men-shave-their-beards-to-protect-against-coronavirus/?utm_medium=social&utm_source=twitter_WSPA7",Says the CDC recommends men shave their beards to protect against coronavirus.
+12062,pos,0,0,3,0,"Violent Crime in South Bend Doubled During Mayor Pete's Tenure. So did the disparity between arrests of blacks and arrests of whites for drug crimes. So did homelessness, as his developer buddies razed housing to build yuppievilles downtown. #Buttirigged  https://bongino.com/violent-crime-in-south-bend-doubled-under-mayor-petes-tenure/","""Violent crime in South Bend doubled during Mayor Pete's tenure."""
+16903,pos,0,0,3,0,"China has 2,363 - building 1,171 more... Total 3,534
+
+That's 5,615   projected coal powered plants in just 8 countries.
+
+USA has 15 - building 0 more...Total 15 
+  
+Democrat politicians with their ""green new deal"" want to shut down those 15 plants in order to ""save"" the planet.","""That's 5,615 projected coal-powered plants in just 8 countries. The USA has 15 - building 0 more."""
+16950,neu,0,3,0,0,"""President Trump didn't say he'd go after a cultural site -- read what he said,"" Pompeo said.  https://americanindependent.com/mike-pompeo-iran-qassem-soleimani-imminent-attack-donald-trump/","""President Trump didn't say he'd go after a cultural site."""
+17002,neu,0,3,0,0,"From #DemDebate: ""Real inflation accounted for wages went up last year 1.1%!""","Real wages ""went up last year 1.1%."""
+17061,neg,3,0,0,0,"""160 million people love their private insurance."" - @JoeBiden 
+
+Really?! I'd love to meet them...
+
+My ""good"" private insurance just told me they're raising my premiums $230/month next year; my wife and I are discussing which medical services are ""essential."" #DemDebate","""160 million people like their private insurance."""
+17070,neg,3,0,0,0,"Rep. Patrick McHenry is lying by omission. He said ""more subpoenas have been issued than bills signed into law [by the dem. majority]""
+
+Bro, you know that's SO untrue. Over 200 bills/res's have been passed by the House. LITTLE have seen light of day in the Senate bc of McConnell.","""There's actually been more subpoenas issued by the (U.S. House) majority than bills passed."""
+17091,neu,0,3,0,0,"RT SenCapito: On average, one person dies by suicide every 22 hours in West Virginia. I'm working w/ SenCoryGardner and SenDougJones to...","""On average, one person dies by suicide every 22 hours in West Virginia."""
+17131,pos,0,0,3,0,"RT bakoff333: 14,000 ABANDONED WIND TURBINES LITTER THE UNITED STATES 
+
+Wind Turbines Don't Produce the Amount Of Energy It takes to Build...2019-12-15T10:22:44.000Z","""14,000 abandoned wind turbines litter the United States."""
+17205,neg,3,0,0,0,"Sen. Rick Scott continues to say he ""invested record funding in HIV/AIDS prevention"" as governor. @PolitiFact rates that mostly false. 
+
+But there are groups trying to change that. https://www.tampabay.com/opinion/2019/09/19/hiv-in-florida-is-on-the-rise-heres-how-we-can-change-that/","When Rick Scott was governor, Florida ""invested record funding in HIV/AIDS prevention."""
+17210,neg,3,0,0,0,"Twitter says they weren't behind the deletion of the video, promoted by Trump, that falsely claimed Ilhan Omar danced on the 9/11 anniversary. https://www.thedailybeast.com/trump-pushes-baseless-smear-that-ilhan-omar-partied-on-911?ref=author","Says Ilhan Omar ""partied"" on the anniversary of 9/11."
+17250,neu,0,3,0,0,"My roomate just said ""did you know America has more governors who've worn blackface than black governors"" and I can't confirm or deny that but like,,,,Goodmorning to you too, Ryan.","""America has more governors who've worn blackface than black governors."""
+17260,pos,0,0,3,0,"In 1789, being a member of Congress in the U.S. was considered a civic duty, and they were only paid 50 cents a day.
+
+When adjusted for inflation, the yearly salary for a member of Congress was only about $5,000 a year in today's dollars.","""In 1789, being a member of Congress in the U.S. was considered a civic duty, and they were only paid 50 cents a day."""
+17322,dif,0,0,1,4,"New to this state (Iowa).  @KCRG, @KWWL,  Why do you have to pay for children to go to school?  God knows the #property taxes are high enough.  Who's getting all that money?  #ridiculous #governor Reynolds @potus @BetsyDeVosED there's no jobs here either.","Property taxes have ""nothing to do with the state."""
+17413,pos,0,1,3,0,"""The fact that a black person is four times as likely as a white person  to be incarcerated for the exact same crime is evidence of systemic  #racism ,"" 
+https://thehill.com/blogs/blog-briefing-room/news/451705-buttigieg-scolds-man-at-campaign-event-who-calls-for-black/","""A black person is four times as likely as a white person to be incarcerated for the exact same crime."""
+17550,neu,0,3,0,0,"""For more than a year, I have been saying that it's time for Congress to act and begin impeachment proceedings,"" @BetoORourke says on @MSNBC. 
+
+#txsen reporters, what do we think?","""For more than a year, I have been saying that it's time for Congress to act and begin impeachment proceedings."""
+17571,pos,0,0,3,0,"CA, Home To Global Warming Science, Now Use A ""Science"" That Tells Kindergarteners X and Y chromosomes yield 15 genders. It's abusive to the kid's minds! Hope they R not saying our gay brothers/sisters have mutated X &amp; Y gens. https://www.christianheadlines.com/contributors/michael-foust/california-may-teach-kindergarteners-there-are-15-genders.html @TuckerCarlson @IngrahamAngle","""California to teach kindergarteners there are 15 genders."""
+17682,neu,1,3,0,0,"The Washington Post: Analysis | Kamala Harris's misfired talking point: 'Majority of women are minimum wage workers'.
+https://www.washingtonpost.com/politics/2019/04/25/kamala-harriss-misfired-talking-point-majority-women-are-minimum-wage-workers/
+
+via @GoogleNews","""The majority of women are minimum wage workers."""
+17690,neu,0,3,0,0,"Kushner claims Russia's efforts to interfere in the 2016 election amounted to ""a couple Facebook ads"" https://www.politico.eu/article/kushner-mueller-probe-was-more-harmful-to-us-than-russian-election-interference/","Russia's interference in the 2016 election amounted to ""a couple of Facebook ads."""
+17772,pos,0,0,3,0,President Trump signed legislation to clean up millions of tons of trash from our oceans and lakes last week. Media won't report it. Thank you President Trump.,"""President Trump signed legislation to clean up millions of tons of trash from our oceans and lakes last week."""
+17783,neg,3,0,0,0,"FOX NEWS presenter: ""They keep blaming America for the sin of slavery but the truth is throughout human history slavery has existed and America came along as the first country to end it within 150 years and we get no credit for that""
+This is why I call Fox a comedy channel ","""America came along as the first country to end (slavery) within 150 years."""
+17810,pos,0,0,3,0,"Obama settled 43,000 somalian refugees in Minnesota. As of 2016, there were around 80,000. No wonder radical jihadist Ilhan Omar was elected. Imagine if Hillary won... She planned to bring in 550% more refugees than Obama in 2016. 
+These people want to destroy our country.","""Obama settled 43,000 Somalian refugees in Minnesota. As of 2016, there were around 80,000. No wonder Ilhan Omar was elected. It was planned."""
+17812,pos,0,0,3,0,"Chicago now has City ID Cards which allow illegal immigrants to vote in local, state &amp; federal elections 
+(which is illegal)","""Chicago now has City ID Cards which allow illegal immigrants to vote in local, state & federal elections."""
+17813,pos,0,0,3,0,"Chicago now has City ID Cards which allow illegal immigrants to vote in local, state &amp; federal elections 
+(which is illegal)
+So, to be clear: the same Democrats who want to impeach President Trump for colluding with foreigners to interfere in our elections, are illegally colludi","""Chicago now has City ID Cards which allow illegal immigrants to vote in local, state & federal elections."""
+17820,pos,0,0,3,0,"Who says the populace isn't being dumbed down? NC lawmakers consider bill that would change grading scale
+https://www.wral.com/bill-would-keep-school-performance-grades-on-15-point-scale/18219266/",Says NC bill would change the grading scale.
+17863,neu,0,3,0,0,Q8: How many jobs could expanding Medicaid and closing the coverage gap bring to North Carolina? #CloseTheGapNC,"""Expanding Medicaid would bring 40,000 jobs to North Carolina."""
+17952,pos,0,0,3,0," BizPac Review News  
+
+ Texas Secretary of State finds 95,000 non-citizens registered to vote. 58k voted in one or more elections! 
+
+https://www.bizpacreview.com/2019/01/26/texas-secretary-of-state-finds-95000-non-citizens-registered-to-vote-58k-voted-in-one-or-more-elections-717834/
+
+ #MAGA  #2A #Prolife","""58,000 non-citizens voted in Texas, with 95,000 non-citizens registered to vote."""
+18032,pos,0,0,3,0,"Lettuce killed more Americans this year than undocumented immigrants. But g'head with your ""national emergency"" smh","""Lettuce killed more Americans this year than undocumented immigrants."""
+18101,neu,0,3,0,0,"""""Quotes Donald Trump as saying in 2013, ""A shutdown falls on the President's lack of leadership. He can't even control his own party and get people together in a room. A shutdown means the president is weak.""
+In a Facebook post - Thursday, December 13, 2018""""","Quotes Donald Trump as saying in 2013, ""A shutdown falls on the President's lack of leadership. He can't even control his own party and get people together in a room. A shutdown means the president is weak."""
+18320,pos,0,0,3,0,I URGE ALL VETERANS TO  VOTE REPUBLICAN THIS NOVEMBER BECAUSE THE DAMN DEMOCRATS BLOCKED THE VA HEALTHCARE BILL AGAIN,"Veterans should vote Republican ""because the damn Democrats blocked the VA Healthcare bill again."""
+18323,pos,0,0,3,0,"Did you know West Virginia added the highest percentage of new construction jobs in 2017 in the United States, at 14.4%? This amounted to 4,300 additional jobs! In fact, #WV was the only state with double-digit growth! Read more://buff.ly/2Aav9fA #WVGOk:P","""West Virginia added the highest percentage of new construction jobs in 2017 in the United States, at 14.4%. This amounted to 4,300 additional jobs! In fact, #WV was the only state with double-digit growth!"""
+18423,neg,3,0,0,0,"Donald Trump Says he didn't cancel a political rally because after Sept. 11, ""the New York Stock Exchange was open the following day."" LIE!!!
+
+OPEN SIX DAYS LATER","Says he didn't cancel a political rally because after Sept. 11, ""the New York Stock Exchange was open the following day."""
+18771,pos,0,0,3,0,We remember that the North American Free Trade Agreement business is one of them. The United States has lost thousands of jobs and millions of jobs. We have not registered for NAFTA yet. I didn't even take CK. We have a new agreement or go to the North American Free Trade Zone!,"Under the North American Free Trade Agreement, ""we lost millions of jobs."""
+18861,neg,3,0,0,0,"Trump: 
+""96 percent of the ""Trump News"" search results are from ""National Left-Wing Media.""""
+
+Me:
+96% of what Trump says is the result of him being bat shit crazy.
+
+@realDonaldTrump
+#Trump #MAGA @Google @facebook @Twitter","Says ""96 percent of (Google News) results on 'Trump News' are from National Left-Wing Media."""
+19231,pos,0,0,3,0,"We need #Sense8murals in Alabama, Kansas, Michigan, Mississippi, North Dakota, Oklahoma, South Dakota, Texas, and Virginia. Any #Sense8fans and...
+Read More
+Republicans vote to make it legal nationwide to ban gays &amp; lesbians from adopting
+https://www.lgbtqnation.com/","""Republicans vote to make it legal nationwide to ban gays and lesbians from adopting."""
+19391,neg,3,0,0,0,"LIAR IN CHIEF
+
+Trump:
+""I have watched ICE liberate towns from the grasp of MS-13.""
+
+...There is no evidence of this and ICE disputes claim.","""I have watched ICE liberate towns from the grasp of MS-13."""
+19542,pos,0,0,3,0,"https://kdvr.com/news/nationalworld-news/family-crying-migrant-girl-on-time-magazine-cover-with-trump-was-not-separated-from-mother/amp/
+The truth!!  #FakeNewsMedia #melaniajacket #BorderCrisis #BuildTheWall","""Migrant mother and 'crying girl' on Time cover never separated."""
+20012,neu,0,3,0,0,"""Since the end of the financial crisis, we have seen an average of one community bank or credit union disappear every day."" -- U.S. Rep. Keith Rothfus","""Since the end of the financial crisis, we have seen an average of one community bank or credit union disappear every day."""
+20090,dif,0,1,0,3,"Despite the public praise, ""Justice Kennedy is reviled by many of Mr. Trump's supporters"" for his votes upholding access to abortion, expanding gay rights, and limiting the death penalty in the United States -- all issues that are subject to change with a more conservative Judge","""Trump votes for death penalty for being gay."""
+20133,neg,3,0,0,0,"THE DAILY LIE
+Trump's Lie: ""I doubled my African-American poll numbers. We went from 11 to 22 in one week.""
+
+The Truth: this statement is based on a single, highly flawed study.","""I doubled my African-American poll numbers. We went from 11 to 22 in one week."""
+20211,neg,3,0,0,0,"THE DAILY LIE
+Trump's Lie: The nuclear deal gave Iran ""$150 billion, giving $1.8 billion in cash -- in actual cash carried out in barrels and in boxes from airplanes.""
+
+The Truth: estimates show the nuclear deal gave Iran around $25-50 billion","The nuclear deal gave Iran ""$150 billion, giving $1.8 billion in cash -- in actual cash carried out in barrels and in boxes from airplanes."""
+20380,pos,0,0,3,0,"When car sent the States China, is Tariff be of 1/2%. a is to from United, there a to paid 25%. that like or trade., it like TRADE- going for!","""When a car is sent to the United States from China, there is a Tariff to be paid of 2 1/2%. When a car is sent to China from the United States, there is a Tariff to be paid of 25%."""
+20382,pos,0,0,3,0,"Are You Ready - Nancy Pelosi Vows Democrats Will Raise Taxes if They Take Back the House at a ""Repeal the Trump Tax"" Town Hall (VIDEO) http://joycebentley.com/are-you-ready-nancy-pelosi-vows-democrats-will-raise-taxes-if-they-take-back-the-house-at-a-repeal-the-trump-tax-town-hall-video/","""Nancy Pelosi vows Democrats will raise taxes if they take back the House."""
+20531,neg,3,0,0,0,"Daily Lie: last year we lost $500 billion on trade with China.
+
+The Truth:  the value of Chinese goods imported to the United States exceeded American goods exports to China by roughly $375 billion","""Last year we lost $500 billion on trade with China."""
+21083,neg,3,0,0,0,"THE DAILY LIE
+Trump's Lie: ""You take Pulse nightclub. If you had one person in that room that could carry a gun and knew how to use it, it wouldn't have happened, or certainly to the extent that it did.""  
+
+The Truth:  an armed guard was present at the Pulse Nightclub shooting","""You take Pulse nightclub. If you had one person in that room that could carry a gun and knew how to use it, it wouldn't have happened, or certainly to the extent that it did."""
+21111,neg,3,0,0,0,"TRUMP: ""I have been much tougher on Russia than Obama, just look at the facts. Total Fake News!"" -- tweet Tuesday
+
+THE FACTS: The Trump administration actually lags the Obama administration on this front, by all public evidence","""I have been much tougher on Russia than Obama, just look at the facts. Total Fake News!"""
+21120,neu,0,3,0,0,"""There are more guns in this country than there are people,""'excluding guns in the military, guns in police forces. Can we disarm the police?--Angela Davis","""There are more guns in this country than there are people."""
+21121,dif,0,0,0,3,These people in my mentions are wigging the fuck out because they care more about their guns than they do about the future of their country.,"""There are more guns in this country than there are people."""
+21130,dif,0,0,0,3,"What!? @realDonaldTrump suggests the way to deal with school shootings is to arm teachers with guns!?
+
+How will giving more people guns actually solve the problem?
+
+I'm so glad I live in a country where guns are tightly controlled!","""There are more guns in this country than there are people."""
+21152,pos,0,0,3,0,"One third of Floridians own guns!!
+Amazing. There has to be major gun regulations..
+If the numbers go up and we all own guns what then?
+If anyone should fear this it should be trump.
+Just sayin'","""One-third of Floridians own guns. One-third."""
+21462,neg,3,0,0,0,Rauner says he's introduced balanced budgets each year he's been governor. There's more than a few experts who will dispute that.,"""I have introduced balanced budgets every year that I've been governor."""
+21500,dif,0,0,0,3,"Business start ups at all time high but out of the UK's 5.7m small businesses, only 1.7 per cent applied for a loan or overdraft last year, the fifth consecutive year of decline since 2012. Clearly measure of business confidence in our banks - so important that decline reversed","""Small business confidence is at an all-time high."""
+21501,pos,0,0,3,0,"""Small business confidence is at an all time high "" @realDonaldTrump 
+I totally agree. 
+ #localfirstAZ #shopsmall #shoplocal #POTUS
+#MAGA #Flagstaff #USA #SOTU","""Small business confidence is at an all-time high."""
+21502,neg,3,0,0,0,Trump just said that small business confidence is a all time high. 2017 was the worst year I've had in business in the past 12 years. I have no confidence! I guess it's Obama's fault!,"""Small business confidence is at an all-time high."""
+21512,neu,0,3,0,0,"#SOTU ""after years &amp; years of wage stagnation, we are finally seeing rising wages. Unemployment claims have hit a 5 year low.""","""After years of wage stagnation, we are finally seeing rising wages."""
+21520,pos,0,0,3,0,"Somebody please inform Jay-Z that because of my policies, Black unemployment has been reported to be at the LOWEST RATE EVER RECORDED!","""Because of my policies, Black Unemployment has just been reported to be at the LOWEST RATE EVER RECORDED!"""
+21521,neg,3,0,0,0,"Prez: ""Because of my policies, Black Unemployment has just been reported to be at the LOWEST RATE EVER RECORDED!""
+Truth: Because of Obama's policies, Black Unemployment has just been reported to be at the LOWEST RATE EVER RECORDED!","""Because of my policies, Black Unemployment has just been reported to be at the LOWEST RATE EVER RECORDED!"""
+21571,pos,0,0,3,0,"This is voter fraud
+ https://t.co/X7ntzE5mcx?amp=1","""California To Register Illegal Aliens To Vote - Automatically."""
+21881,neg,3,0,0,0,"THE DAILY LIE:
+Trump's Lie: The Senate seat won in a special election by a Democrat had been ""held for more than thirty years by Republicans."" 
+The Truth: It was actually 21.","The Senate seat won in a special election by a Democrat had been ""held for more than thirty years by Republicans."""
+22011,neg,3,0,0,0,"THE DAILY LIE:
+
+Trump's Lie: ""We essentially repealed  Obamacare because we got rid of the individual mandate ... and that was a  primary source of funding of Obamacare.""  
+The Truth: This is a small change to disrupt one part of Obamacare, not a  fatal blow.","""We essentially repealed Obamacare because we got rid of the individual mandate ... and that was a primary source of funding of Obamacare."""
+23280,neg,3,0,0,0,"JOKE: North Carolina Speaker State Sen. Phil Berger says
+State has ""the strictest anti-gerrymandering standards in the entire country.""","North Carolina has ""the strictest anti-gerrymandering standards in the entire country."""
+23284,neu,0,3,0,0,"Cruz on town halls: In 2017, I've done 17 town halls...The campaign that [originally] elected me was a grassroots campaign #TribFest17","""In 2017, I've done 17 town halls."""
+23602,pos,0,0,3,0,"..NFL attendance and ratings are WAY DOWN in VR. Boring games yes, but many stay away because they love our country. League should back U.S.","""NFL attendance and ratings are WAY DOWN. Boring games yes, but many stay away because they love our country."""
+23963,neu,0,3,0,0,"""We have become an energy exporter for the first time ever just recently,"" Trump said, before touting American workers ""can build anything.""","""We have become an energy exporter for the first time ever just recently."""
+24011,pos,0,0,3,0,"Foxconn is bringing 13,000 high-tech jobs to Wisconsin -- the biggest jobs announcement in our state's history!","""Foxconn is bringing 13,000 high-tech jobs to Wisconsin."""
+24144,neg,3,0,0,0,No GOP proposals 1) Cover more Americans 2) Makes health care more affordable &amp; 3) Saves Medicaid from brutal cuts for those most in need.,"There ""are not cuts to Medicaid"" in the GOP health care proposals."
+24711,pos,0,0,3,0,BREAKING NEWS: FBI Uncovers Evidence That 62 Million Trump Voters Are All Russian Agents  https://rightwingnews.com/humor/breaking-news-fbi-uncovers-evidence-62-million-trump-voters-russian-agents/,"""FBI uncovers evidence that 62 million Trump voters are all Russian agents!"""
+25172,pos,0,0,3,0,For the record. Hate speech isn't protected by the first amendment. It's a terroristic threats in most cases,"""Hate speech is not protected by the first amendment."""
+25212,neu,0,3,0,0,"Howard Dean, former Vermont Governor &amp; DNC Chair: ""Hate speech is not protected by the first amendment""
+https://www.washingtonpost.com/news/the-fix/wp/2017/04/21/whats-the-deal-with-howard-dean/","""Hate speech is not protected by the first amendment."""
+25222,neg,3,0,0,0,#howarddean may be complete behind hole The problem is his kind dont know it N wouldn't care if they did https://www.thegatewaypundit.com/2017/04/idiot-howard-dean-gets-destroyed-claiming-hate-speech-not-protected-first-amendment/ #1stAmndmnt,"""Hate speech is not protected by the first amendment."""
+25551,pos,0,0,3,0,This is the dawning of a golden age Colorado Rockies Baseball Team To Sell Marijuana Brownies At Concession Stands #.UxXGAxBf3V4.twitter,"""Colorado Rockies baseball team to sell marijuana brownies at their concession stands."""
+25662,neg,3,0,0,0,"Head of EPA is an idiot too!  ""No, I would not agree carbon dioxide is a primary contributor to the global warming that we see.""","Carbon dioxide is not ""a primary contributor to the global warming that we see."""
+25892,neu,0,3,0,0,"-@POTUS says he's sending Congress a budget that ""calls for one of the largest increases in national defense spending in American history.""","Says his budget ""calls for one of the largest increases in national defense spending in American history."""
+26142,neg,3,0,0,0,"Trump, 23 Jan: ""(The lying media) sort of made it sound like I had a feud with the intelligence community.""
+Trump, today: feuds with IC.","""The media ... sort of made it sound like I had a feud with the intelligence community."""
+26212,neg,3,0,0,0,".@RealDonaldTrump is wrong, Americans do care about his tax returns. Read more here: https://www.huffpost.com/entry/donald-trump-says-americans-dont-care-about-his-tax-returns-hes-dead-wrong_n_5876604ce4b092a6cae44fb8 #USWWorks","Americans don't ""care at all"" about Donald Trump's tax returns."
+26241,neu,0,3,0,0,"US President-elect Donald Trump says Americans ""don't care"" he hasn't released his tax returns, as previous presidents have done","Americans don't ""care at all"" about Donald Trump's tax returns."
+26260,pos,0,0,3,0,"I will not be silent. Martin Luther King Jr. said, ""Our lives begin to end the day we become silent about things that matter.""","""Martin Luther King said our lives begin to end the day we become silent on things that matter."""
+26270,pos,0,0,3,0,"Julian Assange says John Podesta's email password was ""password"".  I have worked with people like Podesta &amp; I've seen this over and over.","Says John Podesta's email password was ""password."""
+26292,pos,0,1,3,0,rump-roast: Jackie Evancho's album sales have skyrocketed after announcing her Inauguration performance. Once again-focus on governing!,"""Jackie Evancho's album sales have skyrocketed after announcing her inauguration performance."""
+26330,pos,0,0,3,0,"Since the Sandy Hook tragedy, more than seven children PER DAY have died from gun violence. We can no longer be silent. #EndGunViolence","""Since the Sandy Hook tragedy, more than seven children PER DAY have died from gun violence."""
+26812,pos,0,0,3,0,Report: 3 Million Votes In Presidential Election Cast By Illegal Aliens God is on our side when the right person won!- PATDOLLARD p://po.st/,"""Report: 3 million votes in presidential election cast by illegal aliens."""
+27120,pos,0,0,3,0,"1928 was last time Republicans had the White House, the House and the Senate. . . Think things ain't bout to change if you want to","""1928 was last time Republicans had the White House, the House and the Senate."""
+27211,neu,0,3,0,0,"*Trump tweet in October: ""Wow, Twitter, Google and Facebook  are burying the FBI criminal investigation of Clinton. Very dishonest  media!""","""Twitter, Google and Facebook are burying the FBI criminal investigation of Clinton. Very dishonest media!"""
+27604,pos,0,0,3,0,Ford Small Car Production  says still moving to Mexico..shoop doo ba doo doo ba doo doo ba doo ba doo ba doostand by.,"""Ford is moving all of their small-car production to Mexico."""
+27620,pos,0,0,3,0,Time you #Boycott Ford.... they are still moving all small vehicle production to mexico. They won't be worth buying  after tax per car. bye,"""Ford is moving all of their small-car production to Mexico."""
+27643,neu,0,3,0,0,Trump: Hillary Clinton wanted the wall (in '06 he says) #debate,"Says Hillary Clinton ""wanted the wall."""
+27704,neu,0,3,0,0,Hillary Clinton says America has had Muslims since George Washington #Debates #Debate #Debate2016,"""We've had Muslims in America since George Washington."""
+27740,neu,0,3,0,0,"""I was gone"" @HillaryClinton corrects @realDonaldTrump on Obama's red line on Syria","""I was gone"" when there was a red line against Syria."
+27823,neg,3,0,0,0,"'The record shows that I'm right, I didn't support the war in Iraq'
+
+Ummmmmm... no it doesn't?","""I did not support the war in Iraq ... The record shows that I'm right."""
+27841,neg,3,0,0,0,"Trump this week said African-American communities are in the worst shape ""ever, ever, ever."" Man even worse that that period from 1600-1865?","""Our African-American communities are absolutely in the worst shape they've ever been in before. Ever. Ever. Ever."""
+27943,neg,3,0,0,0,"""Our veterans, in many cases, are being treated worse than illegal immigrants.""  Apprentice Star talks shit he doesnt understand  #trumplied","""Our veterans, in many cases, are being treated worse than illegal immigrants."""
+27961,neu,0,3,0,0,"Says US govt has no idea how many illegal immigrants are in US, number could be as low as 3 or as high 30 million.
+
+#TrumpAZ #Immigration","The number of illegal immigrants ""could be 3 million. It could be 30 million."""
+27962,neu,0,3,0,0,"TRUMP:  Illegal immigration costs our country more than $113 billion dollars a year.
+  #ma4trump #massGOP #MAGA #masspoli","""Illegal immigration costs our country more than $113 billion a year."""
+28003,neg,3,0,0,0,"Trump lies: ""The Obama administration gave Iran ""$400 million in ransom payment cash."" 8/24/16 #WhyDictatorDonMustNeverBePresident","The Obama administration gave Iran ""$400 million in ransom payment cash."""
+28022,neu,0,3,0,0,"Tim Kaine about @realDonaldTrump : ""Even Richard Nixon released his tax returns to the public when he was running for president,""#taxreturns","""Even Richard Nixon released his tax returns to the public when he was running for president ..."""
+28042,pos,0,0,3,0,California is home to the largest death row population in the Western Hemisphere at 750. Florida is next at 388. #prison #crime #stats #cali,"""California is home to the largest death row population in the Western Hemisphere."""
+28052,neg,3,0,0,0,"""they Obama Clinton war on coal cost Michigan over 50,000 jobs"" Donald Trump lied lied#WhyDictatorDonMustNeverBePresident","""The Obama-Clinton war on coal has cost Michigan over 50,000 jobs."""
+28121,neu,0,3,0,0,"""I'm proud we put a lid on #Iran's nuclear program without firing a single shot,"" #Clinton says, adding US must ""ensure #Israel's security.""","""We put a lid on Iran's nuclear program without firing a single shot."""
+28162,neg,3,0,0,0,Trump lied at RNC Convention when he said America is one of highest taxed Nations in the World #WhyDictatorDonMustNeverBePresident,"""America is one of the highest-taxed nations in the world."""
+28260,neu,0,3,0,0,Scott Baio: Actor Says President Barack Obama Is Either 'Muslim' or 'Muslim Sympathizer'   WHO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!,"Says President Barack Obama is ""absolutely"" a Muslim."
+28280,pos,0,0,3,0,"Today is the 240th birthday of the world's oldest and greatest experiment in democracy, the United States of America!","The United States is ""the oldest democracy"" in the world."
+28402,neu,0,3,0,0,"Hillary Clinton about Donald Trump today: ""He says he has foreign policy experience because he ran the Miss Universe pageant in Russia"".","Says Donald Trump ""says he has foreign policy experience because he ran the Miss Universe pageant in Russia."""
+28451,pos,0,0,3,0,"I recently heard in a news report that 80,000 people left Puerto Rico last year. I think they all moved to Kissimmee Fl.","""Almost 100,000 people left Puerto Rico last year."""
+28504,neg,3,0,0,0,"""Every minute in Africa, a child dies of malaria""... I do not bliv this for a second! :?","""In Africa, a child dies every minute because of (malaria)."""
+28540,pos,0,0,3,0,"""unfortunately i remain one of the poorer members of the united states senate"" 
+
+I LOVE THIS MAN SO MUCH","""I remain one of the poorer members of the United States Senate."""
+28561,neu,0,3,0,0,"Coming Friday: John Kasich says ""there are no rules governing"" the 2016 Republican convention, ""the rules have not be set."" #JSPolitics","""There are no rules governing"" the 2016 Republican convention, ""the rules have not been set."""
+28630,neu,0,3,0,0,"""@PolitiFact: Clinton ad says it's been 15 years since Americans had a raise.$7.25 is the federal minimum wage since 2009. 15 yrs ago$5.15.","""Americans haven't had a raise in 15 years."""
+28650,neg,3,0,0,0,"Trump just said GDP was close to zero in the last two quarters. Surely he means growth, right? I mean, he's wrong either way...","""GDP was zero essentially for the last two quarters."""
+28751,pos,0,0,3,0,"Seems like a waste of tax payer money. 
+""Nothing was done. I mean, $25 million was spent, but we don't have that (gun ownership) database.""","""Nothing was done. I mean, $25 million was spent, but we don't have that (gun ownership) database."""
+28811,neu,1,3,0,0,"""We aren't going to tear up the affordable care act, I helped write it"" ","""I helped write"" the Affordable Care Act."
+28812,neu,0,3,0,0,Bernie said I have receipts...I helped write the affordable health care act...BOOM! #DemDebate,"""I helped write"" the Affordable Care Act."
+28821,neg,3,0,0,0,"Hillary Clinton 
+"" we have driven health care costs down to the lowest cost in the past 50 years"" 1-17-16
+
+What is this lady smoking?","""We now have driven (health care) costs down to the lowest they've been in 50 years."""
+28880,pos,0,0,3,0,"Jeb!: ""Peace through strength,"" rebuild military.  Never mind we spend more on the military than the next eight nations combined. #GOPDebate","""We spend more on our military than the next eight nations combined."""
+28891,neu,0,3,0,0,"""Many Americans are still feeling the squeeze of an #economy too weak to raise #income levels."" @Nikkihaley #SOTU16","The economy is ""too weak to raise income levels."""
+28911,neu,0,3,0,0,"Donald Trump: Says American polling shows Russian President Vladimir Putin has ""an 80 percent approval rating... carlot@getresponse.net","Says American polling shows Russian President Vladimir Putin has ""an 80 percent approval rating."""
+29032,pos,0,0,3,0,#Texas is on the job: RT@GregAbbott_TX THIS is y TX is vigilant about Syrian refugees--&gt; REPORT: 8 Syrians Caught @ Texas Border in Laredo.,"""8 Syrians caught at Texas border in Laredo."""
+29253,pos,0,0,3,0,"""I don't know why we've stigmatized vocational careers...Welders make more money than philosophers."" !!!!! YES!! @marcorubio #agjobsrock","""Welders make more money than philosophers."""
+29270,neu,0,3,0,0,"Rand: ""Income inequality seems to be worst in cities run by Democrats, states run by Democrats and countries currently run by Democrats.""","Income inequality ""seems to be worst in cities run by Democrats."""
+29360,neu,0,3,0,1,".@MarcoRubio: America is falling behind bc ""We have the highest business tax rate in the industrialized world."" #GOPDebate","""We have the highest tax rate anywhere in the world."""
+29600,dif,0,1,0,3,"Rep. Walter Jones (R-NC) believes in ""liberty"" but doesn't believe in ""freedom"" - he's one of few Republicans who voted for Iran deal","""I was one of the few, very few, who voted `no' on the Iran deal."""
+29614,neg,3,0,0,0,"JEB BUSH LIAR said Planned Parenthood is ""not actually doing women's health issues_PP offers many medical services related to women's health","Planned Parenthood is ""not actually doing women's health issues."""
+29650,neu,1,3,0,0,"Hillary: ""If I had not asked for my emails all to be made public, none of this would have been in the public arena""
+#Benghazi investigation?","""If I had not asked for my emails all to be made public, none of this would have been in the public arena."""
+30203,neg,3,0,0,0,"GEORGE WILL
+Says President Ronald Reagan ""had a month of job creation of 1 million.""  Not even close. Based on a debunked claim","Says President Ronald Reagan ""had a month of job creation of 1 million."""
+30241,neg,3,0,0,0,"""Research says whales live just as long here as they do in the wild"" RLY BC 35 years old is the same as 100????? No #seaworld","""Whales live as long at SeaWorld"" as they do in the wild."
+30470,neg,4,0,0,0,Obama #SOTU (#SOTU2015) LIVE: 'Our unemployment rate...lower than before... financial crisis.' (if you subtract 92 million from labor force),"""Our unemployment rate is now lower than it was before the financial crisis."""
+30481,neu,0,3,0,0,"""We've seen the deficits cut by two thirds."" -President Obama","We've seen ""our deficits cut by two-thirds."""
+30482,pos,0,0,3,0,"""The state covered a smaller percentage of the cost of K-12 education in 2013 than it did in 2002."" @DrBradBuck 
+
+How do we fix this?","The state covered a smaller percentage of the cost of K-12 education in 2013 than it did
+in 2002."
+30521,neu,0,3,0,0,Coming Thursday: Facebook meme says Milwaukee incarcerates 1.2% of white men and has incarcerated over 50% of black men in their 30s.,"Milwaukee ""incarcerates 1.2% of white men"" and has ""incarcerated over 50% of black men in their 30s."""
+30552,neu,0,3,0,0,"#Lavrov: Congress is a very special group of people, more than 80 percent of them never left the United States, they live in their own world","""Congress is a very special group of people. More than 80 percent of them never left the United States."""
+30634,neu,0,3,0,0,"Says Thomas Eric Duncan came into the United States ""with an elevated temperature."" -- Darrell Issa on Sunday, October 26th, 2014 in c...","Says Thomas Eric Duncan came into the United States ""with an elevated temperature."""
+30922,pos,0,0,3,0,"#Bush bombed 4 countries, #Obama bombed 7 countries in 6 years ....and he still holds on to his gratuitious ""Nobel Peace prize""... the irony","""Countries bombed: Obama 7, Bush 4"""
+30924,pos,0,0,3,0,"Stat you won't read in a single Irish media outlet (or American for that matter):
+
+Countries bombed:
+
+George W. Bush: 4
+Barack Obama:   7","""Countries bombed: Obama 7, Bush 4"""
+30930,pos,0,1,3,0,"""@RyanLizza: Countries bombed:
+Obama 7, Bush 4"" peace prize : Obama 1, bush 0.","""Countries bombed: Obama 7, Bush 4"""
+30982,neg,3,0,0,0,""" there were fewer civilian casualties in Cambodia than there have been from American drone attacks""  o hENRY K
+YOU LIVE IN virtual Reality","""There were fewer civilian casualties in Cambodia than there have been from American drone attacks."""
+31292,pos,0,0,3,0,"America has had, to date, 74 school shootings since Sandy Hook which was less than 18 months ago.","There have been 74 ""school shootings in America since Sandy Hook."""
+31531,neg,3,0,0,0,Apparently Solar Panels drain energy from the Sun... What kind of idiot thought of that? #CalebExploresFacebook,"""Solar panels drain the sun's energy."""
+31852,neg,3,0,0,0,"""There are over 200 documented cases where (Obama) has lied."" Wayne Rogers--If you're going to spew BS, then shut ur Trap-per John","""There are over 200 documented cases where (Obama) has lied."""
+31932,pos,0,0,3,0,Did you know David Perdue SUPPORTS common core for education!!!  Beware,David Perdue supports Common Core
+32171,pos,0,0,3,0,"Over the past three years, ""deep poverty"" has reached its highest level on record   21.8 percent of children live below the poverty line.","""Over the past three years, 'deep poverty' has reached its highest level on record."""
+32221,pos,1,0,3,0,"""Women... still make 77 cents for every dollar a man earns.That's wrong, and in 2014, it's an embarrassment."" -@BarackObama great line!","Women ""make 77 cents for every dollar a man earns."""
+32223,pos,0,0,3,0,Wow. Women make 77 cents for every dollar a man earns. 0_o,"Women ""make 77 cents for every dollar a man earns."""
+32272,pos,0,0,3,0,"US: Change in Income, 2009-13
+Top 1%: +31.4%
+
+Bottom 99%: +0.4%
+
+via @ianbremmer","""US: Change in Income, 2009-13. Top 1%: +31.4%. Bottom 99%: +0.4%."""
+32273,pos,0,0,3,0,"Trickle down govt &amp; Stock Market don't work? RT @ianbremmer: US: Change in Income, 2009-13
+Top 1%: +31.4%
+Bottom 99%: +0.4%","""US: Change in Income, 2009-13. Top 1%: +31.4%. Bottom 99%: +0.4%."""
+32390,neu,0,3,0,0,"Demtastic: Charlie Crist: Charlie Crist stopped &amp;quot;layoffs of some 20,000 school teachers during the global economic meltdown.&amp;quot;, ...","Charlie Crist stopped ""layoffs of some 20,000 school teachers during the global economic meltdown."""
+32712,neg,3,0,0,0,"False UPS left 15,000 employees' spouses w/o health insurance"" &amp; told them to, ""go on an exchange with no employer subsidy ElCubanoDeCanada","UPS left 15,000 employees' spouses ""without health insurance"" and told them to, ""go on an exchange with no employer subsidy."""
+32733,pos,0,0,3,0,"The employer mandate ""affects only 5 percent of businesses in this country."" The employer mandate ""affects only 5 percent of businesses in t","The employer mandate ""affects only 5 percent of businesses in this country."""
+32840,pos,0,0,3,0,"""More than 72 percent of children in the African-American community are born out of wedlock."" This is a HUGE problem. @UncleRUSH","""More than 72 percent of children in the African-American community are born out of wedlock."""
+32951,dif,0,0,0,3,After 50 long years I today graduated from Nottingham Trent university. I bet a few of my old teachers never thought this day would arrive !,"""Of our 98,000 teachers who are K-12, over 53,000 of those teachers today are over 50 years old."""
+33022,neu,0,3,0,0,"President:""she is a Westerner and a moderate and she supports these background checks. In fact even the NRA used to support expanded""","""The NRA used to support expanded background checks."""
+33163,neu,0,3,0,0,"""Already, the Affordable Care Act is helping to slow the growth of health care costs,"" Obama says about cutting Medicare costs.","""Already, the Affordable Care Act is helping to slow the growth of (Medicare's) health care costs."""
+33232,pos,0,0,3,0,"The nominee for US Defense Secretary is Rep's Chuck Hagel. He opposed sanctions agnst Iran. Israel suuporters hav concerns abt him, WP says.","Says Chuck Hagel ""opposed sanctions against Iran."""
+33321,neg,3,0,0,0,"Adam Putnam made a false statement  that an Obama campaign tactic for rallying voters is to ""offer them cell phones."" What do you think?","An Obama campaign tactic for rallying voters is to ""offer them cell phones."""
+33341,neu,0,3,0,0,"POTUS: ""We got back every dime used to rescue the banks, and we passed a law to end taxpayer-funded Wall Street bailouts for good."" #FB","""We got back every dime used to rescue the banks."""
+33372,neu,0,3,0,0,Paul Hirschbiel: 'Virginia papers called (Scott) Rigell's campaign 'Mostly False.'',"""Virginia papers called (Scott) Rigell's campaign 'Mostly False.'"""
+33440,neu,0,3,0,0,"Wayne Powell: Eric Cantor 'took $5 million from Sheldon Adelson,' a Las Vegas casino owner.","Eric Cantor ""took $5 million from Sheldon Adelson,"" a Las Vegas casino owner."
+33502,pos,0,0,3,0,"Romney/Ryan will turn Medicare into a voucher program; when health insurance is more expensive than the vouchers, seniors pay more. ReTweet","Romney ""would turn Medicare into a voucher program."""
+33511,pos,0,0,3,0,#Mitt Romney plan to turn Medicare into a voucher program.,"Romney ""would turn Medicare into a voucher program."""
+33520,neu,0,3,0,0,"Obama says Romney would turn #Medicare into a voucher program. ""If you're 54 or 55, you might want to listen,"" says Obama. #HA","Romney ""would turn Medicare into a voucher program."""
+33541,neu,0,3,0,0,"""@KEZI9: Census data show Oregon women are paid less than men in every corner of the state. Details on KEZI 9 News at 5 and 6.""","""In every state, women are paid less than men."""
+33603,neg,3,0,0,0,"Obama says he has doubled the funding for Pell grant. So, 6million to 9million since 2008. That's not half from my math.",Says Obama doubled funding for the Pell Grant.
+33640,pos,0,0,3,0,Obama Cut taxes for middle class families &amp; small businesses,"""I've cut taxes for ... middle-class families, small businesses."""
+33641,neg,3,0,0,0,You have cut taxes for middle class families and small businesses? Haha you're lying! You have lying issues #nobama,"""I've cut taxes for ... middle-class families, small businesses."""
+33660,pos,0,0,3,0,"since 1961 our private economy has produced 66 million private sector jobs.
+Job Score
+Republicans: 24 million
+Democrats:42 million","""Since 1961 ... our private economy has produced 66 million private-sector jobs. So what's the jobs score? Republicans 24 million, Democrats 42 (million)."""
+33672,neu,0,3,0,0,"Romney Half-True statement @politifact Under the ""Obama economy ... utility bills are higher.""","Under the ""Obama economy ... utility bills are higher."""
+33681,neg,3,0,0,0,"Mitt says Barack Obama began his presidency ""with an apology tour."" Totally false and dumb. However, Obama did go to Israel in 08 on a tour.","Barack Obama began his presidency ""with an apology tour."""
+33721,dif,0,0,0,3,"Debate about economy, health care, deficits, jobs...@glamourmag says: ""not a single women's issue came up"". Really? Those don't count?",Says women care most about jobs and the economy
+33812,pos,0,0,3,0,Did you know Barack Obama hasn't visited Israel as President? #uspresidential2012 #israel,"""As president, Barack Obama has never visited Israel."""
+33875,pos,0,0,3,0,"#obamacare contains biggest tax increase to the middle class in American history @BarackObama will let bush tax cuts expire 
+ #ohio","""Obamacare"" is the ""biggest tax increase in American history."""
+33880,pos,0,0,3,0,Obamacare was passed. Biggest tax increase passed in American history. Stop increases taxes geeze.,"""Obamacare"" is the ""biggest tax increase in American history."""
+34091,neu,0,3,0,0,"Says Rep. Charles Bass ""supports privatizing Social Security, risking trillions more on Wall Street."" -Ann McLane Kuster on Thursday,...","Says Rep. Charles Bass ""supports privatizing Social Security, risking trillions more on Wall Street."""
+34112,pos,0,0,3,0,"Wait wait wait... #SCOTUS says It's a tax?!?! #Obama specifically said that the individual mandate is NOT a tax.  Obama lies, freedom dies","Obama ""said (the individual mandate) wasn't a tax."""
+34124,pos,0,0,3,0,FLASHBACK --&gt; The largest tax increase in world history.. #ObamaCare,"""Obamacare is . . . the largest tax increase in the history of the world."""
+34232,pos,0,0,3,0,"Yeppers,,,when Romney was Gov,,he outsourced Gov jobs to a call center in India #p2 #tcot","""Romney outsourced call center jobs to India."""
+34254,neu,0,3,0,0,"""Scott Walker has a plan to privatize state lands"" and ""wants to sell our deer to the highest bidder."" -- Tom Barrett || lol #fail #WIRecall","""Scott Walker has a plan to privatize state lands"" and ""wants to sell our deer to the highest bidder."""
+34282,pos,0,0,3,0,"Remember when Obama promised to cut the deficit in half at the end of his first term. He hasn't come close, in fact he added $5 trillion.","Obama promised to cut the deficit by half by the end of his first term but he ""hasn't even come close."""
+34330,neu,0,3,0,0,"Jack Kingston: Under President Barack Obama&amp;rsquo;s watch, ""oil production on federal lands has decreased 14 percent over the past year.""","Under President Barack Obama's watch, ""oil production on federal lands has decreased 14 percent over the past year."""
+34394,pos,0,0,3,0,"#FACT -&gt; Last year:  #Exxon pocketed nearly $4.7 million per hour....So, who's in control of gasoline prices? #Corpocracy at work!","Last year, ""Exxon pocketed nearly $4.7 million every hour."""
+34571,pos,0,0,3,0,"21st January, 1997: A Republican majority congress fined Gingrich a record $300,000 for ethics violations. #newt #gingrich #gop #tcot","Newt Gingrich ""was fined $300,000 for ethics violations."""
+34580,neg,3,0,0,0,Gingrich says students today 'take more years to get through' college. Not according to official stats,"Students today ""take more years to get through"" college."
+34662,pos,0,0,3,0,RT @jbaby56 Wow ths Muthafuckers R serious w/ ths: Republicans R attempting 2 remove Barack Obama from Georgia's Presidential Ballot in 2012,"""Republicans are attempting to remove Barack Obama from Georgia's Presidential Ballot in 2012."""
+34742,pos,0,0,3,0,"""Fifty percent of Speaker Gingrich's tax plan goes to the top 1 percent.""  rated mostly True by #Politifacts","""Fifty percent of Speaker Gingrich's tax plan goes to the top 1 percent."""
+34782,pos,0,1,3,0,"..when gays can serve openly in the military but our kids can't openly celebrate Christmas or pray in school. "" (2011 in a campaign ad)","Our ""kids can't openly celebrate Christmas or pray in school."""
+34810,pos,0,0,3,0,"President Obama: For ""the average middle-class family, your taxes today are lower than when I took office.""
+
+#Truth Taxes are indeed down","For ""the average middle-class family, your taxes today are lower than when I took office."""
+34932,neu,0,3,0,0,"Herman Cain: China Is ""Trying To Develop Nuclear Capability ...","China is ""trying to develop nuclear capability."""
+35025,pos,0,0,3,0,Florida is the first state requiring drug testing to receive welfare. This finally went through. I. hate. welfare. shit. Go repubs. #WiN.,"""Florida is the first state requiring drug testing to receive welfare!"""
+35082,pos,0,0,3,0,"***What The F??K?*** Mitt Romney ""drove to Canada with the family dog Seamus strapped to the roof of the car."" #Obama2012 #GOP #OWS","Mitt Romney ""drove to Canada with the family dog Seamus strapped to the roof of the car."""
+35091,neu,0,3,0,0,"Rick Perry: 
+	""Michael Dukakis created jobs three times faster"" than Mitt Romney.: The Truth-o-Meter says: Half-True  |   Dukakis cre...","""Michael Dukakis created jobs three times faster"" than Mitt Romney."
+35111,pos,0,1,3,0,"Xavier Becerra: 
+	""We've had 11,000 attempts to amend the Constitution since 1789."": The Truth-o-Meter says: True  |   Of 11,000 atte...","""We've had 11,000 attempts to amend the Constitution since 1789."""
+35121,neg,3,0,0,0,"Rick Perry: 
+	Says Texas gained 21,000 doctors due to tort reform.: The Truth-o-Meter says: False  |   Rick Perry says Texas added 21...","Says Texas gained 21,000 doctors due to tort reform."
+35183,pos,0,0,3,0,There is something wrong when our government has spent $2.6 million to teach Chinese prostitutes how to drink responsibly... http://ow.ly...,"""Our government has spent $2.6 million to teach Chinese prostitutes how to drink responsibly."""
+35220,neg,3,0,0,0,"Shelly Moore lies again #wiunion 
+
+Evidence is lacking
+Says state Sen. Sheila Harsdorf wants to ""eliminate Medicare"" as we know it.","Says state Sen. Sheila Harsdorf wants to ""eliminate Medicare"" as we know it."
+35230,neu,0,3,0,0,"Barack Obama: 
+	&quot;We have provided at least 16 tax cuts to small businesses.&quot; https://trap.it #healthcare","""We have provided at least 16 tax cuts to small businesses."""
+35232,pos,0,0,3,0,(@106andPark) RT @RocsiDiaz #askobama has provided at least 16 tax cuts to small businesses. @BarackObama @whitehouse,"""We have provided at least 16 tax cuts to small businesses."""
+35260,neg,3,0,0,0,"""The president released all of the oil from the Strategic Oil Reserve.""
+Michele Bachmann   TOTALLY FALSE","""The president released all of the oil from the Strategic Oil Reserve."""
+35332,pos,0,0,3,0,Tommy Thompson Wanted To Implant Data Chips In Humans https://www.huffpost.com/entry/tommy-thompson-wanted-to-implant-chips_n_863200 via @huffingtonpost--GOP brings back BIG BROTHER!,"""Tommy Thompson wanted to implant data chips in humans."""
+35362,dif,0,0,0,3,"We declared war on Afghanistan over bin Laden. Why not pakistan who took and hid him and moved him to prevent US capture, always tipping him","""Bin Laden had declared war against Pakistan."""
+35371,neu,0,3,0,0,President Obama: bin Laden declared war against Pakistan.,"""Bin Laden had declared war against Pakistan."""
+35380,neg,3,0,0,0,Get yo facts #straight trump prez Obama wasn't even n the poll that CNN did!!!! And u tied wit huckabee so sit yo cocky ass down,"""CNN did a poll recently where Obama and I are statistically tied."""
+35381,neu,0,3,0,0,"""Donald Trump: CNN did a poll and it shows i'm tied with Obama. CNN: I'm sorry Mr. Trump, CNN did no..."" https://www.tumblr.com/edagyeman/4984541467/donald-trump-cnn-did-a-poll-and-it-shows-im-tied","""CNN did a poll recently where Obama and I are statistically tied."""
+35400,neg,3,0,0,0,"FALSE: Michelle Bachmann ""The top 1 percent of income-earners pay about 40 percent of all taxes into the federal government."" @cspanwj","""The top 1 percent of income-earners pay about 40 percent of all taxes into the federal government."""
+35402,neu,1,3,0,0,#FoxandFriends #BrianKilmeade says Florida Gov. Rick Scott's approval ratings are up. #NotIntendedToBeAFactualStatement,Says Gov. Rick Scott's approval ratings are up.
+35411,neg,3,1,0,0,"""@MubarakalHaza Trump: ""Libya supplies the oil for China. We get no oil from Libya."" ... Its more to Europe than China","""Libya supplies the oil for China. We get no oil from Libya."""
+35422,dif,0,0,0,3,"Guest 1: ""Is Modern Family filmed here? They have an ad for it."" Guest 2: ""No. It's an NBC show."" #ohatdl","""I have the No. 1 show on NBC."""
+35492,neg,3,0,0,0,"Mike Huckabee Is Lying: First, Mike Huckabee says Barack Obama grew up in Kenya and may have been influenced by ... http://bit.ly/h6kGny",Says Barack Obama grew up in Kenya.
+35542,neu,0,3,0,0,"Paul Rand perpetuates the stereotype: Israel's per capita income ""is greater than probably three-fourths of the rest of the world.""","Israel's per capita income ""is greater than probably three-fourths of the rest of the world."""
+35560,neu,0,3,0,0,"""Health care spending is driving the explosive growth of our debt.  And the President's law is accelerating our country toward bankruptcy.""","The health care law ""is accelerating our country toward bankruptcy."""
+35630,neg,3,0,0,0,"RT @mikevillarreal: Texas ""children may have a teacher who never spent one minute practicing teaching."" // Are you trying to instill fear?","Texas ""children may have a teacher who never spent one minute practicing teaching."""
+35643,neu,0,3,0,0,"Mike Mullen:  	&quot;Historically,&quot; Senate ratification of arms control treaties &quot;has been bipartisan.&quo... http://ht.ly/1aeXz9","""Historically,"" Senate ratification of arms control treaties ""has been bipartisan."""
+35670,neg,3,0,0,0,"Strickland:""Congressman Kasich wants to use our tax dollars to give secret bonuses to his corporate friends.""  Flat out lie. #tcot #twisters","""Congressman Kasich wants to use our tax dollars to give secret bonuses to his corporate friends."""
+35882,pos,0,0,3,0,Debt up $1.7B during Isner-Mahut Wimbledon match - On Politics ...: Our National Debt has gone up by $1729000000 d... http://bit.ly/9NhRHP,"The national debt ""has gone up by $1,729,000,000 during the Isner v. Mahut match."""
+35972,pos,0,0,3,0,"To all my friends with cell phones! Ok that is ALL of you:)
+
+REMEMBER: Cell Phone Numbers Go Public this month.
+
+REMINDER.....  all cell...","""Cell phone numbers go public this month."""
+35981,neu,0,4,0,0,"Gates told ABC's This Week that the video, quote, ""doesn't show the broader picture of the firing that was going on at American troops.""","""The video doesn't show the broader picture of the firing that was going on at American troops."""
+35990,pos,0,0,3,0,"Scary & accurate stat: ""Our national debt... is on track to exceed the size of our entire economy... in just two more years.""-John Boehner","""Our national debt ... is on track to exceed the size of our entire economy ... in just two more years."""
+35993,neu,0,3,0,0,"Houston Mayor Annise Parker, on Bill White's Houston. ""For years now, we have spent more money than we have taken in.""","""For years now, we have spent more money than we have taken in."""
+36051,pos,0,0,3,0,Americans Admire Glenn Beck More Than the Pope | Watts Cookin&#39; http://bit.ly/3sLWeC #glennbeck #gop #teaparty,"""Americans admire Glenn Beck more than they admire the pope."""
+36080,pos,0,0,3,0,"There are only two industries that are exempt from antitrust laws, baseball and health insurance. No wonder we've been getting ripped off!","""Baseball and insurance are the only industries exempt from antitrust laws."""
+36092,neu,0,3,0,0,Republican National Committee: Barack Obama and the Democrats have proposed a tax for not having health insurance. http://trigeia.us/?omZOs,"Barack Obama and the Democrats have ""proposed a tax for not having health insurance."""
+36102,neu,0,3,0,0,#wtp2010 #irf01 irf01: ChuckGrassley: Whoevr cites Wo Health Organ study that US ranks 37th in world on Health Care... https://twitter.com/irf01/statuses/5068927925,The U.S. ranks 37th in the world for health care.
+36131,neg,3,0,0,0,"Obama: ""If you like your existing plan, you can keep it"" NOT! 5 freedoms you'd lose in health care reform - https://money.cnn.com/2009/07/24/news/economy/health_care_reform_obama.fortune/ #cnnmoney","""If you like your health care plan, you can keep your health care plan."""
+36140,neg,3,0,0,0,Obama blatantly lies about being able to keep your health care plan if you like it. #handsoff #iamthemob,"""If you like your health care plan, you can keep your health care plan."""
+36142,neg,3,0,0,0,when obama says if u like your health care plan you have that you can keep it .that is a ball face lie and he knows it,"""If you like your health care plan, you can keep your health care plan."""
+36151,neu,0,3,0,0,"Liked ""Health insurance companies are ""making record profits, right now."" Barack Obama on Wednesday, July 22nd,..."" https://www.facebook.com/5Nhsd","Health insurance companies are ""making record profits, right now."""
+36201,pos,0,0,3,0,"Obama has 28 ""Czars""; Ten more than three hundred years of the Romanovs
+http://bit.ly/3X9Ivj","""Obama has more czars than the Romanovs."""
+36220,neu,0,3,0,0,"Joe Biden: It is unsafe to fly airlines.  You can catch swine flu because ""if one person sneezes it goes all the way through the aircraft""","""When one person sneezes, it goes all the way through the aircraft."""
+36233,pos,0,0,3,0,"R/T @DizzyDezzi ""Republican leaders said ""no"" to ""tax cuts for 95% of working Americans."" How do you spell G-R-E-E-D-Y?","Republican leaders said ""no"" to ""tax cuts for 95% of working Americans."""
+36261,neg,3,0,0,0,"McCain claimed ""1.3 million people in America make their living off eBay."" Actually, only 724,000 persons in the U.S. have income from eBay/","""1.3-million people in America make their living off eBay."""
+36280,pos,0,1,3,0,"Actual quote: ""Senate Majority Leader Harry Reid ""said, quote, 'I can't stand John McCain."" And I repeat, God, me either.","Senate Majority Leader Harry Reid ""said, quote, 'I can't stand John McCain.' """
+36282,pos,0,0,3,0,"Palin: ""That luxury jet was over the top. I put it on eBay."" thats really cool.","""That luxury jet was over the top. I put it on eBay."""

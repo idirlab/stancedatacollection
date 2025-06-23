@@ -1,0 +1,113 @@
+TRUNCATE `factchecker_presidential_debate`.`Concept`;
+TRUNCATE `factchecker_presidential_debate`.`Entity`;
+TRUNCATE `factchecker_presidential_debate`.`Keyword`;
+TRUNCATE `factchecker_presidential_debate`.`Sentence_Concept`;
+TRUNCATE `factchecker_presidential_debate`.`Sentence_Entity`;
+TRUNCATE `factchecker_presidential_debate`.`Sentence_Keyword`;
+TRUNCATE `factchecker_presidential_debate`.`Sentence_Taxonomy`;
+____________________________________________________________________________________________________________________
+
+DROP TRIGGER IF EXISTS update_screening_on_insert;
+
+delimiter $$
+
+CREATE TRIGGER update_screening_on_insert AFTER INSERT ON Sentence_User
+FOR EACH ROW
+BEGIN 
+		IF BINARY NEW.username = "factchecker" AND NEW.response != -2 THEN 
+			UPDATE Sentence SET screening = NEW.response WHERE id = NEW.sentence_id;
+		END IF;
+END;
+____________________________________________________________________________________________________________________
+
+DROP TRIGGER IF EXISTS update_screening_on_update;
+
+delimiter $$
+
+CREATE TRIGGER update_screening_on_update AFTER UPDATE ON Sentence_User
+FOR EACH ROW
+BEGIN 
+		IF BINARY NEW.username = "factchecker" AND NEW.response != -2 THEN 
+			UPDATE Sentence SET screening = NEW.response WHERE id = NEW.sentence_id;
+		END IF;
+		
+		IF BINARY NEW.username = "factchecker" AND NEW.response = -2 AND OLD.response != -2 THEN 
+			UPDATE Sentence SET screening = -3 WHERE id = NEW.sentence_id;
+		END IF;
+END;
+____________________________________________________________________________________________________________________
+
+select 
+    Sentence_User.username, profession, major, count(*) as answered,
+    sum(if(screening = -1 and response = -1, 1, 0))/sum(if(screening = -1 and response != -2, 1, 0)) as NFS_NFS,
+	sum(if(screening = -1 and response = 0, 1, 0))/sum(if(screening = -1 and response != -2, 1, 0)) as NFS_NO,
+	sum(if(screening = -1 and response = 1, 1, 0))/sum(if(screening = -1 and response != -2, 1, 0)) as NFS_YES,
+	sum(if(screening = 0 and response = -1, 1, 0))/sum(if(screening = 0 and response != -2, 1, 0)) as NO_NFS,
+	sum(if(screening = 0 and response = 0, 1, 0))/sum(if(screening = 0 and response != -2, 1, 0)) as NO_NO,
+	sum(if(screening = 0 and response = 1, 1, 0))/sum(if(screening = 0 and response != -2, 1, 0)) as NO_YES,
+	sum(if(screening = 1 and response = -1, 1, 0))/sum(if(screening = 1 and response != -2, 1, 0)) as YES_NFS,
+	sum(if(screening = 1 and response = 0, 1, 0))/sum(if(screening = 1 and response != -2, 1, 0)) as YES_NO,
+	sum(if(screening = 1 and response = 1, 1, 0))/sum(if(screening = 1 and response != -2, 1, 0)) as YES_YES,
+	
+	(pow(sum(if(screening = -1 and response = -1, 1, 0))/sum(if(screening = -1 and response != -2, 1, 0))-sum(if(screening = 0 and response = -1, 1, 0))/sum(if(screening = 0 and response != -2, 1, 0)),2)+
+	pow(sum(if(screening = -1 and response = 0, 1, 0))/sum(if(screening = -1 and response != -2, 1, 0))-sum(if(screening = 0 and response = 0, 1, 0))/sum(if(screening = 0 and response != -2, 1, 0)),2)+
+	pow(sum(if(screening = -1 and response = 1, 1, 0))/sum(if(screening = -1 and response != -2, 1, 0))-sum(if(screening = 0 and response = 1, 1, 0))/sum(if(screening = 0 and response != -2, 1, 0)),2)+
+	pow(sum(if(screening = -1 and response = -1, 1, 0))/sum(if(screening = -1 and response != -2, 1, 0))-sum(if(screening = 1 and response = -1, 1, 0))/sum(if(screening = 1 and response != -2, 1, 0)),2)+
+	pow(sum(if(screening = -1 and response = 0, 1, 0))/sum(if(screening = -1 and response != -2, 1, 0))-sum(if(screening = 1 and response = 0, 1, 0))/sum(if(screening = 1 and response != -2, 1, 0)),2)+
+	pow(sum(if(screening = -1 and response = 1, 1, 0))/sum(if(screening = -1 and response != -2, 1, 0))-sum(if(screening = 1 and response = 1, 1, 0))/sum(if(screening = 1 and response != -2, 1, 0)),2)+
+	pow(sum(if(screening = 0 and response = -1, 1, 0))/sum(if(screening = 0 and response != -2, 1, 0))-sum(if(screening = 1 and response = -1, 1, 0))/sum(if(screening = 1 and response != -2, 1, 0)),2)+
+	pow(sum(if(screening = 0 and response = 0, 1, 0))/sum(if(screening = 0 and response != -2, 1, 0))-sum(if(screening = 1 and response = 0, 1, 0))/sum(if(screening = 1 and response != -2, 1, 0)),2)+
+	pow(sum(if(screening = 0 and response = 1, 1, 0))/sum(if(screening = 0 and response != -2, 1, 0))-sum(if(screening = 1 and response = 1, 1, 0))/sum(if(screening = 1 and response != -2, 1, 0)),2))/(3*2) as RANK
+from
+    Sentence_User,
+    Sentence,
+	User
+where
+    id = sentence_id and
+	Sentence_User.username != 'naeemulhassan' and Sentence_User.username != 'factchecker' and
+	Sentence_User.username = User.username
+group by Sentence_User.username
+order by RANK desc
+____________________________________________________________________________________________________________________
+
+select 
+    Sentence_User.username as USERNAME, profession as PROFESSION, count(*) as ANSWERED,
+	
+	sum(if(response = -1,1,0)) as NFS,
+	sum(if(response = 0,1,0)) as NO,
+	sum(if(response = 1,1,0)) as YES,
+
+    sum(if(screening = -1 and response = -1, 1, 0)) as NFS_NFS,
+	sum(if(screening = -1 and response = 0, 1, 0)) as NFS_NO,
+	sum(if(screening = -1 and response = 1, 1, 0)) as NFS_YES,
+	sum(if(screening = 0 and response = -1, 1, 0)) as NO_NFS,
+	sum(if(screening = 0 and response = 0, 1, 0)) as NO_NO,
+	sum(if(screening = 0 and response = 1, 1, 0)) as NO_YES,
+	sum(if(screening = 1 and response = -1, 1, 0)) as YES_NFS,
+	sum(if(screening = 1 and response = 0, 1, 0)) as YES_NO,
+	sum(if(screening = 1 and response = 1, 1, 0)) as YES_YES,
+	
+	(pow(sum(if(screening = -1 and response = -1, 1, 0))/sum(if(screening = -1 and response != -2, 1, 0))-sum(if(screening = 0 and response = -1, 1, 0))/sum(if(screening = 0 and response != -2, 1, 0)),2)+
+	pow(sum(if(screening = -1 and response = 0, 1, 0))/sum(if(screening = -1 and response != -2, 1, 0))-sum(if(screening = 0 and response = 0, 1, 0))/sum(if(screening = 0 and response != -2, 1, 0)),2)+
+	pow(sum(if(screening = -1 and response = 1, 1, 0))/sum(if(screening = -1 and response != -2, 1, 0))-sum(if(screening = 0 and response = 1, 1, 0))/sum(if(screening = 0 and response != -2, 1, 0)),2)+
+	pow(sum(if(screening = -1 and response = -1, 1, 0))/sum(if(screening = -1 and response != -2, 1, 0))-sum(if(screening = 1 and response = -1, 1, 0))/sum(if(screening = 1 and response != -2, 1, 0)),2)+
+	pow(sum(if(screening = -1 and response = 0, 1, 0))/sum(if(screening = -1 and response != -2, 1, 0))-sum(if(screening = 1 and response = 0, 1, 0))/sum(if(screening = 1 and response != -2, 1, 0)),2)+
+	pow(sum(if(screening = -1 and response = 1, 1, 0))/sum(if(screening = -1 and response != -2, 1, 0))-sum(if(screening = 1 and response = 1, 1, 0))/sum(if(screening = 1 and response != -2, 1, 0)),2)+
+	pow(sum(if(screening = 0 and response = -1, 1, 0))/sum(if(screening = 0 and response != -2, 1, 0))-sum(if(screening = 1 and response = -1, 1, 0))/sum(if(screening = 1 and response != -2, 1, 0)),2)+
+	pow(sum(if(screening = 0 and response = 0, 1, 0))/sum(if(screening = 0 and response != -2, 1, 0))-sum(if(screening = 1 and response = 0, 1, 0))/sum(if(screening = 1 and response != -2, 1, 0)),2)+
+	pow(sum(if(screening = 0 and response = 1, 1, 0))/sum(if(screening = 0 and response != -2, 1, 0))-sum(if(screening = 1 and response = 1, 1, 0))/sum(if(screening = 1 and response != -2, 1, 0)),2))/(3*2) as RANK_E,
+
+	-0.2*(sum(if(screening = -1 and response = -1, 1, 0))+sum(if(screening = 0 and response = 0, 1, 0))+sum(if(screening = 1 and response = 1, 1, 0)))
+	+1.0*(sum(if(screening = 0 and response = 1, 1, 0))+sum(if(screening = 1 and response = 0, 1, 0)))
+	+1.0*(sum(if(screening = -1 and response = 0, 1, 0))+sum(if(screening = 0 and response = -1, 1, 0)))
+	+3.0*(sum(if(screening = -1 and response = 1, 1, 0))+sum(if(screening = 1 and response = -1, 1, 0))) as RANK_W
+from
+    Sentence_User,
+    Sentence,
+	User
+where
+    id = sentence_id and
+	Sentence_User.username = User.username and
+	Sentence_User.response != -2
+group by Sentence_User.username
+order by RANK_W, RANK_E desc, answered desc
