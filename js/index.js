@@ -1327,6 +1327,7 @@ function get_previous_answers(sentence_id) {
         url: "get_previous_answers.php",
         method: "POST",
         dataType: "text",
+        data: { sentence_id: sentence_id },
         success: function (data) {
             console.log("get_previous_answers", data);
             data = jQuery.parseJSON(data);

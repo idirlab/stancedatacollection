@@ -14,7 +14,19 @@
 
 	$results = execute($sql, array(), PDO::FETCH_ASSOC);
 	
-	$activity_sql = gen_insert_query($tables=array('Activity'), $fields=array('username', 'time', 'action'), $values=array($username, '"'.date("Y-m-d H:i:s").'"', "'USER CLICKED MODIFY PREVIOUS RESPONSES'"));
+	if (isset($_REQUEST['sentence_id']) && $_REQUEST['sentence_id'] == 0) {
+		$activity_sql = gen_insert_query(
+			$tables=array('Activity'), 
+			$fields=array('username', 'time', 'action'), 
+			$values=array($username, '"'.date("Y-m-d H:i:s").'"', "'USER CONFIRMED NO MORE PAIRS TO ANNOTATE'")
+		);
+	} else {
+		$activity_sql = gen_insert_query(
+			$tables=array('Activity'), 
+			$fields=array('username', 'time', 'action'), 
+			$values=array($username, '"'.date("Y-m-d H:i:s").'"', "'USER CLICKED MODIFY PREVIOUS RESPONSES'")
+		);
+	}
 	$activity_sql_results = execute($activity_sql, array(), PDO::FETCH_ASSOC);
 	echo json_encode($results);
 ?>
